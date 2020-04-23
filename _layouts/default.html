@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>title</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/css/foundation.min.css" crossorigin="anonymous">
-  </head>
+  {% include head.html %}
   <body>
-  {{ content }}
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js" crossorigin="anonymous"></script>
-  <script>
-    $(document).foundation();
-  </script>
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js" crossorigin="anonymous"></script>
+    <script>
+      $(document).foundation();
+    </script>
   </body>
 </html>
