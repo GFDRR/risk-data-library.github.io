@@ -14,10 +14,15 @@
 
 .navigation-right a {
   font-family: $primary-font;
-  opacity: $primary-opacity;
+  opacity: $secondary-opacity;
   color: $light-font-color;
   font-size:$primary-font-size;
   &:not(:last-child){
     padding-right: rem-calc(34);
   }
+}
+
+a.selected-tab {
+  opacity: $primary-opacity;
+  font-weight: $secondary-font-weight;
 }
