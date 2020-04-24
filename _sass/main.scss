@@ -1,0 +1,15 @@
+@import "colors";
+@import "fonts";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.top-container {
+  background-color: $section-headers;
+}
+
+.container {
+  display: flex;
+}
