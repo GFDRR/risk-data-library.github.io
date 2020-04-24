@@ -4,18 +4,20 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   padding: rem-calc(20 26 22 38);
+  border-bottom: solid 1px rgba(227, 227, 227, 0.33);
 }
 
 .navigation-left {
   font-family: $primary-font;
   font-size: $secondary-font-size;
-  color: $light-font-color;
+  color: $light--primary-font-color;
+  opacity: 1;
 }
 
 .navigation-right a {
   font-family: $primary-font;
   opacity: $secondary-opacity;
-  color: $light-font-color;
+  color: $light--primary-font-color;
   font-size:$primary-font-size;
   &:not(:last-child){
     padding-right: rem-calc(34);

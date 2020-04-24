@@ -9,8 +9,10 @@ $secondary-font-weight: 600;
 $tertiary-font-weight: 500;
 $normal-font-weight: normal;
 
-$primary-font-size: 1rem; //16px
-$secondary-font-size: 1.125rem; //18px
+$primary-font-size: rem-calc(16); 
+$secondary-font-size: rem-calc(18); 
+$tertiary-font-size: rem-calc(20); 
+$title-font-size: rem-calc(50); 
 
 $primary-opacity: 1;
 $secondary-opacity: 0.75;
