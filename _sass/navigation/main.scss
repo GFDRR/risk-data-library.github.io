@@ -8,6 +8,16 @@
 
 .navigation-left {
   font-family: $primary-font;
-  font-size: $primary-font-size;
+  font-size: $secondary-font-size;
   color: $light-font-color;
+}
+
+.navigation-right a {
+  font-family: $primary-font;
+  opacity: $primary-opacity;
+  color: $light-font-color;
+  font-size:$primary-font-size;
+  &:not(:last-child){
+    padding-right: rem-calc(34);
+  }
 }
