@@ -1,0 +1,13 @@
+.navigation {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-top: rem-calc(20px);
+}
+
+.navigation-left {
+  font-family: $primary-font;
+  font-size: $primary-font-size;
+  color: $light-font-color;
+}

@@ -1,5 +1,8 @@
-<nav>
-  {% for item in site.data.navigation %}
-  <a href="{{item.link}}" {% if page.url == item.link %} style="color: red;" {% endif %}>{{item.name}}</a>
-  {% endfor %}
-</nav>
+<div class="navigation">
+  <div class="navigation-left">Risk-data Library</div>
+  <nav class="navigation-right">
+    {% for item in site.data.navigation %}
+    <a href="{{item.link}}" {% if page.url == item.link %} style="color: red;" {% endif %}>{{item.name}}</a>
+    {% endfor %}
+  </nav>
+</div>
