@@ -9,3 +9,5 @@ collections:
       - future-content.md
     output: true
     
+google_analytics: 'UA-164674068-1'
+
