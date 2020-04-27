@@ -8,6 +8,5 @@ collections:
       - dataset.md
       - future-content.md
     output: true
-    
-google_analytics: 'UA-164674068-1'
 
+google_analytics: 'UA-164674068-1'

@@ -1,9 +1,7 @@
 ---
-layout: default
+layout: page
 title: Schema
 ---
-
-# Schema
 
 ## Hazard
 
