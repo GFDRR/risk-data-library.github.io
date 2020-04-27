@@ -5,6 +5,7 @@
 @import "description/main";
 @import "purpose/main";
 @import "components/main";
+@import "component/main";
 
 body {
   margin: 0;
@@ -21,4 +22,6 @@ body {
 
 .middle-container {
   background-color: $light-grey-background;
+  padding-right: rem-calc(169);
+  padding-left: rem-calc(154);
 }

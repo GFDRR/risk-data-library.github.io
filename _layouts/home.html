@@ -7,8 +7,8 @@ layout: default
 {% include purpose.html %}
 <div class="middle-container">
   {%include components.html %}
-  {% for component in site.components %}
-    <h3>{{ component.title }}</h3>
+  {% for item in site.items %}
+    {%include component.html %}
   {% endfor %}
 </div>
 {{content}}

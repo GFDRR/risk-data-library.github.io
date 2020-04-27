@@ -2,14 +2,3 @@
 layout: home
 robots: noindex
 ---
-
-<h1>{{ "Hello World!" | downcase}}</h1>
-<section class="row medium-8 large-7 columns"></div>
-  {% for post in site.posts %}
-  <div class="blog-post">
-    <h3>{{ post.title }} <small>{{ post.date }}</small></h3>
-
-    <a href="{{ post.url }}">see more</a>
-  </div>
-  {% endfor %}
-</section>

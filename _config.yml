@@ -4,3 +4,7 @@ markdown: kramdown
 collections:
   items:
     output: true
+    order:
+      - schema.md
+      - dataset.md
+      - future-content.md

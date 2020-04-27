@@ -1,7 +1,5 @@
 .components {
   padding-top: rem-calc(80);
-  padding-right: rem-calc(169);
-  padding-left: rem-calc(154);
 }
 
 .components-title {
@@ -11,10 +9,15 @@
   color: $dark-primary-font-color;
 }
 
-.components-sub-title {
+.components-subtitle {
   margin-top: 36px;
   font-family: $secondary-font;
   font-size: $tertiary-font-size;
   font-weight: $normal-font-weight;
   color: $dark-secondary-font-color;
+  margin-bottom: 64px;
 }
+
+
+
+

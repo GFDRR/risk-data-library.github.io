@@ -1,11 +1,4 @@
 <div class="components">
   <h2 class="components-title">Three components</h2>
-  <p class="components-sub-title">In the morning were still near the rock which looks like a lion's head. Towards noon passed two rocks.</p>
-
-  {% for i in site.items | sort:"order_number" %}
-    <div>
-      <h2><a href="{{ i.url | relative_url }}">{{ i.title }}</a></h2>
-      <p>{{ i.content | markdownify }}</p>
-    </div>
-  {% endfor %}
+  <p class="components-subtitle">In the morning were still near the rock which looks like a lion's head. Towards noon passed two rocks.</p>
 </div>

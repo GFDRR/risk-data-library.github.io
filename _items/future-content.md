@@ -1,9 +1,9 @@
 ---
-title: The dataset
-order_number: 2
+title: Future content
+order_number: 3
 category: homepage
-permalink: /database.html
-subtitle: Storing hazard, exposure, vulnerabilty and loss datasets together in the same environement.
+permalink: /schema.html
+subtitle: Data that provides information about other data
 anchor: Learn More →
 ---
 
