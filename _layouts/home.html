@@ -7,7 +7,8 @@ layout: default
 {% include purpose.html %}
 <div class="middle-container">
   {%include components.html %}
-  {% for item in site.items %}
+  {% assign sorted-items = site.items | sort: 'order_number' %}
+  {% for item in sorted-items %}
     {%include component.html %}
   {% endfor %}
 </div>
