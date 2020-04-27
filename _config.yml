@@ -1,2 +1,12 @@
 name: awesometitle
 markdown: kramdown
+
+collections:
+  items:
+    order:
+      - schema.md
+      - dataset.md
+      - future-content.md
+    output: true
+
+google_analytics: 'UA-164674068-1'
