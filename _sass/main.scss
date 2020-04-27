@@ -3,16 +3,22 @@
 @import "fonts";
 @import "navigation/main";
 @import "description/main";
+@import "purpose/main";
+@import "components/main";
 
 body {
   margin: 0;
   padding: 0;
 }
 
+.navbar {
+  background-color: $section-headers;
+}
+
 .top-container {
   background-color: $section-headers;
 }
 
-.container {
-  display: flex;
+.middle-container {
+  background-color: $light-grey-background;
 }

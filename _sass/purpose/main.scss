@@ -1,0 +1,47 @@
+.purpose {
+  display: flex;
+  flex-direction: row;
+  padding-top: rem-calc(96);
+  padding-right: rem-calc(169);
+  padding-bottom: rem-calc(90);
+  padding-left: rem-calc(154);
+  justify-content: space-between;
+}
+
+.purpose-left {
+  width: 275px;
+}
+
+.purpose-right {
+  margin-top: rem-calc(21);
+  width: 726px;
+}
+
+.purpose-title {
+  font-family: $primary-font;
+  font-size: $quaternary-font-size;
+  font-weight: bold;
+  color: $purple-primary-font-color;
+}
+
+.purpose-sub-title {
+  font-family: $primary-font;
+  font-size: $tertiary-font-size;
+  font-weight: $normal-font-weight;
+  color: $dark-secondary-font-color;
+}
+
+.purpose-paragraph {
+  font-family: $secondary-font;
+  font-size: $primary-font-size;
+  font-weight: $normal-font-weight;
+  color: $grey-primary-font-color;
+}
+
+.purpose-link {
+  font-family: $secondary-font;
+  font-size: $primary-font-size;
+  font-weight: $normal-font-weight;
+  color: $purple-secondary-font-color;
+  margin-top: 42px;
+}

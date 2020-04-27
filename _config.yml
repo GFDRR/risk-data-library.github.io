@@ -1,2 +1,6 @@
 name: awesometitle
 markdown: kramdown
+
+collections:
+  components:
+    output: true
