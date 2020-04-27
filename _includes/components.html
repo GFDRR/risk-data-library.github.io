@@ -1,4 +1,13 @@
 <div class="components">
   <h2 class="components-title">Three components</h2>
   <p class="components-sub-title">In the morning were still near the rock which looks like a lion's head. Towards noon passed two rocks.</p>
+
+  {% for post in site.posts %}
+    <div class="components-content">
+      <h3 class="components-content-title">{{ post.title }}</h3>
+      <p><small><strong>{{ post.date | date: "%B %e, %Y" }}</strong> . {{ post.category }} . <a
+            href="http://erjjones.github.com{{ post.url }}#disqus_thread"></a></small></p>
+            <a href="{{ post.url }}"></a>
+    </div>
+  {% endfor %}
 </div>
