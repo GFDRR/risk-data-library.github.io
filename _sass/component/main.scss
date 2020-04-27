@@ -1,0 +1,46 @@
+.component-individual {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: rem-calc(90);
+  justify-content: space-between;
+  margin-top: 59px;
+  padding-bottom: 49px; 
+  border-bottom: solid 1px $grey-quaternary-font-color;
+}
+
+.component-individual-left {
+  width: 275px;
+}
+
+.component-individual-right {
+  width: 726px;
+}
+
+.component-individual-title {
+  font-family: $primary-font;
+  font-size: $quaternary-font-size;
+  font-weight: $secondary-font-weight;
+  color: $purple-primary-font-color;
+}
+
+.component-individual-subtitle {
+  font-family: $primary-font;
+  font-size: $tertiary-font-size;
+  font-weight: $normal-font-weight;
+  color: $dark-secondary-font-color;
+}
+
+.component-individual-paragraph {
+  font-family: $secondary-font;
+  font-size: $primary-font-size;
+  font-weight: $normal-font-weight;
+  color: $grey-primary-font-color;
+}
+
+.component-individual-link {
+  font-family: $secondary-font;
+  font-size: $primary-font-size;
+  font-weight: $normal-font-weight;
+  color: $purple-secondary-font-color;
+  margin-top: 52px;
+}

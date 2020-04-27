@@ -1,6 +1,15 @@
 ---
 layout: default
 ---
-<section></section>
-
-{{ content }}
+<div class="top-container">
+  {% include description.html %}
+</div>
+{% include purpose.html %}
+<div class="middle-container">
+  {%include components.html %}
+  {% assign sorted-items = site.items | sort: 'order_number' %}
+  {% for item in sorted-items %}
+    {%include component.html %}
+  {% endfor %}
+</div>
+{{content}}
