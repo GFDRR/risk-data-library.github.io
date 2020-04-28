@@ -4,11 +4,11 @@ layout: default
 <div class="top-container">
   {% include description.html %}
 </div>
-{% include purpose.html %}
 <div class="middle-container">
+  {%include purpose.html %}
   {%include components.html %}
-  {% assign sorted-items = site.items | sort: 'order_number' %}
-  {% for item in sorted-items %}
+  {% assign sorted-components = site.components | sort: 'order_number' %}
+  {% for item in sorted-components %}
     {%include component.html %}
   {% endfor %}
 </div>
