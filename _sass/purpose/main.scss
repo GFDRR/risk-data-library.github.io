@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: row;
   padding-top: rem-calc(96);
-  padding-right: rem-calc(169);
   padding-bottom: rem-calc(90);
-  padding-left: rem-calc(154);
   justify-content: space-between;
+  max-width: 1600px;
+  margin: 0 0 0 0;
 }
 
 .purpose-left {
