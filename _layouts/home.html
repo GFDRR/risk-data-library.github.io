@@ -1,15 +1,19 @@
 ---
 layout: default
 ---
+
 <div class="top-container">
-  {% include description.html %}
+  {% include home/description.html %}
 </div>
-{% include purpose.html %}
+{% include home/purpose.html %}
 <div class="middle-container">
-  {%include components.html %}
-  {% assign sorted-items = site.items | sort: 'order_number' %}
-  {% for item in sorted-items %}
-    {%include component.html %}
+  {% include home/components.html %}
+  {% assign sorted-components = site.components | sort: 'order_number' %}
+  {% for component in sorted-components %}
+    {% include home/component.html %}
   {% endfor %}
 </div>
-{{content}}
+
+<div class="middle-container">
+  {{ content }}
+</div>

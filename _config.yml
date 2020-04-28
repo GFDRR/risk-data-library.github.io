@@ -1,8 +1,14 @@
-name: awesometitle
+title: Risk-data Library
+author:
+  name: Global Facility for Disaster Reduction and Recovery
 markdown: kramdown
 
+sass:
+  # sass_dir: _sass -- default
+  style: compressed
+
 collections:
-  items:
+  components:
     order:
       - schema.md
       - dataset.md
