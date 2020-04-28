@@ -5,8 +5,9 @@ layout: default
 <div class="top-container">
   {% include home/description.html %}
 </div>
-{% include home/purpose.html %}
+
 <div class="middle-container">
+  {% include home/purpose.html %}
   {% include home/components.html %}
   {% assign sorted-components = site.components | sort: 'order_number' %}
   {% for component in sorted-components %}
