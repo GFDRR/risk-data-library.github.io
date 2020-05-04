@@ -13,7 +13,10 @@ layout: default
   {% for component in sorted-components %}
     {% include home/component.html %}
   {% endfor %}
+
+  {% include datasets.html %}
 </div>
+
 
 <div class="middle-container">
   {{ content }}
