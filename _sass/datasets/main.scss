@@ -1,0 +1,55 @@
+.datasets {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: rem-calc(90);
+  justify-content: space-between;
+  margin-top: 59px;
+  padding-bottom: 49px; 
+  border-bottom: solid 1px $grey-quaternary-font-color;
+  max-width: 1600px;
+}
+
+.datasets-left {
+  width: 275px;
+}
+
+.datasets-right {
+  width: 726px;
+}
+
+.datasets-title {
+  font-family: $primary-font;
+  font-size: $quaternary-font-size;
+  font-weight: $secondary-font-weight;
+  color: $purple-primary-font-color;
+}
+
+.datasets ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.datasets li {
+  margin-bottom: 20px;
+}
+
+.datasets h4 {
+  font-family: $primary-font;
+  font-size: $primary-font-size;
+  font-weight: $secondary-font-weight;
+  color: $dark-primary-font-color;
+}
+
+.datasets p {
+  font-family: $primary-font;
+  font-size: $primary-font-size;
+  font-weight: $normal-font-weight;
+  color: $grey-primary-font-color;
+}
+
+.datasets a {
+  font-family: $primary-font;
+  font-size: $primary-font-size;
+  font-weight: $normal-font-weight;
+  color: $links;
+}
