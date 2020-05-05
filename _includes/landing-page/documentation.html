@@ -1,0 +1,18 @@
+<div class="documentation">
+  <div class="documentation-left">
+    <h3 class="documentation-title">Documentation</h3>
+  </div>
+  <div class="documentation-right">
+    <p class="documentation-paragraph">
+      Short introduction to this section. Dummy text is text that is used in the publishing industry or by web designers to occupy. It is said that song composers of the past used dummy texts.
+    </p>
+    {% assign sorted-documents = site.documentation | sort: 'order_number' %}
+    {% for document in sorted-documents %}
+    <ul class="documentation-list">
+      {% include landing-page/document.html %}
+    </ul>
+
+    {% endfor %}
+  </div>
+  
+</div>

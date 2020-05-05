@@ -1,6 +1,9 @@
 ---
 layout: default
 ---
+<div class="navbar">
+  {% include navigation.html %}
+</div>
 
 <div class="top-container">
   {% include home/description.html %}
@@ -13,8 +16,6 @@ layout: default
   {% for component in sorted-components %}
     {% include home/component.html %}
   {% endfor %}
-
-  {% include datasets.html %}
 </div>
 
 

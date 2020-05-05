@@ -1,12 +1,22 @@
 @import "colors";
 @import "mixins";
 @import "fonts";
+
+// landing page
+@import "header/main";
+@import "summary/main";
+@import "instructions/main";
+@import "review-questions/main";
+@import "documentation/main";
+@import "document/main";
+@import "datasets/main";
+
+// main
 @import "navigation/main";
 @import "description/main";
 @import "purpose/main";
 @import "components/main";
 @import "component/main";
-@import "datasets/main";
 
 body {
   margin: 0;
@@ -25,4 +35,12 @@ body {
   background-color: $light-grey-background;
   padding-right: rem-calc(169);
   padding-left: rem-calc(154);
+}
+
+.landing-top-container {
+  background-color: $light--primary-font-color
+}
+
+.container-wrapper {
+  max-width: 1200px;
 }
