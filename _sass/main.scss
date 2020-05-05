@@ -23,6 +23,10 @@ body {
   padding: 0;
 }
 
+pre {
+  white-space: pre-wrap;
+}
+
 .navbar {
   background-color: $section-headers;
 }
@@ -48,7 +52,4 @@ body {
 
 .container-wrapper {
   max-width: 1200px;
-}
-pre {
-  white-space: pre-wrap;
 }
