@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $.get("https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev/api/samples", function (data) {
-    data.data.forEach(element => {
+    data.data.forEach(function(element){
       console.log(element);
       $("#datasets").append(`
       <li>
