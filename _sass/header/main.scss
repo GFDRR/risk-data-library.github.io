@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: rem-calc(20 26 22 38);
+  border-bottom: solid 1px rgba(227, 227, 227, 0.33);
+}
+
+.header-left h1 {
+  font-family: $primary-font;
+  font-size: $secondary-font-size;
+  color: $light--primary-font-color;
+  opacity: 1;
+}
