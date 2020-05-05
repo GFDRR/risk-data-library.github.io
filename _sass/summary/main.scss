@@ -1,0 +1,24 @@
+.summary {
+  display: flex;
+  flex-direction: column;
+  padding-top: rem-calc(108);
+  padding-right: rem-calc(562);
+  padding-bottom: rem-calc(92);
+  padding-left: rem-calc(154);
+}
+
+.summary-title {
+  max-width: 394px;
+  font-family: $primary-font;
+  font-size: $quaternary-font-size;
+  color: $purple-primary-font-color;
+  font-weight: $secondary-font-weight;
+}
+
+.summary-paragraph {
+  margin-top: 31px;
+  font-family: $secondary-font;
+  font-size: $tertiary-font-size;
+  color: $dark-primary-font-color;
+  font-weight: $normal-font-weight;
+}

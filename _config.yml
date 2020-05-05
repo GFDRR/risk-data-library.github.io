@@ -14,5 +14,10 @@ collections:
       - dataset.md
       - future-content.md
     output: true
+  documentation:
+    order:
+      - first-documentation.md
+      - second-documentation.md
+    output: true
 
 google_analytics: 'UA-164674068-1'
