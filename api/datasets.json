@@ -1,0 +1,36 @@
+{
+  "data": {
+    "hazard": [
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "Excel Workbook", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "Comma-separated values", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "tar. gz", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "tar. gz", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "tar. gz", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "tar. gz", "file-size": 10000 }
+    ],
+    "exposure": [
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "Excel Workbook", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "Comma-separated values", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "tar. gz", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "tar. gz", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "tar. gz", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "tar. gz", "file-size": 10000 }
+    ],
+    "vulnerability": [
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "Excel Workbook", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "Comma-separated values", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "tar. gz", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "tar. gz", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "tar. gz", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "tar. gz", "file-size": 10000 }
+    ],
+    "loss": [
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "Excel Workbook", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "Comma-separated values", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "tar. gz", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "tar. gz", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "tar. gz", "file-size": 10000 },
+      { "title": "Dataset title goes here", "hazard": "Earthquake", "region": "Tanzania", "created": "Jan. 2016", "publisher": "Licence", "file-type": "tar. gz", "file-size": 10000 }
+    ]
+  }
+}
