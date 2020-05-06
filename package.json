@@ -1,0 +1,42 @@
+{
+  "name": "risk-data-library.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "watch": "cross-env NODE_ENV=development webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/risk-data-library/risk-data-library.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/risk-data-library/risk-data-library.github.io/issues"
+  },
+  "homepage": "https://github.com/risk-data-library/risk-data-library.github.io#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.7",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.5.3",
+    "html-webpack-plugin": "^4.3.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "vue-loader": "^15.9.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}

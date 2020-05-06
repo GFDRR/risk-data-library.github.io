@@ -21,3 +21,19 @@ collections:
     output: true
 
 google_analytics: 'UA-164674068-1'
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - package.lock.json
+  - package.json
+  - webpack.config.babel.js
+  - src
+  - .editorconfig
+  - .eslintignore
+  - .eslintrc.js

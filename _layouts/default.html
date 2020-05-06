@@ -5,7 +5,9 @@
     <div class="navbar">
       {% include navigation.html %}
     </div>
-    {{ content }}
+    <div id="app">
+      {{ content }}
+    </div>
     {% include footer.html %}
 
     <script src="/assets/js/datasets.js"></script>
@@ -13,5 +15,6 @@
     <script>
       $(document).foundation();
     </script>
+    {% include scripts.html %}
   </body>
 </html>
