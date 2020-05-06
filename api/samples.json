@@ -3,7 +3,7 @@
   "version": "alpha",
   "data": [
     {
-      "title": "example 1",
+      "title": "Dataset title goes here",
       "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
       "schema": "hazard",
       "download_link": "https://risk-data-library-storage.s3-ap-southeast-2.amazonaws.com/datasets/monsters.csv",

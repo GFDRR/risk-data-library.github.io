@@ -1,31 +1,8 @@
 $(document).ready(function () {
-  $.get("https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev/api/samples", function (data) {
-    for (let index = 0; index < data.data.length; index++) {
-      const element = data.data[index];
-      $("#samples").append(`
-        <li>
-          <h4>${element.title}</h4>
-          <p>${element.description}</p>
-          <a href="${element.download_link}" download>
-            Download ${element.schema} dataset
-            ${element.file_size}
-          </a>  
-        </li>`);
-    }
-  });
-});
-
-$(document).ready(function () {
-  $.get("https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev/api/datasets", function (data) {
-    for (let index = 0; index < data.data.length; index++) {
-      const element = data.data[index];
-      $("#datasets").append(`
-        <h4>${element.title}</h4>
-        <p>${element.description}</p>
-        <a href="https://risk-data-library-storage.s3-ap-southeast-2.amazonaws.com/${element.filename}" download>
-          Download ${element.hazard} dataset
-          ${element.size} bytes
-        </a>`);
-    }
+  $.get("/api/datasets.json", function (res) {
+    $("#hazard-datasets").append(`<pre>${JSON.stringify(res.data.hazard, null, 2)}</pre>`);
+    $("#exposure-datasets").append(`<pre>${JSON.stringify(res.data.exposure, null, 2)}</pre>`);
+    $("#vulnerability-datasets").append(`<pre>${JSON.stringify(res.data.vulnerability, null, 2)}</pre>`);
+    $("#loss-datasets").append(`<pre>${JSON.stringify(res.data.loss, null, 2)}</pre>`);
   });
 });
