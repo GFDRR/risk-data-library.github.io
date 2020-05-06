@@ -2,10 +2,12 @@
 <html class="no-js" lang="en">
   {% include head.html %}
   <body>
+    <div class="navbar">
+      {% include navigation.html %}
+    </div>
     {{ content }}
     {% include footer.html %}
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="/assets/js/datasets.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js" crossorigin="anonymous"></script>
     <script>

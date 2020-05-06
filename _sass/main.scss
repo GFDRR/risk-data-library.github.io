@@ -23,6 +23,10 @@ body {
   padding: 0;
 }
 
+pre {
+  white-space: pre-wrap;
+}
+
 .navbar {
   background-color: $section-headers;
 }
@@ -33,6 +37,11 @@ body {
 
 .middle-container {
   background-color: $light-grey-background;
+  padding-right: rem-calc(169);
+  padding-left: rem-calc(154);
+}
+
+.container {
   padding-right: rem-calc(169);
   padding-left: rem-calc(154);
 }

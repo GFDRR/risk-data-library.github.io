@@ -1,21 +1,18 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  {% include head.html %}
+  <body>
+    <div class="navbar">
+      {% include landing-page/header.html %}
+    </div>
+    {{ content }}
 
-<div class="navbar">
-  {% include landing-page/header.html %}
-</div>
-<div class="landing-top-container">
-  {% include landing-page/summary.html %}
-</div>
+    {% include footer.html %}
 
-<div class="middle-container">
-  <div class="container-wrapper">
-    {% include landing-page/instructions.html %}
-    {% include landing-page/review-questions.html %}
-    {% include landing-page/documentation.html %}
-    
-    {% include datasets.html %}
-  </div>
- 
-</div>
+    <script src="/assets/js/datasets.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js" crossorigin="anonymous"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
