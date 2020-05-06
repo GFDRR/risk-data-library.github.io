@@ -1,2 +1,5 @@
 Dockerfile
 docker-compose.yaml
+node_modules
+.git
+.gitignore

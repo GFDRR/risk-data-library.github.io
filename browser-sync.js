@@ -5,4 +5,5 @@ module.exports = {
   serveStaticOptions: {
     extensions: ["html"],
   },
+  proxy: "localhost",
 };
