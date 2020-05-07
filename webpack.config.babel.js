@@ -4,6 +4,8 @@ const webpack = require("webpack");
 const { VueLoaderPlugin } = require("vue-loader");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+//https://stackoverflow.com/questions/43576561/proper-dev-setup-for-jekyll-webpack-and-vue
+
 module.exports = {
   entry: "./src/main.js",
   output: {

@@ -11,3 +11,4 @@ buildkite*
 .DS_Store
 js/vendor/*
 /js/public*
+dist

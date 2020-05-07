@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/risk-data-library/risk-data-library.github.io#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "vue": "^2.6.11"
   },
   "devDependencies": {
