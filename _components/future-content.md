@@ -1,8 +1,8 @@
 ---
-title: Future content
-order_number: 3
+name: Future content
+order: 3
 category: homepage
-permalink: /schema.html
+permalink: /components/future-content
 subtitle: Data that provides information about other data
 anchor: Learn More →
 layout: page

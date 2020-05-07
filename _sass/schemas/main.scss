@@ -1,0 +1,33 @@
+
+// background colours
+$schema_color1: #177E89;
+$schema_color2: #084C61;
+$schema_hazard: #DB3A34;
+$schema_common: #FFC857;
+$schema_color5: #323031;
+
+#classid-contribution-0 rect,
+#classid-event-1 rect,
+#classid-event_set-2 rect,
+#classid-footprint-3 rect,
+#classid-footprint_data-4 rect,
+#classid-footprint_set-5 rect
+{
+  fill: lighten($schema_hazard, 30) !important;
+}
+
+// div[id^="classid-footprint"] {
+//   fill: lighten($schema_hazard, 30) !important;
+// }
+
+#classid-imt-6 rect,
+#classid-license-7 rect,
+#classid-process_type-8 rect,
+#classid-hazard_type-9 rect {
+  fill: lighten($schema_common, 10) !important;
+}
+
+code.language-mermaid {
+  background-color: transparent;
+  border: 0;
+}
