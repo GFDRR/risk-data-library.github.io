@@ -1,10 +1,11 @@
 <template>
   <span>
     <h2>Hazard Datasets</h2>
-
     <ul v-for="hazardEvent in hazardDataset" :key="hazardEvent.id">
       <li>
-        {{ hazardEvent.title }}
+        <div>
+          {{ hazardEvent.title }}
+        </div>
       </li>
     </ul>
     <!-- <h2>Exposure Datasets</h2>
@@ -18,6 +19,11 @@
 
 <script>
 import siteData from '../../api/datasets.json';
+
+const HAZARD = "hazard";
+const EXPOSURE = "exposure";
+const VOLUNERABILITY = "vulnerability";
+const LOSS = "loss";
 
 export default {
   name: 'DataList',
@@ -35,16 +41,16 @@ export default {
     console.log("siteData.data-->", this.siteData);
     for (const key in this.siteData) {
       switch (key) {
-        case "hazard":
+        case HAZARD:
           this.hazardDataset.push(...siteData.data["hazard"])
           break;
-        case "exposure":
+        case EXPOSURE:
           this.exposureDataset.push(...siteData.data["exposure"])
           break;
-        case "vulnerability":
+        case VOLUNERABILITY:
           this.vulnerabilityDataset.push(...siteData.data["vulnerability"])
           break;
-        case "loss":
+        case LOSS:
           this.lossDataset.push(...siteData.data["loss"])
           break;
         default:
@@ -62,5 +68,11 @@ h2 {
   font-size: $quaternary-font-size;
   font-weight: $secondary-font-weight;
   color: $purple-primary-font-color;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 </style>
