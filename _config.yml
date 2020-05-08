@@ -9,15 +9,12 @@ sass:
 
 collections:
   components:
-    order:
-      - schema.md
-      - dataset.md
-      - future-content.md
+    permalink: /:collection/:name
+    sort_by: order
     output: true
   documentation:
-    order:
-      - first-documentation.md
-      - second-documentation.md
+    permalink: /:collection/:name
+    sort_by: order
     output: true
 
 google_analytics: 'UA-164674068-1'

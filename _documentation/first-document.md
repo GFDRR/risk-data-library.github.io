@@ -1,8 +1,8 @@
 ---
-title: Document title 1
-order_number: 1
-category: landingpage
+order: 1
+name: Document title 1
 description: One-line description of the document an abundance of dummy texts
+category: landingpage
 link: /assets/images/sample1.pdf
 anchor: Download
 layout: page
