@@ -1,7 +1,7 @@
 <template>
   <span>
     <h2>Hazard Datasets</h2>
-    <ul v-for="hazardEvent in hazardDataset" :key="hazardEvent.id">
+    <ul v-for="hazardEvent in hazardDatasets" :key="hazardEvent.id">
       <li>
         <div class="table">
           <div class="table-header">
@@ -10,7 +10,7 @@
             </h3>
             <div>
               <a class="table-header-redirect">More infomation →</a>
-              <a href="" download="" class="table-header-download">Download ↓</a>
+              <a :href="hazardEvent.fileLink" download class="table-header-download">Download ↓</a>
             </div>
           </div>
           <div class="table-body">
@@ -46,6 +46,147 @@
         </div>
       </li>
     </ul>
+
+    <h2>Exposure datasets</h2>
+    <ul v-for="exposureEvent in exposureDatasets" :key="exposureEvent.id">
+      <li>
+        <div class="table">
+          <div class="table-header">
+            <h3 class="table-header-title">
+              {{ exposureEvent.title }}
+            </h3>
+            <div>
+              <a class="table-header-redirect">More infomation →</a>
+              <a :href="exposureEvent.fileLink" download class="table-header-download">Download ↓</a>
+            </div>
+          </div>
+          <div class="table-body">
+            <div class="table-cell">
+              <p class="table-value">{{exposureEvent.hazard}}</p>
+              <p class="table-subtitle">Hazard</p>
+            </div>
+            <div class="table-cell">
+              <p class="table-value">{{exposureEvent.region}}</p>
+              <p class="table-subtitle">Region</p>
+            </div>
+            <div class="table-cell">
+              <p class="table-value">{{exposureEvent.created}}</p>
+              <p class="table-subtitle">Created</p>
+            </div>
+            <div class="table-cell">
+              <p class="table-value">{{exposureEvent.publisher}}</p>
+              <p class="table-subtitle">Publisher</p>
+            </div>
+             <div class="table-cell">
+              <p class="table-value">{{exposureEvent.licence}}</p>
+              <p class="table-subtitle">Licence</p>
+            </div>
+            <div class="table-cell">
+              <p class="table-value">{{exposureEvent.fileType}}</p>
+              <p class="table-subtitle">File type</p>
+            </div>
+            <div class="table-cell">
+              <p class="table-value">{{exposureEvent.fileSize}}</p>
+              <p class="table-subtitle">File size</p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <h2>Vulnerability datasets</h2>
+    <ul v-for="vulnerabilityEvent in vulnerabilityDatasets" :key="vulnerabilityEvent.id">
+      <li>
+        <div class="table">
+          <div class="table-header">
+            <h3 class="table-header-title">
+              {{ vulnerabilityEvent.title }}
+            </h3>
+            <div>
+              <a class="table-header-redirect">More infomation →</a>
+              <a :href="vulnerabilityEvent.fileLink" download class="table-header-download">Download ↓</a>
+            </div>
+          </div>
+          <div class="table-body">
+            <div class="table-cell">
+              <p class="table-value">{{vulnerabilityEvent.hazard}}</p>
+              <p class="table-subtitle">Hazard</p>
+            </div>
+            <div class="table-cell">
+              <p class="table-value">{{vulnerabilityEvent.region}}</p>
+              <p class="table-subtitle">Region</p>
+            </div>
+            <div class="table-cell">
+              <p class="table-value">{{vulnerabilityEvent.created}}</p>
+              <p class="table-subtitle">Created</p>
+            </div>
+            <div class="table-cell">
+              <p class="table-value">{{vulnerabilityEvent.publisher}}</p>
+              <p class="table-subtitle">Publisher</p>
+            </div>
+             <div class="table-cell">
+              <p class="table-value">{{vulnerabilityEvent.licence}}</p>
+              <p class="table-subtitle">Licence</p>
+            </div>
+            <div class="table-cell">
+              <p class="table-value">{{vulnerabilityEvent.fileType}}</p>
+              <p class="table-subtitle">File type</p>
+            </div>
+            <div class="table-cell">
+              <p class="table-value">{{vulnerabilityEvent.fileSize}}</p>
+              <p class="table-subtitle">File size</p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <h2>Loss datasets</h2>
+    <ul v-for="lossDatasetsEvent in lossDatasets" :key="lossDatasetsEvent.id">
+      <li>
+        <div class="table">
+          <div class="table-header">
+            <h3 class="table-header-title">
+              {{ lossDatasetsEvent.title }}
+            </h3>
+            <div>
+              <a class="table-header-redirect">More infomation →</a>
+              <a :href="lossDatasetsEvent.fileLink" download class="table-header-download">Download ↓</a>
+            </div>
+          </div>
+          <div class="table-body">
+            <div class="table-cell">
+              <p class="table-value">{{lossDatasetsEvent.hazard}}</p>
+              <p class="table-subtitle">Hazard</p>
+            </div>
+            <div class="table-cell">
+              <p class="table-value">{{lossDatasetsEvent.region}}</p>
+              <p class="table-subtitle">Region</p>
+            </div>
+            <div class="table-cell">
+              <p class="table-value">{{lossDatasetsEvent.created}}</p>
+              <p class="table-subtitle">Created</p>
+            </div>
+            <div class="table-cell">
+              <p class="table-value">{{lossDatasetsEvent.publisher}}</p>
+              <p class="table-subtitle">Publisher</p>
+            </div>
+             <div class="table-cell">
+              <p class="table-value">{{lossDatasetsEvent.licence}}</p>
+              <p class="table-subtitle">Licence</p>
+            </div>
+            <div class="table-cell">
+              <p class="table-value">{{lossDatasetsEvent.fileType}}</p>
+              <p class="table-subtitle">File type</p>
+            </div>
+            <div class="table-cell">
+              <p class="table-value">{{lossDatasetsEvent.fileSize}}</p>
+              <p class="table-subtitle">File size</p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
   </span>
 </template>
 
@@ -62,10 +203,10 @@ export default {
   data () {
     return {
       siteData: [],
-      hazardDataset: [],
-      exposureDataset: [],
-      vulnerabilityDataset: [],
-      lossDataset: []
+      hazardDatasets: [],
+      exposureDatasets: [],
+      vulnerabilityDatasets: [],
+      lossDatasets: []
     }
   },
   created () {
@@ -73,16 +214,16 @@ export default {
     for (const key in this.siteData) {
       switch (key) {
         case HAZARD:
-          this.hazardDataset.push(...siteData.data["hazard"])
+          this.hazardDatasets.push(...siteData.data["hazard"])
           break;
         case EXPOSURE:
-          this.exposureDataset.push(...siteData.data["exposure"])
+          this.exposureDatasets.push(...siteData.data["exposure"])
           break;
         case VOLUNERABILITY:
-          this.vulnerabilityDataset.push(...siteData.data["vulnerability"])
+          this.vulnerabilityDatasets.push(...siteData.data["vulnerability"])
           break;
         case LOSS:
-          this.lossDataset.push(...siteData.data["loss"])
+          this.lossDatasets.push(...siteData.data["loss"])
           break;
         default:
           break;
