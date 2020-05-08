@@ -141,9 +141,6 @@ classDiagram
     link hazard_type "/" "To be determined"
 ```
 
-
-</details>
-
 ## Tables
 
 | table name     | short description                                                 |
