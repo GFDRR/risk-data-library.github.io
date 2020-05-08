@@ -41,10 +41,6 @@ pre {
   padding-left: rem-calc(154);
 }
 
-.container {
-  padding-right: rem-calc(169);
-  padding-left: rem-calc(154);
-}
 
 .landing-top-container {
   background-color: $light--primary-font-color
@@ -53,3 +49,25 @@ pre {
 .container-wrapper {
   max-width: 1200px;
 }
+
+.page-container {
+  padding-right: rem-calc(169);
+  padding-left: rem-calc(154);
+  margin-top: 91px;
+}
+
+.page-container-title {
+  font-family: $primary-font;
+  font-size: $title-font-size;
+  font-weight: $primary-font-weight;
+  color: $purple-primary-font-color;
+  margin-bottom: 57px;
+}
+
+.page-container-content>p {
+  font-family: $primary-font;
+  font-size: $paragraph-font-size;
+  font-weight: $normal-font-weight;
+  color: $dark-primary-font-color;
+}
+

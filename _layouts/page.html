@@ -2,13 +2,15 @@
 layout: default
 ---
 
-<div class="container">
+<div class="page-container">
   <article>
     <header>
-      <h1>{{ page.title }}</h1>
+      <h1 class="page-container-title">{{ page.title }}</h1>
     </header>
     <section>
-      {{ content }}
+      <div class="page-container-content">
+        {{content }}
+      </div>
     </section>
   </article>
 </div>
