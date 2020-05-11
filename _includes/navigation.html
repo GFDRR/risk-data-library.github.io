@@ -2,7 +2,7 @@
   <div class="navigation-left"><a href="{{ site.baseurl }}/" title="link to home of {{ site.title }}">{{ site.title }}</a></div>
   <nav class="navigation-right">
     {% for item in site.data.navigation %}
-    <a href="{{item.link}}" {% if page.url == item.link %} class="selected-tab" {% endif %}>{{item.name}}</a>
+    <a href="{{item.link}}" {% if page.url contains item.link %} class="selected-tab" {% endif %}>{{item.name}}{{url}}</a>
     {% endfor %}
   </nav>
 </div>
