@@ -55,7 +55,9 @@ $(document).ready(function () {
           ];
           if (metadata_fields.includes(key)) {
             return `<div class="table-cell">
-              <p class="table-value">${dataset[key]}</p>
+              <p class="table-value">${
+                (key == 'year_developed') ? (new Date(dataset[key])).toLocaleString('en-us', { year: 'numeric', month: 'short' }) : dataset[key]
+              }</p>
               <p class="table-subtitle">${(key[0].toUpperCase() + key.slice(1)).replace('_', ' ')}</p>
             </div>
             `;
