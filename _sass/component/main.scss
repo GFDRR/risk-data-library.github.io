@@ -5,8 +5,11 @@
   justify-content: space-between;
   margin-top: 59px;
   padding-bottom: 49px; 
-  border-bottom: solid 1px $grey-quaternary-font-color;
   max-width: 1600px;
+
+  &:not(:last-child) {
+    border-bottom: solid 1px $grey-quaternary-font-color;
+  }
 }
 
 .component-individual-left {
@@ -18,17 +21,8 @@
 }
 
 .component-individual-title {
-  font-family: $primary-font;
-  font-size: $quaternary-font-size;
   font-weight: $secondary-font-weight;
   color: $purple-primary-font-color;
-}
-
-.component-individual-subtitle {
-  font-family: $primary-font;
-  font-size: $tertiary-font-size;
-  font-weight: $normal-font-weight;
-  color: $dark-secondary-font-color;
 }
 
 .component-individual-paragraph {
@@ -39,9 +33,5 @@
 }
 
 .component-individual-link {
-  font-family: $secondary-font;
-  font-size: $primary-font-size;
-  font-weight: $normal-font-weight;
-  color: $purple-secondary-font-color;
   margin-top: 52px;
 }
