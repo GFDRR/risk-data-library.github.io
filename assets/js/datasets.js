@@ -3,6 +3,18 @@ $(document).ready(function () {
   const EXPOSURE = "exposure";
   const VULNERABILITY = "vulnerability";
   const LOSS = "loss";
+  const METADATA_FIELDS = [
+    "id",
+    "dataset_name",
+    "location",
+    "exposure_type",
+    "hazard_type",
+    "analysis_type",
+    "function_type",
+    "developed_by",
+    "year_developed",
+    "license"
+  ];
 
   $.get("https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev/datasets", function (data) {
     let hazardDatasets = null;
@@ -33,27 +45,7 @@ $(document).ready(function () {
     function render(dataset) {
       const metadata = Object.keys(dataset).map(function(key) {
         if (dataset[key]) {
-          var metadata_fields = [
-            "id",
-            "project",
-            "year_developed",
-            "developed_by",
-            "license",
-            "data_purpose",
-            "notes",
-            "version",
-            // "dataset",
-            // "dataset_name",
-            "location",
-            // "extent",
-            "analysis_type",
-            "exposure_type",
-            "hazard_type",
-            "process_type",
-            "intensity_measure",
-            "occurrence_probability"
-          ];
-          if (metadata_fields.includes(key)) {
+          if (METADATA_FIELDS.includes(key)) {
             return `<div class="table-cell">
               <p class="table-value">${
                 (key == 'year_developed') ? (new Date(dataset[key])).toLocaleString('en-us', { year: 'numeric', month: 'short' }) : dataset[key]
