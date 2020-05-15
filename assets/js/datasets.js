@@ -92,12 +92,12 @@ $(document).ready(function () {
       $("#exposure-datasets").append(render(exposureEvent));
     });
 
-    // // $.each(vulnerabilityDatasets, function (key, vulnerabilityEvent) {
-    // //   $("#vulnerability-datasets").append(appendData(vulnerabilityEvent));
-    // // });
+    $.each(vulnerabilityDatasets, function (key, vulnerabilityEvent) {
+      $("#vulnerability-datasets").append(render(vulnerabilityEvent));
+    });
 
-    // // $.each(lossDatasets, function (key, lossEvent) {
-    // //   $("#loss-datasets").append(appendData(lossEvent));
-    // // });
+    $.each(lossDatasets, function (key, lossEvent) {
+      $("#loss-datasets").append(render(lossEvent));
+    });
   });
 });
