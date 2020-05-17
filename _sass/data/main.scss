@@ -6,12 +6,6 @@
   padding-top: 91px;
 }
 
-.data-table {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-}
-
 .data-table-header-container {
   border-bottom: 1px solid $dark-divider-lines;
 }
@@ -30,7 +24,6 @@ tr.data-table-header-container>th:first-child, tr>td:first-child {
 tr>td:last-child {
   padding-right: 5px;
 }
-
 
 .data-table-cell {
   padding: 15px 20px;
@@ -52,5 +45,5 @@ tr>td:last-child {
 }
 
 .table-download-link {
-  width:20px;
+  width:15px;
 }

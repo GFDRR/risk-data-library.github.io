@@ -3,50 +3,12 @@ $(document).ready(function () {
   const EXPOSURE = "exposure";
   const VULNERABILITY = "vulnerability";
   const LOSS = "loss";
-  const HAZARD_METADATA_FIELDS = [
+  const METADATA_FIELDS = [
     // "id",
     "dataset_name",
     "location",
     "hazard_type",
     "analysis_type",
-    "developed_by",
-    "year_developed",
-    "license"
-  ];
-  const EXPOSURE_METADATA_FIELDS = [
-    // "id",
-    "dataset_name",
-    "location",
-    "exposure_type",
-    "developed_by",
-    "year_developed",
-    "license"
-  ];
-  const LOSS_METADATA_FIELDS = [
-    // "id",
-    "dataset_name",
-    "location",
-    "hazard_type",
-    "exposure_type",
-    "developed_by",
-    "year_developed",
-    "license"
-  ];
-  const VULNERABILITY_METADATA_FIELDS = [
-    // "id",
-    "dataset_name",
-    "hazard_type",
-    "exposure_type",
-    "function_type",
-    "developed_by",
-    "year_developed",
-    "license"
-  ];
-
-  const METADATA_FIELDS = [
-    // "id",
-    "dataset_name",
-    "hazard_type",
     "exposure_type",
     "function_type",
     "developed_by",
@@ -79,16 +41,6 @@ $(document).ready(function () {
           break;
       }
     } 
-
-    // if (METADATA_FIELDS.includes(key)) {
-    //   return `<div class="table-cell">
-    //           <p class="table-value">${
-    //     (key == 'year_developed') ? (new Date(dataset[key])).toLocaleString('en-us', { year: 'numeric', month: 'short' }) : dataset[key]
-    //     }</p>
-    //           <p class="table-subtitle">${(key[0].toUpperCase() + key.slice(1)).replace('_', ' ')}</p>
-    //         </div>
-    //         `;
-    // }
 
     function getHeadersFromData(dataset) {
       const header = Object.keys(dataset).map(function (key) {
