@@ -22,13 +22,12 @@
 // data
 @import "data/main";
 
+//footer
+@import "footer/main";
+
 body {
   margin: 0;
   padding: 0;
-}
-
-pre {
-  white-space: pre-wrap;
 }
 
 .navbar {
@@ -52,9 +51,6 @@ pre {
 }
 
 .page-container-title {
-  font-family: $primary-font;
-  font-size: $title-font-size;
-  font-weight: $primary-font-weight;
   color: $purple-primary-font-color;
   margin-bottom: 57px;
 }
@@ -72,4 +68,11 @@ pre {
 
 .container-wrapper {
   max-width: 1200px;
+}
+
+a.link {
+  font-family: $secondary-font;
+  font-size: $primary-font-size;
+  font-weight: $normal-font-weight;
+  color: $purple-secondary-font-color;
 }

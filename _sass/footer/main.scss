@@ -1,0 +1,33 @@
+.footer-container {
+  height: 161px;
+  background-color: $footer-background;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 50px 142px 50px 154px;
+}
+
+.footer-left a {
+  font-family: $secondary-font;
+  font-size: $secondary-font-size;
+  font-weight: $normal-font-weight;
+  line-height: 1.39;
+  color: $grey-primary-font-color;
+
+  &:first-child {
+    margin-right: 50px;
+  }
+}
+
+.footer-anchor {
+  font-family: $secondary-font;
+  font-size: $secondary-font-size;
+  font-weight: $normal-font-weight;
+  color: $purple-primary-font-color;
+  line-height: 61px;
+  width: 361px;
+  border: solid 1px $purple-primary-font-color;
+  text-align: center;
+  padding: 17px 105px 20px 92px;
+}
