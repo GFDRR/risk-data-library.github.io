@@ -3,13 +3,16 @@
 
 $primary-font: 'Manrope', sans-serif;
 $secondary-font: 'Open Sans', sans-serif;
+$tertiary-font: 'HelveticaNowText';
 
 $primary-font-weight: 800;
 $secondary-font-weight: 600;
 $tertiary-font-weight: 500;
 $normal-font-weight: normal;
 
+$extra-small-font-size: rem-calc(11);
 $small-font-size: rem-calc(12); 
+$medium-font-size: rem-calc(13);
 $primary-font-size: rem-calc(16); 
 $secondary-font-size: rem-calc(18); 
 $tertiary-font-size: rem-calc(20); 
