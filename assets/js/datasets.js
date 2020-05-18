@@ -43,13 +43,18 @@ $(document).ready(function () {
     } 
 
     function getHeadersFromData(dataset) {
-      const header = Object.keys(dataset).map(function (key) {
-        if (dataset[key]) {
-          if (METADATA_FIELDS.includes(key)) {
-            return`<th class="data-table-cell data-table-header">${key.toUpperCase().replace('_', ' ')}</th>`;
+      const keysFromDataset = Object.keys(dataset);
+      
+      const header = METADATA_FIELDS.map(function(key) {
+        console.log(key, keysFromDataset.includes(key));
+        
+
+          if (keysFromDataset.includes(key)) {
+            return `<th class="data-table-cell data-table-header">${key
+              .toUpperCase()
+              .replace("_", " ")}</th>`;
           }
-        }
-        return ''
+        return "";
       });
       return `
         <tr class="data-table-header-container">
@@ -60,54 +65,72 @@ $(document).ready(function () {
       `
     }
 
+    function transformDataValue(data) {
+      switch (data) {
+        case '':
+          return '-';
+        default:
+          return data;
+      }
+    }
 
-    function render(dataset) {
-      const metadata = Object.keys(dataset).map(function(key) {
-        if (dataset[key]) {
-          if (METADATA_FIELDS.includes(key)) {
-            return `
-              <td class="data-table-value data-table-cell">${
-                (key == 'year_developed') ? (new Date(dataset[key])).toLocaleString('en-us', { year: 'numeric', month: 'short' }) : dataset[key]
-              }</td>
- 
-            `;
-          }
+
+    function render(dataset, riskType) {
+      const keysFromDataset = Object.keys(dataset);
+
+      const metadata = METADATA_FIELDS.map(function(key) {
+        if (keysFromDataset.includes(key)) {
+          return `
+            <td class="data-table-value data-table-cell">${
+              key == "year_developed"
+                ? new Date(dataset[key]).toLocaleString("en-us", {
+                    year: "numeric",
+                    month: "short",
+                  })
+                : transformDataValue(dataset[key])
+            }</td>
+
+          `;
         }
-        return ''
+        return "";
       });
       
       return `
         <tr>
-          ${metadata.join('')}
-          <td class="data-table-value data-table-cell"><a class="table-header-redirect data-table-value">More→</a></td>
-          <td class="data-table-value data-table-cell"><a href="/${dataset.id}" download><img src="/assets/images/download_icon.png" class="table-download-link"></a></td>
+          ${metadata.join("")}
+          <td class="data-table-value data-table-cell"><a class="table-header-redirect data-table-value" href="/${riskType}/${dataset.id}" id="${dataset.id}">More→</a></td>
+          <td class="data-table-value data-table-cell"><a href="/${
+            dataset.id
+          }" download><img src="/assets/images/download_icon.png" class="table-download-link"></a></td>
         </tr>
-      `
+      `;
     }
     
 
     $("#hazard-datasets").append(getHeadersFromData(hazardDatasets[0]));
 
     $.each(hazardDatasets, function (key, hazardEvent){
-      $("#hazard-datasets").append(render(hazardEvent));
+      $("#hazard-datasets").append(render(hazardEvent, HAZARD));
     });
 
     $("#exposure-datasets").append(getHeadersFromData(exposureDatasets[0]));
 
     $.each(exposureDatasets, function (key, exposureEvent) {
-      $("#exposure-datasets").append(render(exposureEvent));
+      $("#exposure-datasets").append(render(exposureEvent, EXPOSURE));
     });
 
     $("#vulnerability-datasets").append(getHeadersFromData(vulnerabilityDatasets[0]));
 
     $.each(vulnerabilityDatasets, function (key, vulnerabilityEvent) {
-      $("#vulnerability-datasets").append(render(vulnerabilityEvent));
+      $("#vulnerability-datasets").append(
+        render(vulnerabilityEvent, VULNERABILITY)
+      );
     });
 
     $("#loss-datasets").append(getHeadersFromData(lossDatasets[0]));
 
     $.each(lossDatasets, function (key, lossEvent) {
-      $("#loss-datasets").append(render(lossEvent));
+      $("#loss-datasets").append(render(lossEvent, LOSS));
     });
 
   });
