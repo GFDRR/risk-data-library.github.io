@@ -43,13 +43,18 @@ $(document).ready(function () {
     } 
 
     function getHeadersFromData(dataset) {
-      const header = Object.keys(dataset).map(function (key) {
-        if (dataset[key]) {
-          if (METADATA_FIELDS.includes(key)) {
-            return`<th class="data-table-cell data-table-header">${key.toUpperCase().replace('_', ' ')}</th>`;
+      const keysFromDataset = Object.keys(dataset);
+      
+      const header = METADATA_FIELDS.map(function(key) {
+        console.log(key, keysFromDataset.includes(key));
+        
+
+          if (keysFromDataset.includes(key)) {
+            return `<th class="data-table-cell data-table-header">${key
+              .toUpperCase()
+              .replace("_", " ")}</th>`;
           }
-        }
-        return ''
+        return "";
       });
       return `
         <tr class="data-table-header-container">
@@ -60,29 +65,45 @@ $(document).ready(function () {
       `
     }
 
+    function transformDataValue(data) {
+      switch (data) {
+        case '':
+          return '-';
+        default:
+          return data;
+      }
+    }
+
 
     function render(dataset) {
-      const metadata = Object.keys(dataset).map(function(key) {
-        if (dataset[key]) {
-          if (METADATA_FIELDS.includes(key)) {
-            return `
-              <td class="data-table-value data-table-cell">${
-                (key == 'year_developed') ? (new Date(dataset[key])).toLocaleString('en-us', { year: 'numeric', month: 'short' }) : dataset[key]
-              }</td>
- 
-            `;
-          }
+      const keysFromDataset = Object.keys(dataset);
+
+      const metadata = METADATA_FIELDS.map(function(key) {
+        if (keysFromDataset.includes(key)) {
+          return `
+            <td class="data-table-value data-table-cell">${
+              key == "year_developed"
+                ? new Date(dataset[key]).toLocaleString("en-us", {
+                    year: "numeric",
+                    month: "short",
+                  })
+                : transformDataValue(dataset[key])
+            }</td>
+
+          `;
         }
-        return ''
+        return "";
       });
       
       return `
         <tr>
-          ${metadata.join('')}
-          <td class="data-table-value data-table-cell"><a class="table-header-redirect data-table-value">More→</a></td>
-          <td class="data-table-value data-table-cell"><a href="/${dataset.id}" download><img src="/assets/images/download_icon.png" class="table-download-link"></a></td>
+          ${metadata.join("")}
+          <td class="data-table-value data-table-cell"><a class="table-header-redirect data-table-value" href="#" id="${dataset.id}">More→</a></td>
+          <td class="data-table-value data-table-cell"><a href="/${
+            dataset.id
+          }" download><img src="/assets/images/download_icon.png" class="table-download-link"></a></td>
         </tr>
-      `
+      `;
     }
     
 
@@ -101,7 +122,9 @@ $(document).ready(function () {
     $("#vulnerability-datasets").append(getHeadersFromData(vulnerabilityDatasets[0]));
 
     $.each(vulnerabilityDatasets, function (key, vulnerabilityEvent) {
-      $("#vulnerability-datasets").append(render(vulnerabilityEvent));
+      $("#vulnerability-datasets").append(
+        render(vulnerabilityEvent)
+      );
     });
 
     $("#loss-datasets").append(getHeadersFromData(lossDatasets[0]));
