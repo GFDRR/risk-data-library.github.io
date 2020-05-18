@@ -75,7 +75,7 @@ $(document).ready(function () {
     }
 
 
-    function render(dataset, riskType) {
+    function render(dataset) {
       const keysFromDataset = Object.keys(dataset);
 
       const metadata = METADATA_FIELDS.map(function(key) {
@@ -98,7 +98,7 @@ $(document).ready(function () {
       return `
         <tr>
           ${metadata.join("")}
-          <td class="data-table-value data-table-cell"><a class="table-header-redirect data-table-value" href="/${riskType}/${dataset.id}" id="${dataset.id}">More→</a></td>
+          <td class="data-table-value data-table-cell"><a class="table-header-redirect data-table-value" href="#" id="${dataset.id}">More→</a></td>
           <td class="data-table-value data-table-cell"><a href="/${
             dataset.id
           }" download><img src="/assets/images/download_icon.png" class="table-download-link"></a></td>
@@ -110,27 +110,27 @@ $(document).ready(function () {
     $("#hazard-datasets").append(getHeadersFromData(hazardDatasets[0]));
 
     $.each(hazardDatasets, function (key, hazardEvent){
-      $("#hazard-datasets").append(render(hazardEvent, HAZARD));
+      $("#hazard-datasets").append(render(hazardEvent));
     });
 
     $("#exposure-datasets").append(getHeadersFromData(exposureDatasets[0]));
 
     $.each(exposureDatasets, function (key, exposureEvent) {
-      $("#exposure-datasets").append(render(exposureEvent, EXPOSURE));
+      $("#exposure-datasets").append(render(exposureEvent));
     });
 
     $("#vulnerability-datasets").append(getHeadersFromData(vulnerabilityDatasets[0]));
 
     $.each(vulnerabilityDatasets, function (key, vulnerabilityEvent) {
       $("#vulnerability-datasets").append(
-        render(vulnerabilityEvent, VULNERABILITY)
+        render(vulnerabilityEvent)
       );
     });
 
     $("#loss-datasets").append(getHeadersFromData(lossDatasets[0]));
 
     $.each(lossDatasets, function (key, lossEvent) {
-      $("#loss-datasets").append(render(lossEvent, LOSS));
+      $("#loss-datasets").append(render(lossEvent));
     });
 
   });
