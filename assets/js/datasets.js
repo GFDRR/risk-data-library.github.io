@@ -48,9 +48,6 @@ $(document).ready(function () {
       const keysFromDataset = Object.keys(dataset);
       
       const header = METADATA_FIELDS.map(function(key) {
-        console.log(key, keysFromDataset.includes(key));
-        
-
           if (keysFromDataset.includes(key)) {
             return `<th class="data-table-cell data-table-header">${key
               .toUpperCase()
