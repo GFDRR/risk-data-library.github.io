@@ -68,6 +68,7 @@ $(document).ready(function () {
     function transformDataValue(data) {
       switch (data) {
         case '':
+        case null:
           return '-';
         default:
           return data;
