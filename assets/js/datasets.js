@@ -16,9 +16,22 @@ $(document).ready(function () {
     "license"
   ];
 
-  const baseUrl = 'https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev';
+  $("#hazard-datasets").append(
+    "<p class='loading-text details-content'>Loading....</p>"
+  );
+  $("#exposure-datasets").append(
+    "<p class='loading-text details-content'>Loading....</p>"
+  );
+  $("#loss-datasets").append(
+    "<p class='loading-text details-content'>Loading....</p>"
+  );
+  $("#vulnerability-datasets").append(
+    "<p class='loading-text details-content'>Loading....</p>"
+  );
 
-  $.get(`${baseUrl}/datasets`, function (data) {
+  const BASE_URL = "https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev";
+
+  $.get(BASE_URL+"/datasets", function (data) {
     let hazardDatasets = null;
     let exposureDatasets = null;
     let vulnerabilityDatasets = null;
@@ -28,16 +41,16 @@ $(document).ready(function () {
     for (const key in siteData) {
       switch (key) {
         case HAZARD:
-          hazardDatasets = siteData[`${HAZARD}`]
+          hazardDatasets = siteData[HAZARD]
           break;
         case EXPOSURE:
-          exposureDatasets = siteData[`${EXPOSURE}`]
+          exposureDatasets = siteData[EXPOSURE]
           break;
         case VULNERABILITY:
-          vulnerabilityDatasets = siteData[`${VULNERABILITY}`]
+          vulnerabilityDatasets = siteData[VULNERABILITY]
           break;
         case LOSS:
-          lossDatasets = siteData[`${LOSS}`]
+          lossDatasets = siteData[LOSS]
           break;
         default:
           break;
@@ -49,29 +62,33 @@ $(document).ready(function () {
       
       const header = METADATA_FIELDS.map(function(key) {
           if (keysFromDataset.includes(key)) {
-            return `<th class="data-table-cell data-table-header">${key
-              .toUpperCase()
-              .replace("_", " ")}</th>`;
+            return "<th class='data-table-cell data-table-header'>"
+              + key.toUpperCase().replace("_", " ")
+              + "</th>";
           }
         return "";
       });
-      return `
-        <tr class="data-table-header-container">
-          ${header.join('')}
-          <th class="data-table-cell"></th>
-          <th class="data-table-cell"></th>
-        </tr>
-      `
+      return "<tr class='data-table-header-container'>"
+          + header.join('')
+          + "<th class='data-table-cell'></th>"
+          + "<th class='data-table-cell'></th>"
+        + "</tr>"
     }
 
     function transformDataValue(data) {
       switch (data) {
-        case '':
+        case "":
         case null:
-          return '-';
+          return "-";
         default:
           return data;
       }
+    }
+
+    function displayKeyValue(key, dataset) {
+      return key == "year_developed" 
+        ? new Date(dataset).toLocaleString("en-us", { year: "numeric", month: "short", })
+          : transformDataValue(dataset)
     }
 
 
@@ -80,31 +97,25 @@ $(document).ready(function () {
 
       const metadata = METADATA_FIELDS.map(function(key) {
         if (keysFromDataset.includes(key)) {
-          return `
-            <td class="data-table-value data-table-cell">${
-              key == "year_developed"
-                ? new Date(dataset[key]).toLocaleString("en-us", {
-                    year: "numeric",
-                    month: "short",
-                  })
-                : transformDataValue(dataset[key])
-            }</td>
-
-          `;
+          return "<td class='data-table-value data-table-cell'>"
+              + displayKeyValue(key, dataset[key])
+              + "</td>"
+          ;
         }
         return "";
       });
       
-      const downloadLink = `${baseUrl}/${schema}/${dataset.id}/datasets?format=csv`;
+      const downloadLink = BASE_URL+"/"+schema+"/"+dataset.id+"/"+"datasets?format=csv";
 
-      return `
-        <tr>
-          ${metadata.join("")}
-          <td class="data-table-value data-table-cell"><a class="table-header-redirect data-table-value" href="#" id="${dataset.id}">More→</a></td>
-          <td class="data-table-value data-table-cell"><a href="${downloadLink}" download><img src="/assets/images/download_icon.png" class="table-download-link"></a></td>
-        </tr>
-      `;
+      return "<tr>"
+          + metadata.join("")
+          + "<td class='data-table-value data-table-cell'><a class='table-header-redirect data-table-value' href='/data-details#" + schema + "=" + dataset.id +"'" + "id='"+ dataset.id +"'>More→</a></td>"
+          + "<td class='data-table-value data-table-cell'><a href='"+ downloadLink + "' download>"
+          + "<img src='assets/images/download_icon.png' class='table-download-link'></a></td>"
+        + "</tr>";
     }
+
+    $("p.loading-text").remove();
     
     $("#hazard-datasets").append(getHeadersFromData(hazardDatasets[0]));
 

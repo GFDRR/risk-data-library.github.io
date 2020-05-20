@@ -8,13 +8,13 @@
 }
 
 .description-title {
-  color: $light--primary-font-color;
+  color: $light-primary-font-color;
 }
 
 .description-paragraph {
   font-family: $secondary-font;
   font-size: $tertiary-font-size;
-  color: $light--primary-font-color;
+  color: $light-primary-font-color;
   font-weight: $normal-font-weight;
 }
 
@@ -22,10 +22,10 @@
   font-family: $secondary-font;
   font-size: $secondary-font-size;
   font-weight: $normal-font-weight;
-  color: $light--primary-font-color;
+  color: $light-primary-font-color;
   line-height: 44px;
   width: 316px;
-  border: solid 1px $light--primary-font-color;
+  border: solid 1px $light-primary-font-color;
   text-align: center;
   margin-top: 70px;
 }

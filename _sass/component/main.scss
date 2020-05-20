@@ -1,23 +1,7 @@
 .component-individual {
-  display: flex;
-  flex-direction: row;
-  padding-bottom: rem-calc(90);
-  justify-content: space-between;
-  margin-top: 59px;
-  padding-bottom: 49px; 
-  max-width: 1600px;
-
   &:not(:last-child) {
     border-bottom: solid 1px $grey-quaternary-font-color;
   }
-}
-
-.component-individual-left {
-  width: 275px;
-}
-
-.component-individual-right {
-  width: 726px;
 }
 
 .component-individual-title {

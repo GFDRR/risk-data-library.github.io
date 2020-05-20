@@ -22,12 +22,19 @@
 // data
 @import "data/main";
 
+// data details
+@import "dataDetails/main";
+
 //footer
 @import "footer/main";
 
 body {
   margin: 0;
   padding: 0;
+}
+
+article {
+  min-height: 600px;
 }
 
 .navbar {
@@ -63,7 +70,7 @@ body {
 }
 
 .landing-top-container {
-  background-color: $light--primary-font-color
+  background-color: $light-primary-font-color
 }
 
 .container-wrapper {
@@ -75,4 +82,25 @@ a.link {
   font-size: $primary-font-size;
   font-weight: $normal-font-weight;
   color: $purple-secondary-font-color;
+}
+
+.reusable-component {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: rem-calc(90);
+  justify-content: space-between;
+  margin-top: 59px;
+  max-width: 1600px;
+}
+
+.reusable-component-left {
+  width: 275px;
+}
+
+.reusable-component-right {
+  width: 726px;
+}
+
+#hazard-datasets, #exposure-datasets, #loss-datasets, #vulnerability-datasets {
+  min-height: 200px;
 }
