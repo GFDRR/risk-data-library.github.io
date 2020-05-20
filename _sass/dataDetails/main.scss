@@ -1,0 +1,23 @@
+.dataDetails-title {
+  font-size: $quaternary-font-size;
+}
+
+.dataDetails-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  max-width: 800px;
+  border-bottom: solid 1px rgba(151, 151, 151, 0.3);
+  margin-top: 16px;
+  margin-bottom: 7px;
+}
+
+.dataDetails-content-left {
+  width: 170px;
+}
+
+.dataDetails-content-right {
+  margin-left: 150px;
+  width: 500px;
+  overflow-wrap: break-word;
+}
