@@ -33,6 +33,10 @@ body {
   padding: 0;
 }
 
+article {
+  min-height: 600px;
+}
+
 .navbar {
   background-color: $section-headers;
 }
@@ -66,7 +70,7 @@ body {
 }
 
 .landing-top-container {
-  background-color: $light--primary-font-color
+  background-color: $light-primary-font-color
 }
 
 .container-wrapper {
@@ -80,8 +84,21 @@ a.link {
   color: $purple-secondary-font-color;
 }
 
-#data-details {
-  min-height: 500px;
+.reusable-component {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: rem-calc(90);
+  justify-content: space-between;
+  margin-top: 59px;
+  max-width: 1600px;
+}
+
+.reusable-component-left {
+  width: 275px;
+}
+
+.reusable-component-right {
+  width: 726px;
 }
 
 #hazard-datasets, #exposure-datasets, #loss-datasets, #vulnerability-datasets {

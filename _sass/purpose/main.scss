@@ -1,20 +1,6 @@
 .purpose {
-  display: flex;
-  flex-direction: row;
   padding-top: rem-calc(96);
-  padding-bottom: rem-calc(90);
-  justify-content: space-between;
-  max-width: 1600px;
-  margin: 0 0 0 0;
-}
-
-.purpose-left {
-  width: 275px;
-}
-
-.purpose-right {
-  margin-top: rem-calc(21);
-  width: 726px;
+  margin: 0;
 }
 
 .purpose-title {

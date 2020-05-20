@@ -2,12 +2,8 @@ $(document).ready(function() {
   if (!window.location.hash) {
     window.location.href = "/data";
   } else {
-    const hashDetails = window.location.hash.substr(1).split("=");
-    const schema = `${hashDetails[0].charAt(0).toUpperCase()}${hashDetails[0].slice(1)}`;
-    $("h1.main-title")
-      .html(`${schema} Dataset`)
-      .addClass("dataDetails-title");
-
+    const BASE_URL =
+      "https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev";
     const METADATA_FIELDS = [
       "dataset_name", 
       "project_name", 
@@ -33,8 +29,20 @@ $(document).ready(function() {
       "extent"
     ];
 
-    const DATA_DETAILS_URL = "https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev/" +
-    hashDetails[0] + "/" + hashDetails[1];
+    const hashDetails = window.location.hash.substr(1).split("=");
+    const schema = hashDetails[0];
+    const dataId = hashDetails[1];
+    const riskType = schema.charAt(0).toUpperCase() + schema.slice(1);
+    $("h1.main-title")
+      .html(riskType + " Dataset")
+      .addClass("dataDetails-title");
+
+
+    const DATA_DETAILS_URL =
+      "https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev/" +
+      schema +
+      "/" +
+      dataId;
 
     $("#data-details").append("<p id='loading-text' class='details-content'>Loading....</p>")
 
@@ -100,7 +108,14 @@ $(document).ready(function() {
         return "";
       });
 
+
+      function downloadData(data){
+        const downloadLink = BASE_URL+"/"+schema+"/"+data.id+"/"+"datasets?format=csv";
+        return "<a href='" + downloadLink + "' download class='dataDetails-download-link'>Download <span>CSV</span></a>";
+      };
+
       $("#data-details").append(renderHeader(data[0])); 
+      $("#data-details").append(downloadData(data[0])); 
       $("#data-details").append("<div class='dataDetails-content'>" + dataDetails.join('') + "</div>"); 
     });
   }

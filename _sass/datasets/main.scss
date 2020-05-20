@@ -3,9 +3,9 @@
   flex-direction: row;
   padding-bottom: rem-calc(90);
   justify-content: space-between;
-  margin-top: 59px;
+  padding-top: 59px;
   padding-bottom: 49px; 
-  border-bottom: solid 1px $grey-quaternary-font-color;
+  border-top: solid 1px $grey-quaternary-font-color;
   max-width: 1600px;
 }
 

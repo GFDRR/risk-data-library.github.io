@@ -38,7 +38,7 @@ h3.subtitle {
   font-weight: $tertiary-font-weight;
 }
 
-h4.paragraph-title {
+h4.reusable-title {
   font-family: $primary-font;
   font-size: $quaternary-font-size;
 }
@@ -50,14 +50,14 @@ h5.subtitle-description {
   color: $dark-secondary-font-color;
 }
 
-p.paragraph-subtitle {
+p.reusable-subtitle {
   font-family: $primary-font;
   font-size: $tertiary-font-size;
   font-weight: $normal-font-weight;
   color: $dark-secondary-font-color;
 }
 
-p.paragraph-content {
+p.reusable-content {
   font-family: $secondary-font;
   font-size: $primary-font-size;
   font-weight: $normal-font-weight;

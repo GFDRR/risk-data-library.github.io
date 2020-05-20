@@ -42,3 +42,22 @@ h2.dataDetails-subtitle {
   width: 500px;
   overflow-wrap: break-word;
 }
+
+.dataDetails-download-link {
+  width: 193px;
+  border: solid 1px $purple-primary-font-color;
+  background-color: $purple-primary-font-color;
+  font-family: $primary-font;
+  font-size: $secondary-font-size;
+  font-weight: $normal-font-weight;
+  color: $light-primary-font-color;
+  padding: 6px 18px 11px 16px;
+
+  span {
+    opacity: 0.5;
+  }
+
+  &:hover {
+    color: darken( $light-primary-font-color, 20% );
+  }
+}
