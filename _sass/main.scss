@@ -79,3 +79,11 @@ a.link {
   font-weight: $normal-font-weight;
   color: $purple-secondary-font-color;
 }
+
+#data-details {
+  min-height: 500px;
+}
+
+#hazard-datasets, #exposure-datasets, #loss-datasets, #vulnerability-datasets {
+  min-height: 200px;
+}

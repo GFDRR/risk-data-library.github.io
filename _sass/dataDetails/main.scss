@@ -1,8 +1,29 @@
-.dataDetails-title {
+h1.dataDetails-title {
   font-size: $quaternary-font-size;
+  margin-bottom: 0;
+}
+
+h2.dataDetails-subtitle {
+  font-family: $primary-font;
+  font-size: $title-font-size;
+  font-weight: $primary-font-weight;
+  color: $purple-primary-font-color;
+}
+
+.dataDetails-project {
+  font-family: $primary-font;
+  font-size: $tertiary-font-size;
+  font-weight: $normal-font-weight;
+  color: $dark-primary-font-color;
+  margin-bottom: 40px;
+  margin-top: 30px;
 }
 
 .dataDetails-content {
+  margin-bottom: 70px;
+}
+
+.dataDetails-list {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -12,11 +33,11 @@
   margin-bottom: 7px;
 }
 
-.dataDetails-content-left {
+.dataDetails-list-left {
   width: 170px;
 }
 
-.dataDetails-content-right {
+.dataDetails-list-right {
   margin-left: 150px;
   width: 500px;
   overflow-wrap: break-word;

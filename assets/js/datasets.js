@@ -16,9 +16,22 @@ $(document).ready(function () {
     "license"
   ];
 
-  const baseUrl = "https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev";
+  $("#hazard-datasets").append(
+    "<p class='loading-text details-content'>Loading....</p>"
+  );
+  $("#exposure-datasets").append(
+    "<p class='loading-text details-content'>Loading....</p>"
+  );
+  $("#loss-datasets").append(
+    "<p class='loading-text details-content'>Loading....</p>"
+  );
+  $("#vulnerability-datasets").append(
+    "<p class='loading-text details-content'>Loading....</p>"
+  );
 
-  $.get(baseUrl+"/datasets", function (data) {
+  const BASE_URL = "https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev";
+
+  $.get(BASE_URL+"/datasets", function (data) {
     let hazardDatasets = null;
     let exposureDatasets = null;
     let vulnerabilityDatasets = null;
@@ -92,7 +105,7 @@ $(document).ready(function () {
         return "";
       });
       
-      const downloadLink = baseUrl+"/"+schema+"/"+dataset.id+"/"+"datasets?format=csv";
+      const downloadLink = BASE_URL+"/"+schema+"/"+dataset.id+"/"+"datasets?format=csv";
 
       return "<tr>"
           + metadata.join("")
@@ -101,6 +114,8 @@ $(document).ready(function () {
           + "<img src='assets/images/download_icon.png' class='table-download-link'></a></td>"
         + "</tr>";
     }
+
+    $("p.loading-text").remove();
     
     $("#hazard-datasets").append(getHeadersFromData(hazardDatasets[0]));
 
