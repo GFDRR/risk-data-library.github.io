@@ -3,6 +3,9 @@ author:
   name: Global Facility for Disaster Reduction and Recovery
 markdown: kramdown
 
+api:
+  baseUrl: https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev
+
 sass:
   # sass_dir: _sass -- default
   style: compressed

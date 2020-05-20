@@ -16,7 +16,9 @@ $(document).ready(function () {
     "license"
   ];
 
-  $.get("https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev/datasets", function (data) {
+  const baseUrl = 'https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev';
+
+  $.get(`${baseUrl}/datasets`, function (data) {
     let hazardDatasets = null;
     let exposureDatasets = null;
     let vulnerabilityDatasets = null;
@@ -73,7 +75,7 @@ $(document).ready(function () {
     }
 
 
-    function render(dataset, riskType) {
+    function render(dataset, schema) {
       const keysFromDataset = Object.keys(dataset);
 
       const metadata = METADATA_FIELDS.map(function(key) {
@@ -93,20 +95,17 @@ $(document).ready(function () {
         return "";
       });
       
+      const downloadLink = `${baseUrl}/${schema}/${dataset.id}/datasets?format=csv`;
+
       return `
         <tr>
           ${metadata.join("")}
-          <td class="data-table-value data-table-cell"><a class="table-header-redirect data-table-value" href="/data-details" id="${riskType}=${
-        dataset.id
-      }">More→</a></td>
-          <td class="data-table-value data-table-cell"><a href="/${
-            dataset.id
-          }" download><img src="/assets/images/download_icon.png" class="table-download-link"></a></td>
+          <td class="data-table-value data-table-cell"><a class="table-header-redirect data-table-value" href="#" id="${dataset.id}">More→</a></td>
+          <td class="data-table-value data-table-cell"><a href="${downloadLink}" download><img src="/assets/images/download_icon.png" class="table-download-link"></a></td>
         </tr>
       `;
     }
     
-
     $("#hazard-datasets").append(getHeadersFromData(hazardDatasets[0]));
 
     $.each(hazardDatasets, function (key, hazardEvent){
