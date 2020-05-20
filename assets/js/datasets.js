@@ -46,9 +46,6 @@ $(document).ready(function () {
       const keysFromDataset = Object.keys(dataset);
       
       const header = METADATA_FIELDS.map(function(key) {
-        console.log(key, keysFromDataset.includes(key));
-        
-
           if (keysFromDataset.includes(key)) {
             return `<th class="data-table-cell data-table-header">${key
               .toUpperCase()
@@ -76,7 +73,7 @@ $(document).ready(function () {
     }
 
 
-    function render(dataset) {
+    function render(dataset, riskType) {
       const keysFromDataset = Object.keys(dataset);
 
       const metadata = METADATA_FIELDS.map(function(key) {
@@ -99,7 +96,9 @@ $(document).ready(function () {
       return `
         <tr>
           ${metadata.join("")}
-          <td class="data-table-value data-table-cell"><a class="table-header-redirect data-table-value" href="#" id="${dataset.id}">More→</a></td>
+          <td class="data-table-value data-table-cell"><a class="table-header-redirect data-table-value" href="/data-details" id="${riskType}=${
+        dataset.id
+      }">More→</a></td>
           <td class="data-table-value data-table-cell"><a href="/${
             dataset.id
           }" download><img src="/assets/images/download_icon.png" class="table-download-link"></a></td>
@@ -111,28 +110,35 @@ $(document).ready(function () {
     $("#hazard-datasets").append(getHeadersFromData(hazardDatasets[0]));
 
     $.each(hazardDatasets, function (key, hazardEvent){
-      $("#hazard-datasets").append(render(hazardEvent));
+      $("#hazard-datasets").append(render(hazardEvent, HAZARD));
     });
 
     $("#exposure-datasets").append(getHeadersFromData(exposureDatasets[0]));
 
     $.each(exposureDatasets, function (key, exposureEvent) {
-      $("#exposure-datasets").append(render(exposureEvent));
+      $("#exposure-datasets").append(render(exposureEvent, EXPOSURE));
     });
 
     $("#vulnerability-datasets").append(getHeadersFromData(vulnerabilityDatasets[0]));
 
     $.each(vulnerabilityDatasets, function (key, vulnerabilityEvent) {
       $("#vulnerability-datasets").append(
-        render(vulnerabilityEvent)
+        render(vulnerabilityEvent, VULNERABILITY)
       );
     });
 
     $("#loss-datasets").append(getHeadersFromData(lossDatasets[0]));
 
     $.each(lossDatasets, function (key, lossEvent) {
-      $("#loss-datasets").append(render(lossEvent));
+      $("#loss-datasets").append(render(lossEvent, LOSS));
     });
 
+    $("a.table-header-redirect").click(function(e) {
+      window.location.href = '/data-details'
+      window.location.hash = $(this).attr("id");
+      console.log("window.location.href-->", window.location.href);
+      
+      // e.preventDefault();
+    });
   });
 });
