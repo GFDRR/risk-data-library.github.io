@@ -2,7 +2,7 @@
   "name": "Risk-Data Library",
   "version": "alpha",
   "hazard": [38],
-  "vulnerability": []
+  "vulnerability": [],
   "exposure": [],
   "loss": []
 }
