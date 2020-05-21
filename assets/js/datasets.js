@@ -96,7 +96,7 @@ $(document).ready(function () {
             month: "short",
           });
         case "exposure_type":
-          if (dataset === null | dataset == '') {
+          if (dataset === null || dataset == '') {
             return '-'
           }
           return dataset
