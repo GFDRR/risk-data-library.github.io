@@ -110,7 +110,7 @@ $(document).ready(function() {
       }
 
       const dataDetails = METADATA_FIELDS.map(function(key) {
-        if (Object.keys(data[0]).includes(key)) {
+        if (Object.keys(data[0]).indexOf(key) !== -1) {
           return (
             "<div class='dataDetails-list'>" +
             "<p class='dataDetails-list-left details-subtitle'>" +
