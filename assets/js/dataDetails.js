@@ -13,7 +13,7 @@ $(document).ready(function() {
       "process_type",  
       "analysis_type",
       "function_type",
-      "mode_type", 
+      "model_type", 
       "analysis_metric",
       "units",
       "loss_model_description",
@@ -22,7 +22,7 @@ $(document).ready(function() {
       "license", 
       "intensity_measure", 
       "occurrence_probability", 
-      "purpose", 
+      "data_purpose", 
       "notes", 
       "data_spatial_reference", 
       "data_version", 
@@ -53,10 +53,10 @@ $(document).ready(function() {
       function renderHeader(data) {
         return (
           "<h2 class='dataDetails-subtitle'>" +
-          data.dataset_name +
+          transformDataValue(data.dataset_name) +
           "</h1>" +
           "<p class='datasetDetails-project'>" +
-          data.project_name +
+          transformDataValue(data.project_name) +
           "</p>"
         );
       }
@@ -74,6 +74,7 @@ $(document).ready(function() {
       }
 
       function transformDataValue(data) {
+        
         switch (data) {
           case "":
           case null:
@@ -83,14 +84,30 @@ $(document).ready(function() {
         }
       }
 
-       function displayKeyValue(key, dataset) {
-         return key == "year_developed"
-           ? new Date(dataset).toLocaleString("en-us", {
-               year: "numeric",
-               month: "short",
-             })
-           : transformDataValue(dataset);
-       }
+      function displayKeyValue(key, dataset) {
+        switch (key) {
+          case "year_developed":
+            return new Date(dataset).toLocaleString("en-us", {
+              year: "numeric",
+              month: "short",
+            });
+          case "exposure_type":
+          case "analysis_metric":
+            return (
+              dataset &&
+              dataset
+                .replace("(", "")
+                .replace(")", "")
+                .split(",")
+                .filter(function(data) {
+                  return data.length > 0;
+                })
+                .join(", ")
+            );
+          default:
+            return transformDataValue(dataset);
+        }
+      }
 
       const dataDetails = METADATA_FIELDS.map(function(key) {
         if (Object.keys(data[0]).includes(key)) {
