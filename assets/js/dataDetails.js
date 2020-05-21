@@ -47,7 +47,6 @@ $(document).ready(function() {
     $("#data-details").append("<p id='loading-text' class='details-content'>Loading....</p>")
 
     $.get(DATA_DETAILS_URL, function(data) {
-      console.log(data);
       $("#loading-text").remove();
 
       function renderHeader(data) {
