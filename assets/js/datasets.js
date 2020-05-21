@@ -38,6 +38,7 @@ $(document).ready(function () {
     let lossDatasets = null;
 
     const siteData = JSON.parse(JSON.stringify(data));
+    // need var here as IE11 doesn't support const/let for in loop
     for (var key in siteData) {
       switch (key) {
         case HAZARD:
@@ -61,10 +62,12 @@ $(document).ready(function () {
       const keysFromDataset = Object.keys(dataset);
       
       const header = METADATA_FIELDS.map(function(key) {
-          if (keysFromDataset.includes(key)) {
-            return "<th class='data-table-cell data-table-header'>"
-              + key.toUpperCase().replace("_", " ")
-              + "</th>";
+          if (keysFromDataset.indexOf(key) !== -1) {
+            return (
+              "<th class='data-table-cell data-table-header'>" +
+              key.toUpperCase().replace("_", " ") +
+              "</th>"
+            );
           }
         return "";
       });
@@ -112,11 +115,12 @@ $(document).ready(function () {
       const keysFromDataset = Object.keys(dataset);
 
       const metadata = METADATA_FIELDS.map(function(key) {
-        if (keysFromDataset.includes(key)) {
-          return "<td class='data-table-value data-table-cell'>"
-              + displayKeyValue(key, dataset[key])
-              + "</td>"
-          ;
+        if (keysFromDataset.indexOf(key) !== -1) {
+          return (
+            "<td class='data-table-value data-table-cell'>" +
+            displayKeyValue(key, dataset[key]) +
+            "</td>"
+          );
         }
         return "";
       });
