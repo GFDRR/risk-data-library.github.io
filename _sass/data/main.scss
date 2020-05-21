@@ -26,8 +26,16 @@ tr>td:last-child {
 }
 
 .data-table-cell {
-  padding: 15px 20px;
+  padding: 0.8em 1em;
   text-align: start;
+
+  @media only screen and (max-width: 900px) {
+    padding: 0.5em 0.8em;
+  }
+
+  @media only screen and (max-width: 700px) {
+    padding: 0.3em 0.5em;
+  }
 }
 
 .data-table-header {

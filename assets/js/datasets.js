@@ -96,7 +96,10 @@ $(document).ready(function () {
             month: "short",
           });
         case "exposure_type":
-          return dataset && dataset
+          if (dataset === null | dataset == '') {
+            return '-'
+          }
+          return dataset
             .replace("(", "")
             .replace(")", "")
             .split(",")
