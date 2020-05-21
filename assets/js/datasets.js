@@ -38,7 +38,7 @@ $(document).ready(function () {
     let lossDatasets = null;
 
     const siteData = JSON.parse(JSON.stringify(data));
-    for (const key in siteData) {
+    for (var key in siteData) {
       switch (key) {
         case HAZARD:
           hazardDatasets = siteData[HAZARD]
