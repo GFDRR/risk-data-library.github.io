@@ -41,7 +41,9 @@ h2.dataDetails-subtitle {
 .dataDetails-list-right {
   margin-left: 150px;
   width: 500px;
-  overflow-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  
 }
 
 .dataDetails-download-link {
