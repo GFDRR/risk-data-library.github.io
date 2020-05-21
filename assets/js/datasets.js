@@ -86,10 +86,26 @@ $(document).ready(function () {
     }
 
     function displayKeyValue(key, dataset) {
-      return key == "year_developed" 
-        ? new Date(dataset).toLocaleString("en-us", { year: "numeric", month: "short", })
-          : transformDataValue(dataset)
+      switch (key) {
+        case "year_developed":
+          return new Date(dataset).toLocaleString("en-us", {
+            year: "numeric",
+            month: "short",
+          });
+        case "exposure_type":
+          return dataset && dataset
+            .replace("(", "")
+            .replace(")", "")
+            .split(",")
+            .filter(function(data) {
+              return data.length > 0;
+            })
+            .join(", ");
+        default:
+          return transformDataValue(dataset);
+      }
     }
+
 
 
     function render(dataset, schema) {
