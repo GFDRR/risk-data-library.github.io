@@ -5,6 +5,11 @@
   padding-right: rem-calc(562);
   padding-bottom: rem-calc(92);
   padding-left: rem-calc(154);
+
+  @media only screen and (max-width: 1200px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
 
 .description-title {
