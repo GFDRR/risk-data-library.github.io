@@ -130,12 +130,23 @@ $(document).ready(function () {
       
       const downloadLink = BASE_URL+"/"+schema+"/"+dataset.id+"/"+"datasets?format=csv";
 
-      return "<tr>"
-          + metadata.join("")
-          + "<td class='data-table-value data-table-cell'><a class='table-header-redirect data-table-value' href='/data-details#" + schema + "=" + dataset.id +"'" + "id='"+ dataset.id +"'>More→</a></td>"
-          + "<td class='data-table-value data-table-cell'><a href='"+ downloadLink + "' download>"
-          + "<img src='assets/images/download_icon.png' class='table-download-link'></a></td>"
-        + "</tr>";
+      return (
+        "<tr>" +
+        metadata.join("") +
+        "<td class='data-table-value data-table-cell'><a class='table-header-redirect data-table-value' href='/data-details#" +
+        schema +
+        "=" +
+        dataset.id +
+        "'" +
+        "id='" +
+        dataset.id +
+        "'>More→</a></td>" +
+        "<td class='data-table-value data-table-cell'><a href='" +
+        downloadLink +
+        "' download target='_blank'>" +
+        "<img src='assets/images/download_icon.png' class='table-download-link'></a></td>" +
+        "</tr>"
+      );
     }
 
     $("p.loading-text").remove();

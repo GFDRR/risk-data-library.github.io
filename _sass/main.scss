@@ -28,13 +28,23 @@
 //footer
 @import "footer/main";
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
-article {
-  min-height: 600px;
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .navbar {

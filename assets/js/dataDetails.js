@@ -127,7 +127,7 @@ $(document).ready(function() {
 
       function downloadData(data){
         const downloadLink = BASE_URL+"/"+schema+"/"+data.id+"/"+"datasets?format=csv";
-        return "<a href='" + downloadLink + "' download class='dataDetails-download-link'>Download <span>CSV</span></a>";
+        return "<a href='" + downloadLink + "' download class='dataDetails-download-link' target='_blank'>Download <span>CSV</span></a>";
       };
 
       $("#data-details").append(renderHeader(data[0])); 

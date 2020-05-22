@@ -12,7 +12,7 @@ sass:
 
 collections:
   components:
-    permalink: /:collection/:name
+    # permalink: /:collection/:name
     sort_by: order
     output: true
   documentation:
