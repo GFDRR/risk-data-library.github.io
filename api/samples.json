@@ -13,10 +13,64 @@
       "value": "Shows typical return period set of data for a key country and peril. Links to exposure data developed under the same project"
     },
     {
-      "title": "example 3",
-      "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+      "id": 38,
+      "schema": "hazard",
+      "description": "Volcanic hazard (ashfall) footprint at Rungwe, Tanzania for three scenarios, each with 1000 realisations",
+      "value": "Demo of the multiple events and footprint uncertainty capabilities"
+    }
+  ],
+  "exposure": [
+    {
+      "id": 115,
+      "schema": "exposure",
+      "description": "Tanzania roads data using GED4ALL taxonomy",
+      "value": "Demo of network transport infrastructure data, coincides with TZ volcanic data"
+    },
+    {
+      "id": 143,
+      "schema": "exposure",
+      "description": "Argentina data with nighttime occupancy",
+      "value": "Building distribution, GEM taxonomy, open licence, includes nightime occupancy."
+    },
+    {
+      "id": 164,
+      "schema": "exposure",
+      "description": "Madagascar aggregate building exposure",
+      "value": "Exposure data developed under same project as two sample hazard data sets. Typical aggregate building data"
+    }
+  ],
+  "loss": [
+    {
+      "id": 75,
       "schema": "loss",
-      "download_link": "https://risk-data-library-storage.s3-ap-southeast-2.amazonaws.com/datasets/monsters.csv",
+      "description": "SWIO return period losses for Madagascar (EQ, TC, All perils)",
+      "value": "Demo of AAL losses and EP curve typical of a probabilistic risk assessment. Linking to sample EXP/HAZ data"
+    },
+    {
+      "id": 76,
+      "schema": "loss",
+      "description": "SWIO return period losses for Madagascar (EQ, TC, All perils)",
+      "value": "Demo of AAL losses and EP curve typical of a probabilistic risk assessment. Linking to sample EXP/HAZ data"
+    },
+    {
+      "id": 78,
+      "schema": "loss",
+      "description": "SWIO return period losses for Madagascar (EQ, TC, All perils)",
+      "value": "Demo of AAL losses and EP curve typical of a probabilistic risk assessment. Linking to sample EXP/HAZ data"
+    }
+  ],
+  "vulnerability": [
+    {
+      "id": 20,
+      "schema": "vulnerability",
+      "description": "TS fragility curves for residential buildings",
+      "value": "Demo of F curves with parameter values relating intensity to probability of N damage states"
+    },
+    {
+      "id": 99,
+      "schema": "vulnerability",
+      "description": "EQ building V curves for TZA-ETH-MWI relating MMI to economic loss",
+      "value": "Demo of V curves with parameter values, relating intensity to loss"
     }
   ]
 }
