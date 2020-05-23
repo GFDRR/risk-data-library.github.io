@@ -36,16 +36,12 @@ html {
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
-// footer {
-//   position: absolute;
-//   left: 0;
-//   bottom: 0;
-//   // height: 100px;
-//   // width: 100%;
-//   overflow: hidden;
-// }
+article {
+  min-height: 100vh;
+}
 
 .navbar {
   background-color: $section-headers;
@@ -155,7 +151,7 @@ table {
   color: $purple-primary-font-color;
   line-height: 42px;
 
-  @media only screen and (max-width: 960px) {
+  @media only screen and (max-width: 1000px) {
     font-size:1.5em;
   }
 }
