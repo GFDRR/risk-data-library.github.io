@@ -34,7 +34,7 @@ body {
 }
 
 article {
-  min-height: 600px;
+  min-height: 100vh;
 }
 
 .navbar {
@@ -145,7 +145,7 @@ table {
   color: $purple-primary-font-color;
   line-height: 42px;
 
-  @media only screen and (max-width: 960px) {
+  @media only screen and (max-width: 1000px) {
     font-size:1.5em;
   }
 }

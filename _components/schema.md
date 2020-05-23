@@ -1,6 +1,7 @@
 ---
 name: The schema
 order: 1
+link: /schema
 category: homepage
 subtitle: A single system for describing all risk data
 anchor: Learn More →

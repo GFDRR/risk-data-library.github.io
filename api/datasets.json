@@ -1,8 +1,0 @@
-{
-  "name": "Risk-Data Library",
-  "version": "alpha",
-  "hazard": [21, 18, 38],
-  "vulnerability": [20, 99],
-  "exposure": [164, 143, 115],
-  "loss": [[73,74,76], [75,76,78]]
-}
