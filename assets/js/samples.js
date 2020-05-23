@@ -113,7 +113,6 @@ $(document).ready(function () {
                 eachData.download_link +
                 "' download target='_blank'>" +
                 "Download " +
-                // eachData.dataset_name +
                 " dataset" +
                 "</a>" +
                 "</li>"
