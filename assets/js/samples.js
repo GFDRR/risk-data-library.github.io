@@ -62,7 +62,13 @@ $(document).ready(function () {
                 description: request.description,
                 value: request.value,
                 schema: request.schema,
-                download_link: BASE_URL + "/" + request.schema + "/" + sample.id + "?format=csv"
+                download_link:
+                  BASE_URL +
+                  "/" +
+                  request.schema +
+                  "/" +
+                  sample.id +
+                  "/datasets?format=csv",
               });
             }
           }
