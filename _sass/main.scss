@@ -109,9 +109,9 @@ a.link {
 .reusable-component {
   display: flex;
   flex-direction: row;
-  padding-bottom: rem-calc(90);
   justify-content: space-between;
-  margin-top: 59px;
+  padding-top: 59px;
+  padding-bottom: 90px;
   max-width: 1600px;
 }
 
