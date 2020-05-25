@@ -17,10 +17,10 @@
 .header-left a {
   font-family: $primary-font;
   font-size: $secondary-font-size;
-  color: $light--primary-font-color;
+  color: $light-primary-font-color;
   opacity: 1;
   
   &:hover {
-    color: darken( $light--primary-font-color, 20% );
+    color: darken( $light-primary-font-color, 20% );
   }
 }
