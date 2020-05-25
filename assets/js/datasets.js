@@ -116,7 +116,6 @@ $(document).ready(function () {
 
     function render(dataset, schema) {
       const keysFromDataset = Object.keys(dataset);
-
       const metadata = METADATA_FIELDS.map(function(key) {
         if (keysFromDataset.indexOf(key) !== -1) {
           return (
@@ -128,8 +127,6 @@ $(document).ready(function () {
         return "";
       });
       
-      const downloadLink = BASE_URL+"/"+schema+"/"+dataset.id+"/"+"datasets?format=csv";
-
       return (
         "<tr>" +
         metadata.join("") +
@@ -142,7 +139,7 @@ $(document).ready(function () {
         dataset.id +
         "'>More→</a></td>" +
         "<td class='data-table-value data-table-cell'><a href='" +
-        downloadLink +
+        dataset.download_link +
         "' download target='_blank'>" +
         "<img src='assets/images/download_icon.png' class='table-download-link'></a></td>" +
         "</tr>"
