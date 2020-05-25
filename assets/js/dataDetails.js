@@ -2,8 +2,6 @@ $(document).ready(function() {
   if (!window.location.hash) {
     window.location.href = "/data";
   } else {
-    const BASE_URL =
-      "https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev";
     const METADATA_FIELDS = [
       "dataset_name", 
       "project_name", 
@@ -126,8 +124,7 @@ $(document).ready(function() {
 
 
       function downloadData(data){
-        const downloadLink = BASE_URL+"/"+schema+"/"+data.id+"/"+"datasets?format=csv";
-        return "<a href='" + downloadLink + "' download class='dataDetails-download-link' target='_blank'>Download <span>CSV</span></a>";
+        return "<a href='" + data.download_link + "' download class='dataDetails-download-link' target='_blank'>Download <span>CSV</span></a>";
       };
 
       $("#data-details").append(renderHeader(data[0])); 
