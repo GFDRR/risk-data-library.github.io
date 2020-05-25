@@ -1,11 +1,11 @@
 .review-questions {
   display: flex;
   flex-direction: row;
-  padding-top: rem-calc(96);
-  padding-bottom: rem-calc(90);
+  padding-top: 50px;
+  padding-bottom: 49px;
   justify-content: space-between;
   max-width: 1600px;
-  margin: 0 0 0 0;
+  border-top: solid 1px $grey-quaternary-font-color;
 }
 
 .review-questions-left {
@@ -14,14 +14,6 @@
 
 .review-questions-right {
   width: 726px;
-}
-
-.review-questions-title {
-  font-family: $primary-font;
-  font-size: $quaternary-font-size;
-  font-weight: $secondary-font-weight;
-  color: $purple-primary-font-color;
-  line-height: 42px;
 }
 
 .review-questions-paragraph, .review-questions-list {

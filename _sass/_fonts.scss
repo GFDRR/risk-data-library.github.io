@@ -24,6 +24,8 @@ $title-font-size: rem-calc(50);
 $primary-opacity: 1;
 $secondary-opacity: 0.75;
 
+
+// common fonts
 h1.main-title {
   font-family: $primary-font;
   font-size: $title-font-size;
@@ -36,7 +38,7 @@ h3.subtitle {
   font-weight: $tertiary-font-weight;
 }
 
-h4.paragraph-title {
+h4.reusable-title {
   font-family: $primary-font;
   font-size: $quaternary-font-size;
 }
@@ -48,16 +50,30 @@ h5.subtitle-description {
   color: $dark-secondary-font-color;
 }
 
-p.paragraph-subtitle {
+p.reusable-subtitle {
   font-family: $primary-font;
   font-size: $tertiary-font-size;
   font-weight: $normal-font-weight;
   color: $dark-secondary-font-color;
 }
 
-p.paragraph-content {
-   font-family: $secondary-font;
+p.reusable-content {
+  font-family: $secondary-font;
   font-size: $primary-font-size;
   font-weight: $normal-font-weight;
   color: $grey-primary-font-color;
+}
+
+p.details-subtitle {
+  font-family: $primary-font;
+  font-size: $primary-font-size;
+  font-weight: $normal-font-weight;
+  color: $grey-primary-font-color;
+}
+
+p.details-content {
+  font-family: $primary-font;
+  font-size: $primary-font-size;
+  font-weight: $normal-font-weight;
+  color: $dark-primary-font-color;
 }

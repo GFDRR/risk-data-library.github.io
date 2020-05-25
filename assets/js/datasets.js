@@ -16,28 +16,42 @@ $(document).ready(function () {
     "license"
   ];
 
-  const baseUrl = 'https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev';
+  $("#hazard-datasets").append(
+    "<p class='loading-text details-content'>Loading....</p>"
+  );
+  $("#exposure-datasets").append(
+    "<p class='loading-text details-content'>Loading....</p>"
+  );
+  $("#loss-datasets").append(
+    "<p class='loading-text details-content'>Loading....</p>"
+  );
+  $("#vulnerability-datasets").append(
+    "<p class='loading-text details-content'>Loading....</p>"
+  );
 
-  $.get(`${baseUrl}/datasets`, function (data) {
+  const BASE_URL = "https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev";
+
+  $.get(BASE_URL+"/datasets", function (data) {
     let hazardDatasets = null;
     let exposureDatasets = null;
     let vulnerabilityDatasets = null;
     let lossDatasets = null;
 
     const siteData = JSON.parse(JSON.stringify(data));
-    for (const key in siteData) {
+    // need var here as IE11 doesn't support const/let for in loop
+    for (var key in siteData) {
       switch (key) {
         case HAZARD:
-          hazardDatasets = siteData[`${HAZARD}`]
+          hazardDatasets = siteData[HAZARD]
           break;
         case EXPOSURE:
-          exposureDatasets = siteData[`${EXPOSURE}`]
+          exposureDatasets = siteData[EXPOSURE]
           break;
         case VULNERABILITY:
-          vulnerabilityDatasets = siteData[`${VULNERABILITY}`]
+          vulnerabilityDatasets = siteData[VULNERABILITY]
           break;
         case LOSS:
-          lossDatasets = siteData[`${LOSS}`]
+          lossDatasets = siteData[LOSS]
           break;
         default:
           break;
@@ -48,63 +62,91 @@ $(document).ready(function () {
       const keysFromDataset = Object.keys(dataset);
       
       const header = METADATA_FIELDS.map(function(key) {
-          if (keysFromDataset.includes(key)) {
-            return `<th class="data-table-cell data-table-header">${key
-              .toUpperCase()
-              .replace("_", " ")}</th>`;
+          if (keysFromDataset.indexOf(key) !== -1) {
+            return (
+              "<th class='data-table-cell data-table-header'>" +
+              key.toUpperCase().replace("_", " ") +
+              "</th>"
+            );
           }
         return "";
       });
-      return `
-        <tr class="data-table-header-container">
-          ${header.join('')}
-          <th class="data-table-cell"></th>
-          <th class="data-table-cell"></th>
-        </tr>
-      `
+      return "<tr class='data-table-header-container'>"
+          + header.join('')
+          + "<th class='data-table-cell'></th>"
+          + "<th class='data-table-cell'></th>"
+        + "</tr>"
     }
 
     function transformDataValue(data) {
       switch (data) {
-        case '':
+        case "":
         case null:
-          return '-';
+          return "-";
         default:
           return data;
       }
     }
 
+    function displayKeyValue(key, dataset) {
+      switch (key) {
+        case "year_developed":
+          return new Date(dataset).toLocaleString("en-us", {
+            year: "numeric",
+            month: "short",
+          });
+        case "exposure_type":
+          if (dataset === null || dataset == '') {
+            return '-'
+          }
+          return dataset
+            .replace("(", "")
+            .replace(")", "")
+            .split(",")
+            .filter(function(data) {
+              return data.length > 0;
+            })
+            .join(", ");
+        default:
+          return transformDataValue(dataset);
+      }
+    }
+
+
 
     function render(dataset, schema) {
       const keysFromDataset = Object.keys(dataset);
-
       const metadata = METADATA_FIELDS.map(function(key) {
-        if (keysFromDataset.includes(key)) {
-          return `
-            <td class="data-table-value data-table-cell">${
-              key == "year_developed"
-                ? new Date(dataset[key]).toLocaleString("en-us", {
-                    year: "numeric",
-                    month: "short",
-                  })
-                : transformDataValue(dataset[key])
-            }</td>
-
-          `;
+        if (keysFromDataset.indexOf(key) !== -1) {
+          return (
+            "<td class='data-table-value data-table-cell'>" +
+            displayKeyValue(key, dataset[key]) +
+            "</td>"
+          );
         }
         return "";
       });
       
-      const downloadLink = `${baseUrl}/${schema}/${dataset.id}/datasets?format=csv`;
-
-      return `
-        <tr>
-          ${metadata.join("")}
-          <td class="data-table-value data-table-cell"><a class="table-header-redirect data-table-value" href="#" id="${dataset.id}">More→</a></td>
-          <td class="data-table-value data-table-cell"><a href="${downloadLink}" download><img src="/assets/images/download_icon.png" class="table-download-link"></a></td>
-        </tr>
-      `;
+      return (
+        "<tr>" +
+        metadata.join("") +
+        "<td class='data-table-value data-table-cell'><a class='table-header-redirect data-table-value' href='/data-details#" +
+        schema +
+        "=" +
+        dataset.id +
+        "'" +
+        "id='" +
+        dataset.id +
+        "'>More→</a></td>" +
+        "<td class='data-table-value data-table-cell'><a href='" +
+        dataset.download_link +
+        "' download target='_blank'>" +
+        "<img src='assets/images/download_icon.png' class='table-download-link'></a></td>" +
+        "</tr>"
+      );
     }
+
+    $("p.loading-text").remove();
     
     $("#hazard-datasets").append(getHeadersFromData(hazardDatasets[0]));
 

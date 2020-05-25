@@ -22,6 +22,9 @@
 // data
 @import "data/main";
 
+// data details
+@import "dataDetails/main";
+
 //footer
 @import "footer/main";
 
@@ -30,24 +33,50 @@ body {
   padding: 0;
 }
 
+article {
+  min-height: 100vh;
+}
+
 .navbar {
   background-color: $section-headers;
 }
 
 .top-container {
   background-color: $section-headers;
+  padding-left: rem-calc(154);
+  padding-right: rem-calc(562);
+
+  @media only screen and (max-width: 1200px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
 
 .middle-container {
   background-color: $light-grey-background;
   padding-right: rem-calc(169);
   padding-left: rem-calc(154);
+
+  @media only screen and (max-width: 1200px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
 
 .page-container {
   padding-right: rem-calc(169);
   padding-left: rem-calc(154);
   margin-top: 91px;
+
+  @media only screen and (max-width: 1100px) {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+ @media only screen and (max-width: 900px) {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
 }
 
 .page-container-title {
@@ -63,7 +92,7 @@ body {
 }
 
 .landing-top-container {
-  background-color: $light--primary-font-color
+  background-color: $light-primary-font-color
 }
 
 .container-wrapper {
@@ -75,4 +104,48 @@ a.link {
   font-size: $primary-font-size;
   font-weight: $normal-font-weight;
   color: $purple-secondary-font-color;
+}
+
+.reusable-component {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 59px;
+  padding-bottom: 90px;
+  max-width: 1600px;
+}
+
+.reusable-component-left {
+  width: 275px;
+}
+
+.reusable-component-right {
+  width: 726px;
+}
+
+#hazard-datasets, #exposure-datasets, #loss-datasets, #vulnerability-datasets {
+  min-height: 200px;
+}
+
+
+table {
+  max-width: 1100px;
+  @media only screen and (max-width: 1100px) {
+    width: 900px!important;
+  }
+ @media only screen and (max-width: 900px) {
+    width: 700px!important;
+  }
+}
+
+.landing-page-component-title {
+  font-family: $primary-font;
+  font-size: $quaternary-font-size;
+  font-weight: $secondary-font-weight;
+  color: $purple-primary-font-color;
+  line-height: 42px;
+
+  @media only screen and (max-width: 1000px) {
+    font-size:1.5em;
+  }
 }

@@ -1,6 +1,7 @@
 ---
-name: The dataset
+name: The database
 order: 2
+link: /database
 category: homepage
 subtitle: Storing hazard, exposure, vulnerabilty and loss datasets together in the same environement.
 anchor: Learn More →

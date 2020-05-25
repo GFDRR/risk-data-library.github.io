@@ -3,9 +3,9 @@
   flex-direction: row;
   padding-bottom: rem-calc(90);
   justify-content: space-between;
-  margin-top: 59px;
+  padding-top: 59px;
   padding-bottom: 49px; 
-  border-bottom: solid 1px $grey-quaternary-font-color;
+  border-top: solid 1px $grey-quaternary-font-color;
   max-width: 1600px;
 }
 
@@ -17,20 +17,13 @@
   width: 726px;
 }
 
-.datasets-title {
-  font-family: $primary-font;
-  font-size: $quaternary-font-size;
-  font-weight: $secondary-font-weight;
-  color: $purple-primary-font-color;
-}
-
 .datasets ul {
   list-style-type: none;
   margin: 0;
 }
 
 .datasets li {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .datasets h4 {
