@@ -46,7 +46,7 @@ $(document).ready(function () {
       vulnerabilityIds;
   
     $.get(GET_SAMPLE_DATASET_URL, function(receivedSampleDataset) {
-
+      
       function mergedSampleAndRequestData(requestData, receivedSampleData) {
         let mergedData = [];
         for (var k in receivedSampleData) {
@@ -55,20 +55,13 @@ $(document).ready(function () {
             const request = requestData[j];
 
             if (sample.id === request.id) {
-              console.log("here!");
               mergedData.push({
                 id: sample.id,
                 dataset_name: sample.dataset_name,
                 description: request.description,
                 value: request.value,
                 schema: request.schema,
-                download_link:
-                  BASE_URL +
-                  "/" +
-                  request.schema +
-                  "/" +
-                  sample.id +
-                  "/datasets?format=csv",
+                download_link: sample.download_link
               });
             }
           }
