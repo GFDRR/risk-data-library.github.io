@@ -7,7 +7,7 @@ h2.dataDetails-subtitle {
   font-family: $primary-font;
   font-size: $title-font-size;
   font-weight: $primary-font-weight;
-  color: $purple-primary-font-color;
+  color: $reusable-component-title-color;
 }
 
 .dataDetails-project {
@@ -48,12 +48,11 @@ h2.dataDetails-subtitle {
 
 .dataDetails-download-link {
   width: 193px;
-  border: solid 1px $purple-primary-font-color;
-  background-color: $purple-primary-font-color;
+  border: solid 1px $links-color;
   font-family: $primary-font;
   font-size: $secondary-font-size;
   font-weight: $normal-font-weight;
-  color: $light-primary-font-color;
+  color: $links-color;
   padding: 6px 18px 11px 16px;
 
   span {
@@ -61,6 +60,6 @@ h2.dataDetails-subtitle {
   }
 
   &:hover {
-    color: darken( $light-primary-font-color, 20% );
+    color: darken( $links-color, 20% );
   }
 }
