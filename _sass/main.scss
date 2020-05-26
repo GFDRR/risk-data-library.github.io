@@ -86,7 +86,7 @@ article {
   margin-bottom: 57px;
 }
 
-.page-container-content>p {
+.page-container-content>p:first-child {
   font-family: $primary-font;
   font-size: $paragraph-font-size;
   font-weight: $normal-font-weight;
