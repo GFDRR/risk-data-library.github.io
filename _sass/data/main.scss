@@ -1,9 +1,18 @@
 .data-title {
   font-family: $primary-font;
-  font-size: $quaternary-font-size;
-  font-weight: $secondary-font-weight;
+  font-size: rem-calc(22);
+  font-weight: $normal-font-weight;
   color: $reusable-component-title-color;
   padding-top: 91px;
+}
+
+.data-subtitle {
+  font-family: $primary-font;
+  font-size: $secondary-font-size;
+  font-weight: $normal-font-weight;
+  color: $reusable-subtitle-color;
+  margin-bottom: 50px;
+  width: 480px;
 }
 
 .data-table-header-container {
@@ -11,7 +20,7 @@
 }
 
 .data-table-value {
-  font-family: $tertiary-font;
+  font-family: $secondary-font;
   font-size: $medium-font-size;
   font-weight: $normal-font-weight;
   vertical-align: top;
@@ -40,6 +49,7 @@ tr>td:last-child {
 
 .data-table-header {
   font-weight: $tertiary-font-weight;
+  font-family: $secondary-font;
   font-size: $extra-small-font-size;
   font-weight: bold;
   color: $grey-quinary-font-color;
