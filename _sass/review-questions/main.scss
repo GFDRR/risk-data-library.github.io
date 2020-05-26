@@ -4,7 +4,6 @@
   padding-top: 50px;
   padding-bottom: 49px;
   justify-content: space-between;
-  max-width: 1600px;
   border-top: solid 1px $grey-quaternary-font-color;
 }
 
@@ -25,10 +24,11 @@
 
 .review-questions-list {
   list-style-type: square;
+  padding-left: 20px;
 }
 
 .review-questions-list li {
-   padding: 10px 40px;
+   padding: 10px;
 }
 
 .review-questions-link {

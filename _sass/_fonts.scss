@@ -34,34 +34,37 @@ h1.main-title {
 
 h3.subtitle {
   font-family: $primary-font;
-  font-size: $quinary-font-size;
-  font-weight: $tertiary-font-weight;
+  font-weight: $secondary-font-weight;
+  color: $reusable-component-title-color;
 }
 
 h4.reusable-title {
   font-family: $primary-font;
   font-size: $quaternary-font-size;
+  color: $reusable-component-title-color;
 }
 
-h5.subtitle-description {
+p.subtitle-description {
   font-family: $secondary-font;
   font-size: $tertiary-font-size;
   font-weight: $normal-font-weight;
-  color: $dark-secondary-font-color;
+  color: $grey-quinary-font-color;
+  width: 600px;
 }
 
 p.reusable-subtitle {
   font-family: $primary-font;
-  font-size: $tertiary-font-size;
+  font-size: rem-calc(19);
   font-weight: $normal-font-weight;
-  color: $dark-secondary-font-color;
+  color: $reusable-subtitle-color;
 }
 
-p.reusable-content {
+div.reusable-content {
   font-family: $secondary-font;
   font-size: $primary-font-size;
   font-weight: $normal-font-weight;
-  color: $grey-primary-font-color;
+  color: $grey-quinary-font-color;
+  margin-bottom: 20px;
 }
 
 p.details-subtitle {
