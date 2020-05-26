@@ -14,6 +14,7 @@
   font-size: $tertiary-font-size;
   color: $light-primary-font-color;
   font-weight: $normal-font-weight;
+  width: 700px;
 }
 
 .description-anchor {
@@ -26,4 +27,8 @@
   border: solid 1px $light-primary-font-color;
   text-align: center;
   margin-top: 70px;
+
+  &:hover {
+    color: darken( $light-primary-font-color, 20% );
+  }
 }

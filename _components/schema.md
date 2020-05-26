@@ -1,11 +1,12 @@
 ---
 name: The schema
 order: 1
-link: /schema
+link: /schemas
 category: homepage
-subtitle: A single system for describing all risk data
+subtitle: A single, interoperable format for hazard, exposure, vulnerability and exposure data.
 anchor: Learn More →
 layout: page
 ---
 
-In the morning were still near the rock which looks like a lion’s head. Towards noon passed two rocks; the most westerly looks like Pedra Branca, which lies on the coast of China, the most easterly, looking like a high rugged tower, lies about 16 miles out from the mainland. That at one extremity on the point of the way they had seen large numbers of gulls, wild ducks, and geese, but had perceived none further inward though they had heard their cries, and had found no fish except different kinds of mussels forming small clusters in various places.
+Most of us tend to take printed materials for granted, but imagine life today if the printing press had never been invented. We would not have books, magazines or newspapers. Posters, flyers, pamphlets and mailers would not exist.
+In fact, the printing press is so significant that it has come to be known as one of the most important inventions of our time. It drastically changed the way society evolved. In this article.

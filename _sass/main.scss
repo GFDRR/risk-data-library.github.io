@@ -43,21 +43,23 @@ article {
 
 .top-container {
   background-color: $section-headers;
-  padding-left: rem-calc(154);
-  padding-right: rem-calc(562);
-
-  @media only screen and (max-width: 1200px) {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
+  
+  // padding-right: rem-calc(562);
 }
 
 .middle-container {
   background-color: $light-grey-background;
-  padding-right: rem-calc(169);
-  padding-left: rem-calc(154);
+  // padding-right: rem-calc(169);
+}
 
-  @media only screen and (max-width: 1200px) {
+.top-container, .middle-container, .page-container, .landing-top-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: rem-calc(154);
+  padding-right: rem-calc(169);
+
+   @media only screen and (max-width: 1200px) {
     padding-left: 100px;
     padding-right: 100px;
   }
@@ -80,7 +82,7 @@ article {
 }
 
 .page-container-title {
-  color: $purple-primary-font-color;
+  color: $reusable-component-title-color;
   margin-bottom: 57px;
 }
 
@@ -96,14 +98,19 @@ article {
 }
 
 .container-wrapper {
-  max-width: 1200px;
+  width: 1050px;
+  align-self: center;
 }
 
 a.link {
   font-family: $secondary-font;
   font-size: $primary-font-size;
   font-weight: $normal-font-weight;
-  color: $purple-secondary-font-color;
+  color: $links-color;
+
+  &:hover {
+    color: darken( $links-color, 20% );
+  }
 }
 
 .reusable-component {
@@ -112,7 +119,6 @@ a.link {
   justify-content: space-between;
   padding-top: 59px;
   padding-bottom: 90px;
-  max-width: 1600px;
 }
 
 .reusable-component-left {
@@ -142,7 +148,7 @@ table {
   font-family: $primary-font;
   font-size: $quaternary-font-size;
   font-weight: $secondary-font-weight;
-  color: $purple-primary-font-color;
+  color: $reusable-component-title-color;
   line-height: 42px;
 
   @media only screen and (max-width: 1000px) {

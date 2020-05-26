@@ -3,14 +3,18 @@ layout: default
 ---
 
 <div class="top-container">
-  {% include home/description.html %}
+  <div class="container-wrapper">
+  {%include home/description.html %}
+  </div>
 </div>
 
 <div class="middle-container">
-  {% include home/purpose.html %}
-  {% include home/components.html %}
-  {% assign sorted-components = site.components %}
-  {% for component in sorted-components %}
+  <div class="container-wrapper">
+    {% include home/purpose.html %}
+    {% include home/components.html %}
+    {% assign sorted-components = site.components | reverse %}
+    {% for component in sorted-components %}
     {% include home/component.html %}
-  {% endfor %}
+    {% endfor %}
+  </div>
 </div>
