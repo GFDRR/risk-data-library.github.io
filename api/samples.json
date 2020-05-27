@@ -57,7 +57,7 @@
     {
       "id": 20,
       "schema": "vulnerability",
-      "description": "Vulnerability data: TS fragility curves for residential buildings.",
+      "description": "Vulnerability data: tsunami fragility curves for residential buildings.",
       "value": "This example demonstrates the data held for fragility curves relating intensity to the probability of sustaining a given damage state."
     },
     {
