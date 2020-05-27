@@ -43,13 +43,13 @@
     {
       "id": 75,
       "schema": "loss",
-      "description": "Loss data: Return period losses for earthquake in Madagascar (AIR Worldwide, SWIO-RAFI project).",
+      "description": "Loss data: Return period losses for combined perils in Madagascar (AIR Worldwide, SWIO-RAFI project).",
       "value": "Demonstrates AAL losses and EP curve typical of a probabilistic risk assessment, in the risk data schema format."
     },
     {
       "id": 76,
       "schema": "loss",
-      "description": "Loss data: Return period losses for tropical cyclone in Madagascar (AIR Worldwide, SWIO-RAFI project).",
+      "description": "Loss data: Return period losses for earthquake in Madagascar (AIR Worldwide, SWIO-RAFI project).",
       "value": "Demonstrates AAL losses and EP curve typical of a probabilistic risk assessment, in the risk data schema format."
     }
   ],
