@@ -5,7 +5,7 @@ title: The risk data schema
 
 ## The full schema
 
-The risk data schema comprises schema for hazard, exposure, vulnerability and loss data - all connected by a series of common tables. 
+The risk data schema describes consistent and connected storage for hazard, exposure, vulnerability and loss data. For the first time, all four data components for a risk analysis can be stored in a single database. 
 
 ![keys6](/assets/images/edr/all-cf-keys6-2020-02-06.png "keys6")
 
@@ -21,7 +21,7 @@ The 'common' schema tables provide common entities used as dependencies in all t
 
 ## Hazard
 
-A hazard is any agent that can cause harm or damage to humans, property, or the environment. Risk is defined as the probability that exposure to a hazard will lead to a negative consequence, or more simply, a hazard poses no risk if there is no exposure to that hazard.
+A process, phenomenon or human activity that may cause loss of life, injury or other health impacts, property damage, social and economic disruption or environmental degradation. Hazard data for risk modelling describes the spatial distribution of intensity parameters for a scenario of return period hazard map. Hazard data are stored as point datasets in the Risk Data Library. Importantly, the exposure schema links to the vulnerability schema through the use of common hazard intensity parameters.
 
 ![hazard](/assets/images/edr/all-cf-hazard-2020-02-06.png "hazard")
 
@@ -38,7 +38,7 @@ A hazard is any agent that can cause harm or damage to humans, property, or the 
 
 ## Exposure
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Exposure refers to assets such as people, buildings, infrastructure (transport, communications and supply) and land that could be exposed to hazards. Exposure data for risk modelling describes the location, structural or socio-economic characteristics and value of those assets. The Risk Data Library can describe multiple asset types in point, polyon or polyline datasets. Importantly, the exposure schema links to the vulnerability schema through the use of common taxonomies.
 
 ![ged4all](/assets/images/edr/all-cf-ged4all-2020-02-06.png "ged4all")
 
@@ -52,10 +52,12 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 | occupancy  | ... |
 | tags  | ... |
 | all_exposure (view)  | ... |
+| exposure_type (type)  | ... |
+
 
 ## Vulnerability
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Vulnerability refers to the conditions determined by physical, social, economic and environmental factors or processes which increase the susceptibility of an individual, a community, assets or systems to the impacts of hazards. The Risk Data Library stores structural vulnerability and fragility curves for multiple hazard and asset types. 
 
 ![mover](/assets/images/edr/all-cf-mover-2020-02-06.png "mover")
 
@@ -74,7 +76,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ## Modeled Loss
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Modeled loss datasets describe the estimated impact of a scenario, or risk communicated as a return period or annual average loss. 
 
 ![loss](/assets/images/edr/all-cf-loss-2020-02-06.png "loss")
 
