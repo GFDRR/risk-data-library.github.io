@@ -10,6 +10,17 @@
     padding-bottom: 10px;
 }
 
-.no-padding-top {
-    padding-top: 0 !important;
+.supporting-organisations .reusable-component-right {
+    padding-bottom: 0!important;
 }
+
+.supporting-organisations .components-subtitle {
+    padding-bottom: 0!important;
+}
+
+.individual-organisation:first-child {
+  >.title-color {
+    margin-top: 0!important;
+  }
+}
+
