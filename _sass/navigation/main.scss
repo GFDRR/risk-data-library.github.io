@@ -36,7 +36,7 @@
   color: $light-primary-font-color;
   font-size:$primary-font-size;
   &:not(:last-child){
-    padding-right: rem-calc(34);
+    padding-right: 60px;
   }
   &:hover {
     color: darken( $light-primary-font-color, 20% );
