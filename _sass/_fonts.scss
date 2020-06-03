@@ -18,7 +18,7 @@ $tertiary-font-size: rem-calc(20);
 $paragraph-font-size: rem-calc(21); 
 $quaternary-font-size: rem-calc(31); 
 $quinary-font-size: rem-calc(44); 
-$title-font-size: rem-calc(50); 
+$title-font-size: rem-calc(36); 
 
 $primary-opacity: 1;
 $secondary-opacity: 0.75;
@@ -35,11 +35,14 @@ h3.subtitle {
   font-family: $primary-font;
   font-weight: $secondary-font-weight;
   color: $reusable-component-title-color;
+  font-size: 26px;
+  margin-bottom: 10px;
+  margin-top: 60px;
 }
 
 h4.reusable-title {
   font-family: $primary-font;
-  font-size: $quaternary-font-size;
+  font-size: 24px;
   color: $reusable-component-title-color;
 }
 
@@ -52,8 +55,8 @@ p.subtitle-description {
 }
 
 p.reusable-subtitle {
-  font-family: $primary-font;
-  font-size: rem-calc(19);
+  font-family: $secondary-font;
+  font-size: $secondary-font-size;
   font-weight: $normal-font-weight;
   color: $reusable-subtitle-color;
 }
@@ -63,7 +66,7 @@ div.reusable-content {
   font-size: $primary-font-size;
   font-weight: $normal-font-weight;
   color: $grey-quinary-font-color;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 p.details-subtitle {

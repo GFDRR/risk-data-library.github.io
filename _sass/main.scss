@@ -34,6 +34,10 @@ body {
   padding: 0;
 }
 
+p {
+  margin-bottom: 0!important;
+}
+
 article {
   min-height: 100vh;
 }
@@ -49,7 +53,7 @@ article {
 }
 
 .middle-container {
-  background-color: $light-grey-background;
+  // background-color: $light-grey-background;
   // padding-right: rem-calc(169);
 }
 
@@ -128,7 +132,7 @@ a.link {
 }
 
 .reusable-component-right {
-  width: 726px;
+  width: 625px;
   padding-bottom: 60px;
 }
 
@@ -161,6 +165,8 @@ table {
 
 .title-color {
   color: $reusable-title-color;
+  margin-top: 30px;
+  margin-bottom: 5px;
 }
 
 .primary-divider {
