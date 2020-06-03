@@ -43,13 +43,11 @@ article {
 }
 
 .navbar {
-  background-color: $section-headers;
+  background-color: $reusable-title-color;
 }
 
 .top-container {
-  background-color: $section-headers;
-  
-  // padding-right: rem-calc(562);
+  background-color: $reusable-title-color;
 }
 
 .middle-container {
@@ -123,8 +121,8 @@ a.link {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 59px;
-  padding-bottom: 90px;
+  padding-top: 60px;
+  padding-bottom: 0;
 }
 
 .reusable-component-left {
@@ -164,9 +162,10 @@ table {
 }
 
 .title-color {
-  color: $reusable-title-color;
+  color: $reusable-title-color !important;
   margin-top: 30px;
-  margin-bottom: 5px;
+  padding-bottom: 5px;
+  font-weight: $secondary-font-weight!important;
 }
 
 .primary-divider {

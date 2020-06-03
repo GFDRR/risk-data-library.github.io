@@ -34,7 +34,7 @@ h1.main-title {
 h3.subtitle {
   font-family: $primary-font;
   font-weight: $secondary-font-weight;
-  color: $reusable-component-title-color;
+  color: $reusable-title-color;
   font-size: 26px;
   margin-bottom: 10px;
   margin-top: 60px;
@@ -43,7 +43,8 @@ h3.subtitle {
 h4.reusable-title {
   font-family: $primary-font;
   font-size: 24px;
-  color: $reusable-component-title-color;
+  color: $reusable-title-color;
+  margin-bottom: 5px;
 }
 
 p.subtitle-description {

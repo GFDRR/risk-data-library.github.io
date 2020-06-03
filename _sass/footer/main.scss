@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: nowrap;
-  padding: 50px 142px 50px 154px;
+  padding: 40px 142px 86px 71px;
 
   @media only screen and (max-width: 1200px) {
     padding-left: 100px;
@@ -15,6 +15,7 @@
 .footer-left {
   display: flex;
   flex-direction: column;
+  width: 616px;
 
   a {
     font-family: $secondary-font;
