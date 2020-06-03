@@ -18,6 +18,7 @@
 @import "purpose/main";
 @import "components/main";
 @import "component/main";
+@import "supporting-organisations/main";
 
 // data
 @import "data/main";
@@ -33,22 +34,24 @@ body {
   padding: 0;
 }
 
+p {
+  margin-bottom: 0!important;
+}
+
 article {
   min-height: 100vh;
 }
 
 .navbar {
-  background-color: $section-headers;
+  background-color: $reusable-title-color;
 }
 
 .top-container {
-  background-color: $section-headers;
-  
-  // padding-right: rem-calc(562);
+  background-color: $reusable-title-color;
 }
 
 .middle-container {
-  background-color: $light-grey-background;
+  // background-color: $light-grey-background;
   // padding-right: rem-calc(169);
 }
 
@@ -69,6 +72,7 @@ article {
   padding-right: rem-calc(169);
   padding-left: rem-calc(154);
   margin-top: 91px;
+  padding-bottom: 90px;
 
   @media only screen and (max-width: 1100px) {
     padding-right: 50px;
@@ -98,7 +102,7 @@ article {
 }
 
 .container-wrapper {
-  width: 1050px;
+  width: 960px;
   align-self: center;
 }
 
@@ -117,8 +121,8 @@ a.link {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 59px;
-  padding-bottom: 90px;
+  padding-top: 60px;
+  padding-bottom: 0;
 }
 
 .reusable-component-left {
@@ -126,7 +130,8 @@ a.link {
 }
 
 .reusable-component-right {
-  width: 726px;
+  width: 625px;
+  padding-bottom: 60px;
 }
 
 #hazard-datasets, #exposure-datasets, #loss-datasets, #vulnerability-datasets {
@@ -154,4 +159,15 @@ table {
   @media only screen and (max-width: 1000px) {
     font-size:1.5em;
   }
+}
+
+.title-color {
+  color: $reusable-title-color !important;
+  margin-top: 30px;
+  padding-bottom: 5px;
+  font-weight: $secondary-font-weight!important;
+}
+
+.primary-divider {
+  border-bottom: solid 1px $grey-quaternary-font-color;
 }

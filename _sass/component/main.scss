@@ -1,5 +1,5 @@
-.component-individual {
-  &:not(:last-child) {
+.component-individual:not(:last-child) {
+  >.component-individual-right {
     border-bottom: solid 1px $grey-quaternary-font-color;
   }
 }
@@ -13,8 +13,4 @@
   font-size: $primary-font-size;
   font-weight: $normal-font-weight;
   color: $grey-primary-font-color;
-}
-
-.component-individual-link {
-  margin-top: 52px;
 }

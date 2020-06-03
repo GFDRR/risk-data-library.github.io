@@ -8,13 +8,22 @@ layout: default
   </div>
 </div>
 
-<div class="middle-container">
+<div class="middle-container primary-divider">
   <div class="container-wrapper">
     {% include home/purpose.html %}
+  </div>
+</div>
+<div class="middle-container primary-divider">
+  <div class="container-wrapper">
     {% include home/components.html %}
     {% assign sorted-components = site.components | reverse %}
     {% for component in sorted-components %}
     {% include home/component.html %}
     {% endfor %}
+  </div>
+</div>
+<div class="middle-container primary-divider">
+  <div class="container-wrapper">
+    {% include home/supporting-organisations.html %}
   </div>
 </div>

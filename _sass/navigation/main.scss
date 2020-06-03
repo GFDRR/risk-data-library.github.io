@@ -1,15 +1,27 @@
 .navigation {
   display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: rem-calc(20 26 22 38);
+  padding-left: rem-calc(154);
+  padding-right: rem-calc(169);
+
+  @media only screen and (max-width: 1200px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+.navigation div {
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  padding: rem-calc(20 26 22 38);
-  border-bottom: solid 1px rgba(227, 227, 227, 0.33);
 }
 
 .navigation-left a {
   font-family: $primary-font;
-  font-size: $secondary-font-size;
+  font-size: $primary-font-size;
   color: $light-primary-font-color;
   opacity: 1;
 
@@ -24,7 +36,7 @@
   color: $light-primary-font-color;
   font-size:$primary-font-size;
   &:not(:last-child){
-    padding-right: rem-calc(34);
+    padding-right: 60px;
   }
   &:hover {
     color: darken( $light-primary-font-color, 20% );
