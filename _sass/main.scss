@@ -18,6 +18,7 @@
 @import "purpose/main";
 @import "components/main";
 @import "component/main";
+@import "supporting-organisations/main";
 
 // data
 @import "data/main";
@@ -128,6 +129,7 @@ a.link {
 
 .reusable-component-right {
   width: 726px;
+  padding-bottom: 60px;
 }
 
 #hazard-datasets, #exposure-datasets, #loss-datasets, #vulnerability-datasets {
@@ -155,4 +157,12 @@ table {
   @media only screen and (max-width: 1000px) {
     font-size:1.5em;
   }
+}
+
+.title-color {
+  color: $reusable-title-color;
+}
+
+.primary-divider {
+  border-bottom: solid 1px $grey-quaternary-font-color;
 }

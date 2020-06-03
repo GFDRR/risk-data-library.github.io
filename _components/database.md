@@ -3,10 +3,18 @@ name: The database
 order: 2
 link: /database
 category: homepage
-subtitle: Storing hazard, exposure, vulnerabilty and loss datasets together in the same environement.
-anchor: Learn More →
+subtitle: Storing and indexing all four data types together in a single environment.
+anchor: Learn more about the database →
 layout: page
 ---
 
-In the morning were still near the rock which looks like a lion's head. Towards noon passed two rocks; the most westerly looks like Pedra Branca, which lies on the coast of China, the most easterly, looking like a high rugged tower, lies about 16 miles out from the mainland.
-That at one extremity on the point of the way they had seen large numbers of gulls, wild ducks, and geese, but had perceived none further inward though they had heard their cries, and had found no fish except different kinds of mussels forming small clusters in various places.
+Allow a even showed are been odd might become looked any people, destruction. Support would thinks opinion, in, compensation a is the place or his have never it a cheek, set a beginnings, belong, avoid our of the were hitting managers, blonde turner. Be become of on it for fact, upper to that basically.
+
+Better indexing for better searches
+{: class="title-color"}
+Allow a even showed are been odd might become looked any people, destruction. Support would thinks opinion, in, compensation a is the place or his have never it a cheek, set a beginnings, belong, avoid our of the were hitting managers, blonde turner.
+
+Faster dataset selection
+{: class="title-color"}
+Allow a even showed are been odd might become looked any people, destruction. Support would thinks opinion, in, compensation.
+

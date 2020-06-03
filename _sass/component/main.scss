@@ -1,7 +1,5 @@
-.component-individual {
-  &:not(:last-child) {
-    border-bottom: solid 1px $grey-quaternary-font-color;
-  }
+.component-individual-right {
+  border-bottom: solid 1px $grey-quaternary-font-color;
 }
 
 .component-individual-title {
