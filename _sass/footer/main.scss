@@ -15,20 +15,25 @@
 
 .footer-left {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
-    a {
+  a {
     font-family: $secondary-font;
-    font-size: $secondary-font-size;
+    font-size: $primary-font-size;
     font-weight: $normal-font-weight;
     line-height: 1.39;
-    color: $grey-primary-font-color;
+    color: $links-color;
     align-self: center;
+  }
 
-    &:first-child {
-      margin-right: 50px;
-    }
-} 
+  p {
+    margin-bottom: 5px;
+    font-family: $secondary-font;
+    font-size: $primary-font-size;
+    font-weight: $normal-font-weight;
+    color: $grey-quinary-font-color;
+  }
+
 }
 
 .footer-right {
