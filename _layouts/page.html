@@ -2,15 +2,19 @@
 layout: default
 ---
 
-<div class="page-container">
-  <article class="container-wrapper">
+<div class="page-container primary-divider">
+  <div class="container-wrapper">
     <header>
       <h1 class="page-container-title main-title">{{ page.title }}</h1>
+      <p class="reusable-component-right padding-bottom">{{ page.description }}</p>
     </header>
-    <section>
-      <div class="page-container-content">
-        {{content }}
-      </div>
-    </section>
-  </article>
+  </div>
+</div>
+
+<div class="page-container">
+  <section>
+    <div class="page-container-content">
+      {{content }}
+    </div>
+  </section>
 </div>
