@@ -42,7 +42,7 @@ p {
   margin-bottom: 0!important;
 }
 
-h4 {
+h4, h2 {
   margin-bottom: 0!important;
 }
 
@@ -74,16 +74,10 @@ article, section {
 .page-top-container {
   padding-top: 60px;
   padding-bottom: 70px;
+}
 
-//   @media only screen and (max-width: 1100px) {
-//     padding-right: 50px;
-//     padding-left: 50px;
-//   }
-
-//  @media only screen and (max-width: 900px) {
-//     padding-right: 30px;
-//     padding-left: 30px;
-//   }
+.extra-padding-bottom {
+  margin-bottom: 40px;
 }
 
 .page-container-title {
@@ -131,15 +125,9 @@ a.link {
   min-height: 200px;
 }
 
-
 table {
-  max-width: 1100px;
-  @media only screen and (max-width: 1100px) {
-    width: 1000px!important;
-  }
- @media only screen and (max-width: 900px) {
-    width: 800px!important;
-  }
+  margin-top: 30px;
+  margin-bottom: 0!important;
 }
 
 .landing-page-component-title {
@@ -177,6 +165,10 @@ p.paragraph-padding-bottom {
   padding-bottom: 1rem;
 }
 
+.title-padding-bottom {
+  padding-bottom: 5px;
+}
+
 div.no-margin-bottom {
   margin-bottom: 0;
 }
@@ -188,8 +180,4 @@ div.no-margin-bottom {
 .list {
   padding-left: 20px;
   margin-bottom: 0;
-}
-
-.last-section-margin-bottom {
-  margin-bottom: 40px;
 }

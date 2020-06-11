@@ -47,6 +47,16 @@ $(document).ready(function () {
             break;
         }
       } 
+
+      function displayKey(key) {
+        switch (key) {
+          case "year_developed":
+            return "year".toUpperCase();
+          default:
+            return key.toUpperCase().replace("_", " ");
+        }
+      }
+
   
       function getHeadersFromData(dataset) {
         const keysFromDataset = Object.keys(dataset);
@@ -54,8 +64,8 @@ $(document).ready(function () {
         const header = METADATA_FIELDS.map(function(key) {
             if (keysFromDataset.indexOf(key) !== -1) {
               return (
-                "<th class='data-table-cell data-table-header'>" +
-                key.toUpperCase().replace("_", " ") +
+                "<th class='data-table-th data-table-header'>" +
+                displayKey(key) +
                 "</th>"
               );
             }
@@ -63,8 +73,8 @@ $(document).ready(function () {
         });
         return "<tr class='data-table-header-container'>"
             + header.join('')
-            + "<th class='data-table-cell'></th>"
-            + "<th class='data-table-cell'></th>"
+            + "<th class='data-table-th'></th>"
+            + "<th class='data-table-th'></th>"
           + "</tr>"
       }
   
@@ -83,7 +93,7 @@ $(document).ready(function () {
           case "year_developed":
             return new Date(dataset).toLocaleString("en-us", {
               year: "numeric",
-              month: "short",
+              // month: "short",
             });
           case "exposure_type":
             if (dataset === null || dataset == '') {
@@ -108,6 +118,7 @@ $(document).ready(function () {
         "exposure_type", "function_type", "developed_by", "year_developed",
         "license"
       ];
+
       function render(dataset, schema) {
         const keysFromDataset = Object.keys(dataset);
         const metadata = METADATA_FIELDS.map(function(key) {
@@ -120,7 +131,7 @@ $(document).ready(function () {
           }
           return "";
         });
-        
+
         return (
           "<tr>" +
           metadata.join("") +
@@ -132,7 +143,7 @@ $(document).ready(function () {
           "id='" +
           dataset.id +
           "'>More→</a></td>" +
-          "<td class='data-table-value data-table-cell'><a href='" +
+          "<td class='data-table-value data-table-image'><a href='" +
           dataset.download_link +
           "' download target='_blank'>" +
           "<img src='assets/images/download_icon.png' class='table-download-link'></a></td>" +
