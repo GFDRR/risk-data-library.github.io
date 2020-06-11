@@ -1,9 +1,12 @@
+.data-table-container {
+  margin-top: 60px;
+}
+
 .data-title {
   font-family: $primary-font;
-  font-size: rem-calc(22);
-  font-weight: $normal-font-weight;
-  color: $reusable-component-title-color;
-  padding-top: 91px;
+  font-size: 24px;
+  font-weight: $secondary-font-weight;
+  color: $reusable-title-color;
 }
 
 .data-subtitle {
@@ -16,13 +19,15 @@
 }
 
 .data-table-header-container {
-  border-bottom: 1px solid $dark-divider-lines;
+  border-bottom: 1px solid $grey-quaternary-font-color;
 }
 
 .data-table-value {
   font-family: $secondary-font;
   font-size: $medium-font-size;
   font-weight: $normal-font-weight;
+  line-height: 1.54;
+  color: $grey-quinary-font-color;
   vertical-align: top;
 }
 
@@ -30,38 +35,86 @@ tr.data-table-header-container>th:first-child, tr>td:first-child {
   padding-left: 0;
 }
 
-tr>td:last-child {
-  padding-right: 5px;
+table>tr:nth-of-type(2n+1) {
+  // background-color: green;
+}
+
+table>tr:not(:first-child)>td:nth-last-child(2) {
+  padding-right: 0;
+}
+
+table>tr:not(:first-child)>td:nth-last-child(3) {
+  word-wrap: none;
+  padding-right: 0;
+}
+
+table>tr:not(:first-child)>td:nth-last-child(5) {
+  width: 100px;
+}
+
+table#hazard-datasets>tr:not(:first-child)>td:first-child {
+  width: 150px;
+}
+
+// table>tr:last-child {
+//   padding-bottom: 0!important;
+//   // background-color:red;
+// }
+
+tr>td:first-child, tr>th:first-child  {
+  padding-right: 30px;
+}
+
+.data-table-th {
+  padding-top: 13px;
+  padding-bottom: 9px;
+  padding-left: calc(0.15vw + 15px);
+  // padding-right: calc(0.1vw + 15px);
+  text-align: left;
 }
 
 .data-table-cell {
-  padding: 0.8em 1em;
+  padding-top: 13px;
+  padding-bottom: 12px;
+  padding-left: calc(0.15vw + 15px);
+  padding-right: calc(0.15vw + 15px);
   text-align: left;
+}
 
-  @media only screen and (max-width: 900px) {
-    padding: 0.5em 0.8em;
-  }
+#exposure-datasets tr.data-table-header-container>th:first-of-type, #exposure-datasets tr:not(:first-child)>td:first-of-type {
+  padding-left: 0;
+  width: 300px;
+}
 
-  @media only screen and (max-width: 700px) {
-    padding: 0.3em 0.5em;
-  }
+#loss-datasets tr.data-table-header-container>th:first-of-type, #exposure-datasets tr:not(:first-child)>td:first-of-type {
+  padding-left: 0;
+  width: 250px;
+}
+
+.data-table-image {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  text-align: right;
 }
 
 .data-table-header {
-  font-weight: $tertiary-font-weight;
+  font-weight: $secondary-font-weight;
   font-family: $secondary-font;
   font-size: $extra-small-font-size;
-  font-weight: bold;
-  color: $grey-quinary-font-color;
+  color: $reusable-title-color;
   vertical-align: bottom;
 }
 
 .table-header-redirect {
-  font-weight: $tertiary-font-weight;
   line-height: 1.54;
-  color: $grey-links;
+  color: $links-color;
 }
 
 .table-download-link {
-  width: 15px;
+  max-width: 15px;
+}
+
+.data-table-margin-bottom {
+  margin-bottom: 60px;
 }
