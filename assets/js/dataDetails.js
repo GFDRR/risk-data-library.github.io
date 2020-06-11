@@ -30,11 +30,6 @@ $(document).ready(function() {
     const hashDetails = window.location.hash.substr(1).split("=");
     const schema = hashDetails[0];
     const dataId = hashDetails[1];
-    const riskType = schema.charAt(0).toUpperCase() + schema.slice(1);
-    $("h1.main-title")
-      .html(riskType + " Dataset")
-      .addClass("dataDetails-title");
-
 
     const DATA_DETAILS_URL =
       "https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev/" +
@@ -49,12 +44,9 @@ $(document).ready(function() {
 
       function renderHeader(data) {
         return (
-          "<h2 class='dataDetails-subtitle'>" +
+          "<h1 class='dataDetails-title'>" +
           transformDataValue(data.dataset_name) +
-          "</h1>" +
-          "<p class='datasetDetails-project'>" +
-          transformDataValue(data.project_name) +
-          "</p>"
+          "</h1>" 
         );
       }
      
@@ -124,7 +116,7 @@ $(document).ready(function() {
 
 
       function downloadData(data){
-        return "<a href='" + data.download_link + "' download class='dataDetails-download-link' target='_blank'>Download <span>CSV</span></a>";
+        return "<div class='dataDetails-link-container'><a href='" + data.download_link + "' download class='dataDetails-download-link' target='_blank'>Download CSV</a></div>";
       };
 
       $("#data-details").append(renderHeader(data[0])); 

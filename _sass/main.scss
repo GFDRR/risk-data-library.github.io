@@ -71,12 +71,27 @@ article, section {
   }
 }
 
+.data-details-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+   @media only screen and (max-width: 1200px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
 .page-top-container {
   padding-top: 60px;
   padding-bottom: 70px;
 }
 
-.extra-padding-bottom {
+.extra-margin-top {
+  margin-top: 70px;
+}
+
+.extra-margin-bottom {
   margin-bottom: 40px;
 }
 

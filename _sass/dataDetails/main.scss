@@ -1,13 +1,22 @@
 h1.dataDetails-title {
-  font-size: $quaternary-font-size;
+  font-family: $primary-font;
+  font-size: 26px;
+  font-weight: $secondary-font-weight;
+  color: $reusable-title-color;
   margin-bottom: 0;
 }
 
-h2.dataDetails-subtitle {
-  font-family: $primary-font;
-  font-size: $title-font-size;
-  font-weight: $primary-font-weight;
-  color: $reusable-component-title-color;
+.dataDetails-link-container {
+  margin-top: 30px;
+  margin-bottom: 60px;
+  width: 160px;
+  height: 40px;
+  border: solid 1px $links-color;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .dataDetails-project {
@@ -20,44 +29,34 @@ h2.dataDetails-subtitle {
 }
 
 .dataDetails-content {
-  margin-top: 50px;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
 .dataDetails-list {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  max-width: 800px;
   border-bottom: solid 1px rgba(151, 151, 151, 0.3);
-  margin-top: 16px;
-  margin-bottom: 7px;
+  padding: 15px 0;
 }
 
 .dataDetails-list-left {
-  width: 170px;
+  width: 275px;
 }
 
 .dataDetails-list-right {
-  margin-left: 150px;
-  width: 500px;
+  margin-left: 60px;
+  width: 625px;
   word-break: break-word;
   word-wrap: break-word;
-  
 }
 
 .dataDetails-download-link {
-  width: 193px;
-  border: solid 1px $links-color;
-  font-family: $primary-font;
-  font-size: $secondary-font-size;
+  align-self: center;
+  font-family: $secondary-font;
+  font-size: $primary-font-size;
   font-weight: $normal-font-weight;
   color: $links-color;
-  padding: 6px 18px 11px 16px;
-
-  span {
-    opacity: 0.5;
-  }
 
   &:hover {
     color: darken( $links-color, 20% );

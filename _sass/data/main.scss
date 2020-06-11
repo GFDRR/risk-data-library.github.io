@@ -32,7 +32,7 @@
 }
 
 tr.data-table-header-container>th:first-child, tr>td:first-child {
-  padding-left: 0;
+  padding-left: 5px;
 }
 
 table>tr:not(:first-of-type) {
@@ -79,12 +79,12 @@ tr>td:first-child, tr>th:first-child  {
 }
 
 #exposure-datasets tr.data-table-header-container>th:first-of-type, #exposure-datasets tr:not(:first-child)>td:first-of-type {
-  padding-left: 0;
+  padding-left: 5px;
   width: 300px;
 }
 
 #loss-datasets tr.data-table-header-container>th:first-of-type, #exposure-datasets tr:not(:first-child)>td:first-of-type {
-  padding-left: 0;
+  padding-left: 5px;
   width: 250px;
 }
 
