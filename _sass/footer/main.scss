@@ -4,7 +4,10 @@
   flex-direction: column;
   justify-content: space-between;
   flex-wrap: nowrap;
-  padding: 40px 142px 86px 71px;
+  padding-top: 40px;
+  padding-bottom: 86px;
+  padding-left: rem-calc(154);
+  padding-right: rem-calc(169);
 
   @media only screen and (max-width: 1200px) {
     padding-left: 100px;
