@@ -1,0 +1,31 @@
+.schema-page-image {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.schema-page-caption {
+  color: $reusable-subtitle-color;
+  font-size: 15px;
+  font-weight: $normal-font-weight;
+  margin-bottom: 30px!important;
+}
+
+.schema-page-link-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-top: 30px;
+
+  & > a {
+    margin-bottom: 10px;
+  }
+}
+
+p.schemas-page-timeline {
+  margin-top: 3px;
+  margin-bottom: 8px!important;
+}
+
+.schemas-page-version-container:not(:last-of-type) {
+  margin-bottom: 30px;
+}

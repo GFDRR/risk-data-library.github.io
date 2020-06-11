@@ -20,6 +20,10 @@
 @import "component/main";
 @import "supporting-organisations/main";
 
+// schema page
+// database page share the same css as schema page
+@import "schema-page/main";
+
 // data
 @import "data/main";
 
@@ -38,7 +42,11 @@ p {
   margin-bottom: 0!important;
 }
 
-article {
+h4 {
+  margin-bottom: 0!important;
+}
+
+article, section {
   min-height: 100vh;
 }
 
@@ -48,11 +56,6 @@ article {
 
 .top-container {
   background-color: $reusable-title-color;
-}
-
-.middle-container {
-  // background-color: $light-grey-background;
-  // padding-right: rem-calc(169);
 }
 
 .top-container, .middle-container, .page-container, .landing-top-container {
@@ -68,26 +71,23 @@ article {
   }
 }
 
-.page-container {
-  padding-right: rem-calc(169);
-  padding-left: rem-calc(154);
-  margin-top: 60px;
-  // padding-bottom: 90px;
+.page-top-container {
+  padding-top: 60px;
+  padding-bottom: 70px;
 
-  @media only screen and (max-width: 1100px) {
-    padding-right: 50px;
-    padding-left: 50px;
-  }
+//   @media only screen and (max-width: 1100px) {
+//     padding-right: 50px;
+//     padding-left: 50px;
+//   }
 
- @media only screen and (max-width: 900px) {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
+//  @media only screen and (max-width: 900px) {
+//     padding-right: 30px;
+//     padding-left: 30px;
+//   }
 }
 
 .page-container-title {
   color: $reusable-title-color;
-  // margin-bottom: 57px;
 }
 
 .page-container-content>p:first-child {
@@ -174,4 +174,28 @@ table {
 
 .padding-bottom {
   padding-bottom: 70px;
+}
+
+p.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+p.paragraph-padding-bottom {
+  padding-bottom: 1rem;
+}
+
+div.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+.list {
+  padding-left: 20px;
+}
+
+.last-section-margin-bottom {
+  margin-bottom: 40px;
 }
