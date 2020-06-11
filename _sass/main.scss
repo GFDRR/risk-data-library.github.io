@@ -90,13 +90,6 @@ article, section {
   color: $reusable-title-color;
 }
 
-.page-container-content>p:first-child {
-  font-family: $primary-font;
-  font-size: $paragraph-font-size;
-  font-weight: $normal-font-weight;
-  color: $dark-primary-font-color;
-}
-
 .landing-top-container {
   background-color: $light-primary-font-color
 }
@@ -121,7 +114,7 @@ a.link {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 60px;
+  padding-top: 65px;
   padding-bottom: 0;
 }
 
@@ -194,6 +187,7 @@ div.no-margin-bottom {
 
 .list {
   padding-left: 20px;
+  margin-bottom: 0;
 }
 
 .last-section-margin-bottom {
