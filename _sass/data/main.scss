@@ -35,8 +35,10 @@ tr.data-table-header-container>th:first-child, tr>td:first-child {
   padding-left: 0;
 }
 
-table>tr:nth-of-type(2n+1) {
-  // background-color: green;
+table>tr:not(:first-of-type) {
+  &:nth-of-type(2n+1) {
+    background-color: $table-row-color;
+  }
 }
 
 table>tr:not(:first-child)>td:nth-last-child(2) {
@@ -53,13 +55,9 @@ table>tr:not(:first-child)>td:nth-last-child(5) {
 }
 
 table#hazard-datasets>tr:not(:first-child)>td:first-child {
-  width: 150px;
+  width: 200px;
+  padding-right: 0;
 }
-
-// table>tr:last-child {
-//   padding-bottom: 0!important;
-//   // background-color:red;
-// }
 
 tr>td:first-child, tr>th:first-child  {
   padding-right: 30px;
@@ -69,7 +67,6 @@ tr>td:first-child, tr>th:first-child  {
   padding-top: 13px;
   padding-bottom: 9px;
   padding-left: calc(0.15vw + 15px);
-  // padding-right: calc(0.1vw + 15px);
   text-align: left;
 }
 
@@ -93,8 +90,8 @@ tr>td:first-child, tr>th:first-child  {
 
 .data-table-image {
   padding-top: 10px;
-  padding-bottom: 5px;
   padding-left: 10px;
+  padding-right: 5px;
   text-align: right;
 }
 
