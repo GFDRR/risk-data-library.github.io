@@ -142,7 +142,7 @@ $(document).ready(function () {
           "'" +
           "id='" +
           dataset.id +
-          "'>More→</a></td>" +
+          "'>More&nbsp;→</a></td>" +
           "<td class='data-table-value data-table-image'><a href='" +
           dataset.download_link +
           "' download target='_blank'>" +
