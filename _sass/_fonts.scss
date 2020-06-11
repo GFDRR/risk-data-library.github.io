@@ -28,7 +28,7 @@ $secondary-opacity: 0.75;
 h1.main-title {
   font-family: $primary-font;
   font-size: $title-font-size;
-  font-weight: $primary-font-weight;
+  font-weight: $secondary-font-weight;
   margin-bottom: 10px;
 }
 
@@ -45,7 +45,8 @@ h4.reusable-title {
   font-family: $primary-font;
   font-size: 24px;
   color: $reusable-title-color;
-  margin-bottom: 5px;
+  // margin-bottom: 5px;
+  margin-top: 0;
 }
 
 p.subtitle-description {
@@ -53,6 +54,7 @@ p.subtitle-description {
   font-size: $secondary-font-size;
   font-weight: $normal-font-weight;
   color: $grey-quinary-font-color;
+  line-height: 1.56;
   width: 625px;
 }
 
