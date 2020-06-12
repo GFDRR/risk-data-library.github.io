@@ -3,11 +3,12 @@
 @import "fonts";
 
 // landing page
-@import "header/main";
 @import "first-section/main";
 @import "documentation/main";
 @import "datasets/main";
-@import "schemas/main";
+
+// TODOS: Potential future requests
+// @import "schemas/main";
 
 // homepage
 @import "navigation/main";
@@ -30,6 +31,8 @@
 //footer
 @import "footer/main";
 
+
+// common or reusable css across whole site
 body {
   margin: 0;
   padding: 0;
@@ -200,8 +203,41 @@ div.no-margin-bottom {
 .list {
   padding-left: 20px;
   margin-bottom: 0;
+
+  >li {
+    padding-bottom: 0.5rem;
+  }
 }
 
+
+// landing page only
 .landing-page-section-title {
   text-align: right;
+}
+
+.landing-page-nav-bar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding-top: 20px;
+  padding-bottom: 22px;
+  padding-left: rem-calc(154);
+  padding-right: rem-calc(169);
+
+  @media only screen and (max-width: 1200px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+.landing-page-header {
+  font-family: $primary-font;
+  font-size: 15px;
+  font-weight: $normal-font-weight;
+  color: $light-primary-font-color;
+  line-height: 0.93;
+}
+
+.landing-page-container {
+  margin-bottom: 100px;
 }
