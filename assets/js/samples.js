@@ -4,7 +4,16 @@ $(document).ready(function () {
   const VULNERABILITY = "vulnerability";
   const LOSS = "loss";
 
-   $("#samples").append(
+   $("#samples_hazard").append(
+     "<p id='loading-text' class='details-content'>Loading....</p>"
+   );
+   $("#samples_exposure").append(
+     "<p id='loading-text' class='details-content'>Loading....</p>"
+   );
+   $("#samples_vulnerability").append(
+     "<p id='loading-text' class='details-content'>Loading....</p>"
+   );
+   $("#samples_loss").append(
      "<p id='loading-text' class='details-content'>Loading....</p>"
    );
   
@@ -91,33 +100,36 @@ $(document).ready(function () {
       
       function displaySampleDatasets(dataPerSchema){
         return dataPerSchema.map(function(eachData) {
-              return (
-                "<li>" +
-                "<h4>" +
-                eachData.dataset_name +
-                "</h4>" +
-                "<p>" +
-                eachData.description +
-                "</p>" +
-                "<p>" +
-                eachData.value +
-                "</p>" +
-                "<a href='" +
-                eachData.download_link +
-                "' download target='_blank'>" +
-                "Download " +
-                " dataset" +
-                "</a>" +
-                "</li>"
-              );
+          return (
+            "<li>" +
+            "<p class='datasets-dataset-title'>" +
+            eachData.dataset_name +
+            "</p>" +
+            "<p class='datasets-dataset-content paragraph-padding-bottom'>" +
+            eachData.description +
+            "</p>" +
+            "<p class='datasets-dataset-content'>" +
+            eachData.value +
+            "</p>" +
+            "<div class='datasets-link-container'>"+
+            "<a href='" +
+            eachData.download_link +
+            "' download target='_blank' class='link'>" +
+            "Download " +
+            " dataset" +
+            "</a>" +
+            "</div>" +
+            "</li>"
+          );
         });
       }
 
       $("p#loading-text").remove();
-      $("#samples").append(displaySampleDatasets(mergedHazardData));
-      $("#samples").append(displaySampleDatasets(mergedExposureData));
-      $("#samples").append(displaySampleDatasets(mergedLossData));
-      $("#samples").append(displaySampleDatasets(mergedVulnerabilityData));
+      $("#samples_hazard").append(displaySampleDatasets(mergedHazardData));
+      $("#samples_exposure").append(displaySampleDatasets(mergedExposureData));
+      $("#samples_vulnerability").append(displaySampleDatasets(mergedVulnerabilityData));
+      $("#samples_loss").append(displaySampleDatasets(mergedLossData));
+
     });
   });
 });
