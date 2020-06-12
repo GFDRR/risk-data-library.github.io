@@ -4,15 +4,12 @@
 
 // landing page
 @import "header/main";
-@import "summary/main";
-@import "instructions/main";
-@import "review-questions/main";
+@import "first-section/main";
 @import "documentation/main";
-@import "document/main";
 @import "datasets/main";
 @import "schemas/main";
 
-// home
+// homepage
 @import "navigation/main";
 @import "description/main";
 @import "purpose/main";
@@ -21,13 +18,13 @@
 @import "supporting-organisations/main";
 
 // schema page
-// database page share the same css as schema page
+// database, resources & project pages share the same css as schema page
 @import "schema-page/main";
 
-// data
+// data page
 @import "data/main";
 
-// data details
+// data details page
 @import "dataDetails/main";
 
 //footer
@@ -172,6 +169,14 @@ table {
   padding-bottom: 70px;
 }
 
+.no-padding-bottom {
+  padding-bottom: 0;
+}
+
+.no-border-bottom {
+  border-bottom: none!important;
+}
+
 p.no-padding-bottom {
   padding-bottom: 0;
 }
@@ -195,4 +200,8 @@ div.no-margin-bottom {
 .list {
   padding-left: 20px;
   margin-bottom: 0;
+}
+
+.landing-page-section-title {
+  text-align: right;
 }

@@ -1,47 +1,8 @@
-.documentation {
+.documentation-link-container {
   display: flex;
-  flex-direction: row;
-  padding-top: 59px;
-  padding-bottom: 49px;
-  justify-content: space-between;
-  border-top: solid 1px $grey-quaternary-font-color;
-}
-
-.documentation-left {
-  width: 275px;
-}
-
-.documentation-right {
-  width: 726px;
-}
-
-.documentation-subtitle {
-  font-family: $primary-font;
-  font-size: $tertiary-font-size;
-  font-weight: $normal-font-weight;
-  color: $dark-secondary-font-color;
-}
-
-.documentation-paragraph {
-  font-family: $secondary-font;
-  font-size: $primary-font-size;
-  font-weight: $normal-font-weight;
-  color: $grey-primary-font-color;
-}
-
-.documentation-link {
-  font-family: $secondary-font;
-  font-size: $primary-font-size;
-  font-weight: $normal-font-weight;
-  color: $purple-secondary-font-color;
-  margin-top: 42px;
-}
-
-.documentation-list {
-  list-style-type: none;
-  margin: 0;
-}
-
-.documentation-list li {
-  margin-bottom: 20px;
+  flex-direction: column;
+  
+  &>a {
+    line-height: 1.5;
+  }
 }
