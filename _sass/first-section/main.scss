@@ -1,0 +1,28 @@
+.first-section-container {
+  padding-top: 60px;
+
+  &>div.component-individual:first-of-type {
+    padding-top: 0;
+  }
+
+  &>div.component-individual:last-of-type {
+    &>div.reusable-component-right {
+      padding-bottom: 60px;
+      border-bottom: solid 1px $grey-quaternary-font-color!important;
+    }
+  }
+}
+
+.first-section-numeric-list {
+  list-style-type: decimal;
+}
+
+.first-section-line-height {
+  &>li {
+    line-height: 1.5;
+  }
+}
+
+.first-section-bold-text {
+  font-weight: bold;
+}
