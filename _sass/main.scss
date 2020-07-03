@@ -241,3 +241,10 @@ div.no-margin-bottom {
 .landing-page-container {
   margin-bottom: 100px;
 }
+
+// schema page, database page & resources page only
+.no-margin-top-first-title-color {
+  &>p.title-color:first-of-type {
+    margin-top: 0;
+  }
+}
