@@ -34,7 +34,7 @@ $(document).ready(function () {
       return requestedData.id;
     }).join(",");
 
-    const BASE_URL = "https://d3utuyt0gg.execute-api.ap-southeast-2.amazonaws.com/dev"
+    const BASE_URL = "https://ob7y97f6e1.execute-api.ap-southeast-2.amazonaws.com/dev"
     const SAMPLE_BASE_URL = BASE_URL + "/datasets/samples?";
     const GET_SAMPLE_DATASET_URL =
       SAMPLE_BASE_URL +
