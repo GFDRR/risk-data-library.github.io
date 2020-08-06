@@ -1,10 +1,10 @@
 - name: Schema
-  link: /schemas
+  link: risk-data-library.github.io/schemas
 - name: Database
-  link: /database
+  link: risk-data-library.github.io//database
 - name: Data
-  link: /data
+  link: risk-data-library.github.io//data
 - name: Resources
-  link: /resources
+  link: risk-data-library.github.io//resources
 - name: Project
-  link: /project
+  link: risk-data-library.github.io//project
