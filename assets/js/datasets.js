@@ -135,7 +135,7 @@ $(document).ready(function () {
         return (
           "<tr>" +
           metadata.join("") +
-          "<td class='data-table-value data-table-cell'><a class='table-header-redirect data-table-value' href='/data-details#" +
+          "<td class='data-table-value data-table-cell'><a class='table-header-redirect data-table-value' href='./data-details#" +
           schema +
           "=" +
           dataset.id +
