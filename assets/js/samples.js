@@ -17,7 +17,7 @@ $(document).ready(function () {
      "<p id='loading-text' class='details-content'>Loading....</p>"
    );
   
-  $.get("/api/samples.json", function (requestedData) {
+  $.get("./api/samples.json", function (requestedData) {
     const hazardIds = requestedData[HAZARD].map(function(requestedData) {
       return requestedData.id;
     }).join(",");
