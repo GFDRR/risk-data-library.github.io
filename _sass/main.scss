@@ -248,3 +248,23 @@ div.no-margin-bottom {
     margin-top: 0;
   }
 }
+
+figure {
+  display: inline-block;
+  font-family: $primary-font;
+  font-weight: $secondary-font-weight;
+  color: $grey-quinary-font-color;
+  margin: 20px; 
+}
+
+figure img {
+  vertical-align: top;
+}
+
+figure figcaption {
+  text-align: center;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+}
