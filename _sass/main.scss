@@ -172,6 +172,10 @@ table {
   padding-bottom: 70px;
 }
 
+.no-padding-top {
+  padding-top: 0;
+}
+
 .no-padding-bottom {
   padding-bottom: 0;
 }
@@ -259,12 +263,16 @@ figure {
 
 figure img {
   vertical-align: top;
+  max-width: 960px;
 }
 
 figure figcaption {
-  text-align: center;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   letter-spacing: normal;
+}
+
+.image-container {
+  margin-top: 65px;
 }
