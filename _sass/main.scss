@@ -172,6 +172,10 @@ table {
   padding-bottom: 70px;
 }
 
+.no-padding-top {
+  padding-top: 0;
+}
+
 .no-padding-bottom {
   padding-bottom: 0;
 }
@@ -247,4 +251,21 @@ div.no-margin-bottom {
   &>p.title-color:first-of-type {
     margin-top: 0;
   }
+}
+
+figure {
+  display: inline-block;
+  font-family: $primary-font;
+  font-weight: $secondary-font-weight;
+  color: $grey-quinary-font-color;
+  margin: 20px; 
+}
+
+figure img {
+  vertical-align: top;
+  max-width: 960px;
+}
+
+.image-container {
+  margin-top: 65px;
 }
