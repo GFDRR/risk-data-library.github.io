@@ -21,16 +21,20 @@ $title-font-size: rem-calc(36);
 $primary-opacity: 1;
 $secondary-opacity: 0.75;
 
+$baseline: 16px;
+
 
 // common fonts
 .reusable-font-semi-bold {
+  vertical-align: baseline;
   font-family: $primary-font;
   font-weight: $secondary-font-weight;
 }
 
 .reusable-font-regular {
   font-family: $primary-font;
-  line-height: 1.56;
+  line-height: $baseline * 1.6;
+  vertical-align: baseline;
   font-weight: $normal-font-weight;
 }
 
@@ -61,7 +65,8 @@ p.subtitle-description {
   font-size: $secondary-font-size;
   font-weight: $normal-font-weight;
   color: $grey-quinary-font-color;
-  line-height: 1.56;
+  line-height: $baseline * 1.6;
+  vertical-align: baseline;
   width: 625px;
 }
 
