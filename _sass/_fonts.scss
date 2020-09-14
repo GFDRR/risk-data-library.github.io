@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
-$primary-font: 'Manrope', sans-serif;
-$secondary-font: 'Open Sans', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;500;600;800&display=swap');
+
+$primary-font: 'SourceSansPro', sans-serif;
 
 $primary-font-weight: 800;
 $secondary-font-weight: 600;
@@ -25,6 +26,17 @@ $secondary-opacity: 0.75;
 
 
 // common fonts
+.reusable-font-semi-bold {
+  font-family: $primary-font;
+  font-weight: $secondary-font-weight;
+}
+
+.reusable-font-regular {
+  font-family: $primary-font;
+  line-height: 1.56;
+  font-weight: $normal-font-weight;
+}
+
 h1.main-title {
   font-family: $primary-font;
   font-size: $title-font-size;
@@ -42,15 +54,13 @@ h3.subtitle {
 }
 
 h4.reusable-title {
-  font-family: $primary-font;
   font-size: 24px;
   color: $reusable-title-color;
-  // margin-bottom: 5px;
   margin-top: 0;
 }
 
 p.subtitle-description {
-  font-family: $secondary-font;
+  font-family: $primary-font;
   font-size: $secondary-font-size;
   font-weight: $normal-font-weight;
   color: $grey-quinary-font-color;
@@ -59,18 +69,18 @@ p.subtitle-description {
 }
 
 p.reusable-subtitle {
-  font-family: $secondary-font;
   font-size: $secondary-font-size;
-  font-weight: $normal-font-weight;
   color: $reusable-subtitle-color;
 }
 
 div.reusable-content {
-  font-family: $secondary-font;
   font-size: $primary-font-size;
-  font-weight: $normal-font-weight;
   color: $grey-quinary-font-color;
   margin-bottom: 40px;
+
+  &> :first-child {
+    padding-top: 6px;
+  }
 }
 
 p.details-subtitle {
