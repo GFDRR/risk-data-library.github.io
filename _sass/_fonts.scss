@@ -54,10 +54,15 @@ h3.subtitle {
   margin-top: 60px;
 }
 
+h4 {
+  line-height: $baseline * 1.6;
+}
+
 h4.reusable-title {
   font-size: 24px;
   color: $reusable-title-color;
   margin-top: 0;
+  line-height: $baseline * 1.6;
 }
 
 p.subtitle-description {
@@ -73,6 +78,8 @@ p.subtitle-description {
 p.reusable-subtitle {
   font-size: $secondary-font-size;
   color: $reusable-subtitle-color;
+  padding-top: 27px;
+  line-height: $baseline * 1.5625;
 }
 
 div.reusable-content {
