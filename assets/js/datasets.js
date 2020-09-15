@@ -74,7 +74,6 @@ $(document).ready(function () {
         return "<tr class='data-table-header-container'>"
             + header.join('')
             + "<th class='data-table-th'></th>"
-            + "<th class='data-table-th'></th>"
           + "</tr>"
       }
   
