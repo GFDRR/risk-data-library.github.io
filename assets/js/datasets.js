@@ -87,19 +87,28 @@ $(document).ready(function () {
             return data;
         }
       }
-  
-      function displayKeyValue(key, dataset) {
+    
+      function displayKeyValue(schema, key, dataset) {
         switch (key) {
+          case "dataset_name":
+            return  "<a class='table-header-redirect data-table-value' href='./data-details#" +
+                      schema +
+                      "=" +
+                      dataset.id +
+                      "'" +
+                      "id='" +
+                      dataset.id +
+                      "'>" + dataset[key]+ "</a>";
           case "year_developed":
-            return new Date(dataset).toLocaleString("en-us", {
+            return new Date(dataset[key]).toLocaleString("en-us", {
               year: "numeric",
               // month: "short",
             });
           case "exposure_type":
-            if (dataset === null || dataset == '') {
+            if (dataset[key] === null || dataset[key] == '') {
               return '-'
             }
-            return dataset
+            return dataset[key]
               .replace("(", "")
               .replace(")", "")
               .split(",")
@@ -108,7 +117,7 @@ $(document).ready(function () {
               })
               .join(", ");
           default:
-            return transformDataValue(dataset);
+            return transformDataValue(dataset[key]);
         }
       }
   
@@ -125,7 +134,7 @@ $(document).ready(function () {
           if (keysFromDataset.indexOf(key) !== -1) {
             return (
               "<td class='data-table-value data-table-cell'>" +
-              displayKeyValue(key, dataset[key]) +
+              displayKeyValue(schema, key, dataset) +
               "</td>"
             );
           }
@@ -135,14 +144,6 @@ $(document).ready(function () {
         return (
           "<tr>" +
           metadata.join("") +
-          "<td class='data-table-value data-table-cell'><a class='table-header-redirect data-table-value' href='./data-details#" +
-          schema +
-          "=" +
-          dataset.id +
-          "'" +
-          "id='" +
-          dataset.id +
-          "'>More&nbsp;→</a></td>" +
           "<td class='data-table-value data-table-image'><a href='" +
           dataset.download_link +
           "' download target='_blank'>" +
