@@ -23,7 +23,7 @@
 }
 
 .data-table-value {
-  font-family: $secondary-font;
+  font-family: $primary-font;
   font-size: $medium-font-size;
   font-weight: $normal-font-weight;
   line-height: 1.54;
@@ -97,7 +97,7 @@ tr>td:first-child, tr>th:first-child  {
 
 .data-table-header {
   font-weight: $secondary-font-weight;
-  font-family: $secondary-font;
+  font-family: $primary-font;
   font-size: $extra-small-font-size;
   color: $reusable-title-color;
   vertical-align: bottom;

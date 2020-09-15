@@ -21,7 +21,7 @@
   width: 616px;
 
   a {
-    font-family: $secondary-font;
+    font-family: $primary-font;
     font-size: $primary-font-size;
     font-weight: $normal-font-weight;
     line-height: 1.39;
@@ -31,12 +31,10 @@
 
   p {
     margin-bottom: 5px;
-    font-family: $secondary-font;
     font-size: $primary-font-size;
     font-weight: $normal-font-weight;
     color: $grey-quinary-font-color;
   }
-
 }
 
 .footer-right {
@@ -45,7 +43,7 @@
 }
 
 .footer-anchor {
-  font-family: $secondary-font;
+  font-family: $primary-font;
   font-size: $secondary-font-size;
   font-weight: $normal-font-weight;
   color: $links-color;
