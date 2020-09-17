@@ -14,10 +14,11 @@ Note: `localhost` doesn't render data from the backend.
 
 1. Remove `hidden` class from the parent div in the schema & dashboard page
 2. For example
-    **From**
+
     ``` html
-	<div class="image-container hidden component-individual data-table-margin-bottom">```
-    **To**
-    ``` html 
+	From
+	<div class="image-container hidden component-individual data-table-margin-bottom">
+	
+	To
 	<div class="image-container component-individual data-table-margin-bottom">`
 	```
