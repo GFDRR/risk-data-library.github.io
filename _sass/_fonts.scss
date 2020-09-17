@@ -88,8 +88,12 @@ div.reusable-content {
   color: $grey-tertiary-font-color;
   margin-bottom: 40px;
 
-  &> :first-child {
-    padding-top: 3px;
+  &> p.title-color {
+    padding-top: 10px;
+  }
+
+  &> p.content {
+    padding-top: 8px;
   }
 }
 

@@ -10,15 +10,15 @@
   margin-bottom: 30px!important;
 }
 
-.schema-page-link-container {
+.link-under-paragraph-container {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   margin-top: 30px;
 
-  & > a:first-of-type {
-    margin-bottom: 10px;
-  }
+  // & > a:first-of-type {
+  //   margin-bottom: 10px;
+  // }
 }
 
 p.schemas-page-timeline {
