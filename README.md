@@ -13,7 +13,11 @@ Note: `localhost` doesn't render data from the backend.
 ### To Display Image block in the future
 
 1. Remove `hidden` class from the parent div in the schema & dashboard page
-2. For example 
-    `<div class="image-container hidden component-individual data-table-margin-bottom">`
-    TO
-    `<div class="image-container component-individual data-table-margin-bottom">`
+2. For example
+    **From**
+    ``` html
+	<div class="image-container hidden component-individual data-table-margin-bottom">```
+    **To**
+    ``` html 
+	<div class="image-container component-individual data-table-margin-bottom">`
+	```
