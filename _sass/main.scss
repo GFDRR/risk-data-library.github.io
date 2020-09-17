@@ -10,7 +10,6 @@
 // homepage
 @import "navigation/main";
 @import "description/main";
-@import "purpose/main";
 @import "components/main";
 @import "component/main";
 @import "supporting-organisations/main";
@@ -52,11 +51,11 @@ article, section {
 }
 
 .navbar {
-  background-color: $reusable-title-color;
+  background-color: $blue-secondary-color;
 }
 
 .top-container {
-  background-color: $reusable-title-color;
+  background-color: $blue-secondary-color;
 }
 
 .top-container, .middle-container, .page-container, .landing-top-container {
@@ -97,7 +96,7 @@ article, section {
 }
 
 .page-container-title {
-  color: $reusable-title-color;
+  color: $blue-secondary-color;
 }
 
 .landing-top-container {
@@ -113,10 +112,10 @@ a.link {
   font-family: $primary-font;
   font-size: $primary-font-size;
   font-weight: $normal-font-weight;
-  color: $links-color;
+  color: $blue-primary-color;
 
   &:hover {
-    color: darken( $links-color, 20% );
+    color: darken( $blue-primary-color, 20% );
   }
 }
 
@@ -148,9 +147,9 @@ table {
 
 .landing-page-component-title {
   font-family: $primary-font;
-  font-size: $quaternary-font-size;
+  font-size: $senary-font-size;
   font-weight: $secondary-font-weight;
-  color: $reusable-component-title-color;
+  color: $grey-quaternary-font-color;
   line-height: 42px;
 
   @media only screen and (max-width: 1000px) {
@@ -159,13 +158,13 @@ table {
 }
 
 .title-color {
-  color: $reusable-title-color !important;
+  color: $blue-secondary-color !important;
   margin-top: 30px;
   font-weight: $secondary-font-weight!important;
 }
 
 .primary-divider {
-  border-bottom: solid 1px $grey-quaternary-font-color;
+  border-bottom: solid 1px $grey-secondary-font-color;
 }
 
 .padding-bottom {
@@ -177,7 +176,7 @@ table {
 }
 
 .extra-padding-top {
-  padding-top: 3px;
+  padding-top: 8px;
 }
 
 .no-padding-bottom {
@@ -215,6 +214,11 @@ div.no-margin-bottom {
   >li {
     padding-bottom: 0.5rem;
   }
+}
+
+// Learn more links
+.link-container {
+  margin-top: 15px;
 }
 
 
@@ -257,6 +261,7 @@ div.no-margin-bottom {
   }
 }
 
+// hidden components for later use
 .hidden {
   display: none;
 }

@@ -8,20 +8,21 @@ $tertiary-font-weight: 500;
 $normal-font-weight: normal;
 
 $extra-small-font-size: rem-calc(11);
-$small-font-size: rem-calc(12); 
 $medium-font-size: rem-calc(13);
 $primary-font-size: rem-calc(16); 
 $secondary-font-size: rem-calc(18); 
-$tertiary-font-size: rem-calc(20); 
-$paragraph-font-size: rem-calc(21); 
-$quaternary-font-size: rem-calc(31); 
-$quinary-font-size: rem-calc(44); 
+$tertiary-font-size: rem-calc(20);
+$quaternary-font-size: rem-calc(24);
+$quinary-font-size:  rem-calc(26);
+$senary-font-size: rem-calc(31); 
 $title-font-size: rem-calc(36); 
 
 $primary-opacity: 1;
 $secondary-opacity: 0.75;
 
-$baseline: 16px;
+$primary-line-height: $primary-font-size * 1.5;
+$secondary-line-height: $secondary-font-size * 1.34;
+$tertiary-line-height: $quaternary-font-size * 1.5;
 
 
 // common fonts
@@ -33,7 +34,6 @@ $baseline: 16px;
 
 .reusable-font-regular {
   font-family: $primary-font;
-  line-height: $baseline * 1.6;
   vertical-align: baseline;
   font-weight: $normal-font-weight;
 }
@@ -48,43 +48,44 @@ h1.main-title {
 h3.subtitle {
   font-family: $primary-font;
   font-weight: $secondary-font-weight;
-  color: $reusable-title-color;
-  font-size: 26px;
+  color: $blue-secondary-color;
+  font-size: $quinary-font-size;
   margin-bottom: 10px;
   margin-top: 60px;
 }
 
 h4 {
-  line-height: $baseline * 1.6;
+  line-height: $tertiary-line-height;
 }
 
 h4.reusable-title {
-  font-size: 24px;
-  color: $reusable-title-color;
+  font-size: $quaternary-font-size;
+  color: $blue-secondary-color;
   margin-top: 0;
-  line-height: $baseline * 1.6;
+  line-height: $tertiary-line-height;
 }
 
 p.subtitle-description {
   font-family: $primary-font;
   font-size: $secondary-font-size;
   font-weight: $normal-font-weight;
-  color: $grey-quinary-font-color;
-  line-height: $baseline * 1.6;
+  color: $grey-tertiary-font-color;
+  line-height: $secondary-line-height;
   vertical-align: baseline;
   width: 625px;
 }
 
 p.reusable-subtitle {
   font-size: $secondary-font-size;
-  color: $reusable-subtitle-color;
-  padding-top: 27px;
-  line-height: $baseline * 1.5625;
+  color: $grey-quinary-font-color;
+  // padding-top: 0.5rem;
+  line-height: $secondary-line-height;
 }
 
 div.reusable-content {
   font-size: $primary-font-size;
-  color: $grey-quinary-font-color;
+  line-height: $primary-line-height;
+  color: $grey-tertiary-font-color;
   margin-bottom: 40px;
 
   &> :first-child {
