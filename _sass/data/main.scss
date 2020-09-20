@@ -6,20 +6,20 @@
   font-family: $primary-font;
   font-size: 24px;
   font-weight: $secondary-font-weight;
-  color: $reusable-title-color;
+  color: $blue-secondary-color;
 }
 
 .data-subtitle {
   font-family: $primary-font;
   font-size: $secondary-font-size;
   font-weight: $normal-font-weight;
-  color: $reusable-subtitle-color;
+  color: $grey-quinary-font-color;
   margin-bottom: 50px;
   width: 480px;
 }
 
 .data-table-header-container {
-  border-bottom: 1px solid $grey-quaternary-font-color;
+  border-bottom: 1px solid $grey-secondary-font-color;
 }
 
 .data-table-value {
@@ -27,7 +27,7 @@
   font-size: $medium-font-size;
   font-weight: $normal-font-weight;
   line-height: 1.54;
-  color: $grey-quinary-font-color;
+  color: $grey-tertiary-font-color;
   vertical-align: top;
 }
 
@@ -37,7 +37,7 @@ tr.data-table-header-container>th:first-child, tr>td:first-child {
 
 table>tr:not(:first-of-type) {
   &:nth-of-type(2n+1) {
-    background-color: $table-row-color;
+    background-color: $light-secondary-font-color;
   }
 }
 
@@ -99,13 +99,13 @@ tr>td:first-child, tr>th:first-child  {
   font-weight: $secondary-font-weight;
   font-family: $primary-font;
   font-size: $extra-small-font-size;
-  color: $reusable-title-color;
+  color: $blue-secondary-color;
   vertical-align: bottom;
 }
 
 .table-header-redirect {
   line-height: 1.54;
-  color: $links-color;
+  color: $blue-primary-color;
 }
 
 .table-download-link {

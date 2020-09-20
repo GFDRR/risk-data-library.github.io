@@ -2,7 +2,7 @@ h1.dataDetails-title {
   font-family: $primary-font;
   font-size: 26px;
   font-weight: $secondary-font-weight;
-  color: $reusable-title-color;
+  color: $blue-secondary-color;
   margin-bottom: 0;
 }
 
@@ -11,7 +11,7 @@ h1.dataDetails-title {
   margin-bottom: 60px;
   width: 160px;
   height: 40px;
-  border: solid 1px $links-color;
+  border: solid 1px $blue-primary-color;
   text-align: center;
   display: flex;
   flex-direction: row;
@@ -56,9 +56,9 @@ h1.dataDetails-title {
   font-family: $primary-font;
   font-size: $primary-font-size;
   font-weight: $normal-font-weight;
-  color: $links-color;
+  color: $blue-primary-color;
 
   &:hover {
-    color: darken( $links-color, 20% );
+    color: darken( $blue-primary-color, 20% );
   }
 }
