@@ -1,0 +1,36 @@
+.schema-page-image {
+  & div.logos-container:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+}
+
+.logos-container {
+  margin: 0 40px;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+
+  & .individual-logo-container:not(:last-of-type) {
+    margin-right: 45px;
+  }
+}
+
+.individual-logo-container {
+  width: 290px;
+  display: flex;
+  flex-flow: column;
+
+  & a {
+    align-self: center;
+    margin-bottom: 20px;
+  }
+
+  & figcaption {
+    text-align: center;
+  }
+}
+
+.logo-image {
+  width: 204px;
+  height: 120px;
+}
