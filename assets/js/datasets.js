@@ -26,7 +26,7 @@ $(document).ready(function () {
       let exposureDatasets = null;
       let vulnerabilityDatasets = null;
       let lossDatasets = null;
-  
+
       const siteData = JSON.parse(JSON.stringify(data));
       // need var here as IE11 doesn't support const/let for in loop
       for (var key in siteData) {
@@ -59,7 +59,7 @@ $(document).ready(function () {
 
   
       function getHeadersFromData(dataset) {
-        const keysFromDataset = Object.keys(dataset);
+        const keysFromDataset = dataset? Object.keys(dataset) : '';
         
         const header = METADATA_FIELDS.map(function(key) {
             if (keysFromDataset.indexOf(key) !== -1) {
