@@ -181,7 +181,7 @@ $(document).ready(function () {
     });
   }
 
-  const BASE_URL = "https://ob7y97f6e1.execute-api.ap-southeast-2.amazonaws.com/dev";
+  const BASE_URL = "https://ddsurmhzkc.execute-api.ap-southeast-2.amazonaws.com/dev";
   var GET_SAMPLE_DATASET_URL = BASE_URL + '/datasets?';
   $.get("./api/samples.json", function (res) {
     const hazardIds = res[HAZARD].map(function(json) {

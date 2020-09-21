@@ -32,7 +32,7 @@ $(document).ready(function() {
     const dataId = hashDetails[1];
 
     const DATA_DETAILS_URL =
-      "https://ob7y97f6e1.execute-api.ap-southeast-2.amazonaws.com/dev/" +
+      "https://ddsurmhzkc.execute-api.ap-southeast-2.amazonaws.com/dev/" +
       schema +
       "/" +
       dataId;
