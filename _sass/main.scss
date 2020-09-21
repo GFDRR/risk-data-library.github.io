@@ -58,6 +58,10 @@ article, section {
   background-color: $blue-secondary-color;
 }
 
+.navbar, .top-container, .middle-container, .footer-container {
+  min-width: 1200px;
+}
+
 .top-container, .middle-container, .page-container, .landing-top-container {
   display: flex;
   flex-direction: column;
