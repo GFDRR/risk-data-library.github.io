@@ -3,15 +3,16 @@
   {% include head.html %}
   <body>
     <div class="body-container">
-      <div id="content-wrap">
+      <div class="content-wrap">
         <div class="navbar">
           {% include navigation.html %}
         </div>
         {{ content }}
         </div>
+    
+    </div>    
         {% include footer.html %}
 
-    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js" crossorigin="anonymous"></script>
     <script>
       $(document).foundation();
