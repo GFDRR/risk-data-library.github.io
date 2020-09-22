@@ -41,6 +41,8 @@ $(document).ready(function() {
 
     $.get(DATA_DETAILS_URL, function(data) {
       $("#loading-text").remove();
+      
+      // add units to intensity
 
       function renderHeader(data) {
         return (
@@ -76,15 +78,23 @@ $(document).ready(function() {
       function displayKeyValue(key, dataset) {
         switch (key) {
           case "year_developed":
-            return new Date(dataset).toLocaleString("en-us", {
+            return new Date(dataset[key]).toLocaleString("en-us", {
               year: "numeric",
               month: "short",
             });
-          case "exposure_type":
+          case "intensity_measure":
+            let intensity_concat = [];
+            if(dataset[key] && dataset[key].length > 0){
+              dataset[key].forEach(function(intensity, idx){
+                intensity_concat.push(`${intensity}(${dataset['unit'][idx]})` )
+              })
+            }
+
+            return transformDataValue(intensity_concat);
           case "analysis_metric":
             return (
-              dataset &&
-              dataset
+              dataset[key] &&
+              dataset[key]
                 .replace("(", "")
                 .replace(")", "")
                 .split(",")
@@ -94,7 +104,7 @@ $(document).ready(function() {
                 .join(", ")
             );
           default:
-            return transformDataValue(dataset);
+            return transformDataValue(dataset[key]);
         }
       }
 
@@ -106,7 +116,7 @@ $(document).ready(function() {
             transformKey(key) +
             "</p>" +
             "<p class='dataDetails-list-right details-content'>" +
-            displayKeyValue(key, data[0][key]) +
+            displayKeyValue(key, data[0]) +
             "</p>" +
             "</div>"
           );
