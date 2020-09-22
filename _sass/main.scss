@@ -30,7 +30,6 @@
 //footer
 @import "footer/main";
 
-
 // common or reusable css across whole site
 body {
   margin: 0;
@@ -56,10 +55,6 @@ article, section {
 
 .top-container {
   background-color: $blue-secondary-color;
-}
-
-.navbar, .top-container,.page-top-container,.middle-container, .footer-container {
-  min-width: 1200px;
 }
 
 .top-container, .middle-container, .page-container, .landing-top-container {
@@ -269,7 +264,26 @@ div.no-margin-bottom {
   }
 }
 
+// the section below is to make website readable on mobile view - no responsive design
+.navbar, .top-container,.page-top-container,.middle-container, .footer-container {
+  min-width: 1200px;
+}
+
+.body-container {
+  min-height: 100%;
+  margin-bottom: -230px;
+}
+
+.content-wrap {
+  margin-bottom: 230px;
+}
+
+footer {
+  height: 230px;
+}
+
 // hidden components for later use
 .hidden {
   display: none;
 }
+
