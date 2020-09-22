@@ -58,7 +58,7 @@ article, section {
   background-color: $blue-secondary-color;
 }
 
-.navbar, .top-container, .middle-container, .footer-container {
+.navbar, .top-container,.page-top-container,.middle-container, .footer-container {
   min-width: 1200px;
 }
 
@@ -110,6 +110,10 @@ article, section {
 .container-wrapper {
   width: 960px;
   align-self: center;
+
+  @media only screen and (max-width: 1200px) {
+    align-self: flex-start;
+  }
 }
 
 a.link {
