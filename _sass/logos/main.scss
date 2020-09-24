@@ -5,18 +5,14 @@
 }
 
 .logos-container {
-  margin: 0 40px;
   display: flex;
   flex-flow: row;
   flex-wrap: nowrap;
-
-  & .individual-logo-container:not(:last-of-type) {
-    margin-right: 45px;
-  }
+  justify-content: space-between;
 }
 
 .individual-logo-container {
-  width: 290px;
+  width: 280px;
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
@@ -27,7 +23,7 @@
   }
 
   & figcaption {
-    text-align: center;
+    text-align: start;
   }
 }
 
@@ -39,6 +35,4 @@ img {
 .logo-image {
   align-self: flex-end;
   width: 204px;
-  //TODO: check with designer re height 
-  // height: 120px;
 }
