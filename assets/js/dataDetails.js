@@ -86,11 +86,14 @@ $(document).ready(function() {
             let intensity_concat = [];
             if(dataset[key] && dataset[key].length > 0){
               dataset[key].forEach(function(intensity, idx){
-                intensity_concat.push(`${intensity}(${dataset['unit'][idx]})` )
+                intensity_concat.push(`${intensity} (${dataset['unit'][idx]})` )
               })
             }
-
-            return transformDataValue(intensity_concat);
+            
+            return transformDataValue(intensity_concat.join(', '));
+            case "occurrence_probability":
+             
+              return transformDataValue(dataset[key].join(', '));
           case "analysis_metric":
             return (
               dataset[key] &&
