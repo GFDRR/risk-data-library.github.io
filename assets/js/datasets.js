@@ -157,6 +157,7 @@ $(document).ready(function () {
       }
 
       $(document).on('click', 'td.data-table-image', function () { 
+        $('td.data-table-image>div>div').removeClass('show');
         $(this).find('div').toggleClass('show');
       })
 
