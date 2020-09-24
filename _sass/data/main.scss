@@ -20,6 +20,8 @@
 
 .data-table-header-container {
   border-bottom: 1px solid $grey-secondary-font-color;
+  height: 40px;
+  background-color: $grey-table-font-color;
 }
 
 .data-table-value {
@@ -31,18 +33,34 @@
   vertical-align: top;
 }
 
-tr.data-table-header-container>th:first-child, tr>td:first-child {
-  padding-left: 5px;
+tr.data-table-header-container>th:last-child, tr>td:last-child {
+  padding-right: 20px;
+  padding-left: 0px !important;
+  border-left:1px solid $light-primary-font-color;
+  border-right:1px solid $light-tertiary-color;
 }
 
-table>tr:not(:first-of-type) {
-  &:nth-of-type(2n+1) {
-    background-color: $light-secondary-font-color;
-  }
+tr>td:l:nth-last-child(2) {
+  border-right:1px solid $light-primary-font-color;
+}
+
+tr.data-table-header-container>th:nth-last-child(2) {
+  border-right:1px solid $grey-table-font-color;
+}
+
+tr.data-table-header-container>th:first-child, tr>td:first-child {
+  padding-left: 20px;
+}
+
+table, th, td {
+  border-left: 1px solid $light-tertiary-color;
+  border-top: 1px solid $light-tertiary-color;
+  border-bottom: 1px solid $light-tertiary-color;
 }
 
 table>tr:not(:first-child)>td:nth-last-child(2) {
   padding-right: 0;
+  padding-left: 16px;
 }
 
 table>tr:not(:first-child)>td:nth-last-child(3) {
@@ -79,12 +97,12 @@ tr>td:first-child, tr>th:first-child  {
 }
 
 #exposure-datasets tr.data-table-header-container>th:first-of-type, #exposure-datasets tr:not(:first-child)>td:first-of-type {
-  padding-left: 5px;
+  padding-left: 20px;
   width: 300px;
 }
 
 #loss-datasets tr.data-table-header-container>th:first-of-type, #exposure-datasets tr:not(:first-child)>td:first-of-type {
-  padding-left: 5px;
+  padding-left: 20px;
   width: 250px;
 }
 
@@ -99,8 +117,13 @@ tr>td:first-child, tr>th:first-child  {
   font-weight: $secondary-font-weight;
   font-family: $primary-font;
   font-size: $extra-small-font-size;
-  color: $blue-secondary-color;
+  color: $grey-tertiary-font-color;
   vertical-align: bottom;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
 }
 
 .table-header-redirect {

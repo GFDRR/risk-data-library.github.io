@@ -22,3 +22,29 @@ Note: `localhost` doesn't render data from the backend.
 	To
 	<div class="image-container component-individual data-table-margin-bottom">`
 	```
+
+### To add new columns in the data page tables
+
+NOTE: Make sure the column you are looking to expose on the UI present in the API response i.e. from `datasets_service.py` in `rdl-infra` project.
+
+Add the new attribute you're trying to expose on the data table to METADATA_FIELDS Arrray in `assets > js > datasets.js`
+
+Example 
+
+FROM: 
+``` js
+	const METADATA_FIELDS = [
+        "dataset_name", "location", "hazard_type", "analysis_type",
+        "exposure_type", "function_type", "developed_by", "year_developed",
+        "license"
+	  ];
+```
+
+TO: to include hazard type as the last column
+```js
+	const METADATA_FIELDS = [
+        "dataset_name", "location", "hazard_type", "analysis_type",
+        "exposure_type", "function_type", "developed_by", "year_developed",
+        "license", "hazard_type"
+	];
+```
