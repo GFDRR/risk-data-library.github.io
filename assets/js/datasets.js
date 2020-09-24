@@ -143,13 +143,29 @@ $(document).ready(function () {
         return (
           "<tr>" +
           metadata.join("") +
-          "<td class='data-table-value data-table-image'><a href='" +
-          dataset.download_link +
-          "' download target='_blank'>" +
-          "<img src='assets/images/download_icon.png' class='table-download-link'></a></td>" +
+          "<td class='data-table-value data-table-image'>" +
+          // <a href='" +
+          // dataset.download_link +
+          // "' download target='_blank'>" +
+          "<div class='popup' onclick='myFunction()'>" +
+          "<span class='popuptext' id='myPopup'>A Simple Popup!</span>" +
+          "<img src='assets/images/download_icon.png' class='table-download-link'></div></td>" +
           "</tr>"
         );
       }
+
+      function myFunction() {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+      }
+
+      // $("img.table-download-link").on('click', function(){
+      //   console.log("clicked!");
+      // })
+      // $('body').on('click', 'div.popup-container', function () { 
+      //   // alert('it works'); 
+      //   $('#myPopup').removeClass('popuptext');
+      // })
   
       $("p.loading-text").remove();
       
