@@ -162,6 +162,13 @@ svg:hover circle {
   cursor: pointer;
 }
 
+.table-dialog-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 // The actual dialog
 .table-dialog .table-dialog-text {
   visibility: hidden;
@@ -173,7 +180,7 @@ svg:hover circle {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
   border-radius: 6px;
-  padding: 0.5rem 0;
+  padding: 0.5rem 15px;
   position: absolute;
   z-index: 1;
   bottom: 125%;
