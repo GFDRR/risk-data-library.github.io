@@ -20,6 +20,8 @@
 
 .data-table-header-container {
   border-bottom: 1px solid $grey-secondary-font-color;
+  height: 40px;
+  background-color: #f5f5f5;
 }
 
 .data-table-value {
@@ -32,17 +34,12 @@
 }
 
 tr.data-table-header-container>th:first-child, tr>td:first-child {
-  padding-left: 5px;
-}
-
-table>tr:not(:first-of-type) {
-  &:nth-of-type(2n+1) {
-    background-color: $light-secondary-font-color;
-  }
+  padding-left: 20px;
 }
 
 table>tr:not(:first-child)>td:nth-last-child(2) {
   padding-right: 0;
+  padding-left: 16px;
 }
 
 table>tr:not(:first-child)>td:nth-last-child(3) {
@@ -99,8 +96,13 @@ tr>td:first-child, tr>th:first-child  {
   font-weight: $secondary-font-weight;
   font-family: $primary-font;
   font-size: $extra-small-font-size;
-  color: $blue-secondary-color;
+  color: $grey-tertiary-font-color;
   vertical-align: bottom;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
 }
 
 .table-header-redirect {
