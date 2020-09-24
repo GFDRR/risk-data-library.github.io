@@ -7,8 +7,8 @@ $secondary-font-weight: 600;
 $tertiary-font-weight: 500;
 $normal-font-weight: normal;
 
-$extra-small-font-size: rem-calc(11);
-$medium-font-size: rem-calc(13);
+$extra-small-font-size: rem-calc(12);
+$medium-font-size: rem-calc(14);
 $primary-font-size: rem-calc(16); 
 $secondary-font-size: rem-calc(18); 
 $tertiary-font-size: rem-calc(20);
@@ -69,7 +69,7 @@ p.subtitle-description {
   font-family: $primary-font;
   font-size: $secondary-font-size;
   font-weight: $normal-font-weight;
-  color: $grey-tertiary-font-color;
+  color: $grey-tertiary-color;
   line-height: $secondary-line-height;
   vertical-align: baseline;
   width: 625px;
@@ -77,7 +77,7 @@ p.subtitle-description {
 
 p.reusable-subtitle {
   font-size: $secondary-font-size;
-  color: $grey-quinary-font-color;
+  color: $grey-quinary-color;
   // padding-top: 0.5rem;
   line-height: $secondary-line-height;
 }
@@ -85,7 +85,7 @@ p.reusable-subtitle {
 div.reusable-content {
   font-size: $primary-font-size;
   line-height: $primary-line-height;
-  color: $grey-tertiary-font-color;
+  color: $grey-tertiary-color;
   margin-bottom: 1rem;
 
   &> p.title-color {
@@ -101,12 +101,12 @@ p.details-subtitle {
   font-family: $primary-font;
   font-size: $primary-font-size;
   font-weight: $normal-font-weight;
-  color: $grey-primary-font-color;
+  color: $grey-primary-color;
 }
 
 p.details-content {
   font-family: $primary-font;
   font-size: $primary-font-size;
   font-weight: $normal-font-weight;
-  color: $dark-primary-font-color;
+  color: $dark-primary-color;
 }

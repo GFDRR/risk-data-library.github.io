@@ -23,24 +23,24 @@
 .navigation-left a {
   font-family: $primary-font;
   font-size: $primary-font-size;
-  color: $light-primary-font-color;
+  color: $light-primary-color;
   opacity: 1;
 
   &:hover {
-    color: darken( $light-primary-font-color, 20% );
+    color: darken( $light-primary-color, 20% );
   }
 }
 
 .navigation-right a {
   font-family: $primary-font;
   opacity: $secondary-opacity;
-  color: $light-primary-font-color;
+  color: $light-primary-color;
   font-size:$primary-font-size;
   &:not(:last-child){
     padding-right: 60px;
   }
   &:hover {
-    color: darken( $light-primary-font-color, 20% );
+    color: darken( $light-primary-color, 20% );
   }
 }
 
