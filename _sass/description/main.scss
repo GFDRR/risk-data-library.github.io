@@ -6,13 +6,13 @@
 }
 
 .description-title {
-  color: $light-primary-font-color;
+  color: $light-primary-color;
 }
 
 .description-paragraph {
   font-family: $primary-font;
   font-size: $secondary-font-size;
-  color: $light-primary-font-color;
+  color: $light-primary-color;
   font-weight: $normal-font-weight;
   width: 625px;
 }
@@ -21,14 +21,14 @@
   font-family: $primary-font;
   font-size: $secondary-font-size;
   font-weight: $normal-font-weight;
-  color: $light-primary-font-color;
+  color: $light-primary-color;
   line-height: 44px;
   width: 316px;
-  border: solid 1px $light-primary-font-color;
+  border: solid 1px $light-primary-color;
   text-align: center;
   margin-top: 70px;
 
   &:hover {
-    color: darken( $light-primary-font-color, 20% );
+    color: darken( $light-primary-color, 20% );
   }
 }
