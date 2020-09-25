@@ -130,13 +130,13 @@ $(document).ready(function() {
       function build_download_links(download_link) {
         let links = '';
         for (var key in download_link) {
-          links += "<a" +
+          links += "<div class='dataDetails-link-container'><a" +
               " href='" + download_link[key] +
               "' download " +
               " target='_blank' " +
               " class='table-dialog-download-link reusable-font-regular'>" +
               " Download " + displayKey(key) +
-              " </a>" ;
+              " </a></div>" ;
         }
 
         return links;
@@ -150,11 +150,9 @@ $(document).ready(function() {
             return key.toUpperCase().replace("_", " ");
         }
       }
-      
+
       function downloadData(data){
-        return "<div class='dataDetails-link-container'>" +
-          build_download_links(data.download_link) +
-         "</div>";
+        return build_download_links(data.download_link) 
       };
 
       $("#data-details").append(renderHeader(data[0])); 
