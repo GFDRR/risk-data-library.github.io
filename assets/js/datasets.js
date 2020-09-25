@@ -101,7 +101,6 @@ $(document).ready(function () {
           case "year_developed":
             return new Date(dataset[key]).toLocaleString("en-us", {
               year: "numeric",
-              // month: "short",
             });
           case "exposure_type":
             if (dataset[key] === null || dataset[key] == '') {
@@ -140,16 +139,34 @@ $(document).ready(function () {
           return "";
         });
 
+        console.log("dataset-->", dataset);
+
+        function downloadLinkType() {
+
+        }
+
         return (
           "<tr>" +
           metadata.join("") +
-          "<td class='data-table-value data-table-image'><a href='" +
-          dataset.download_link +
-          "' download target='_blank'>" +
-          "<img src='assets/images/download_icon.png' class='table-download-link'></a></td>" +
+          "<td class='data-table-value data-table-image'>" +
+          "<div class='table-dialog'>" +
+          "<div class='table-dialog-text' id='" + schema + dataset.id + "'><a href='" + dataset.download_link + "' download target='_blank' class='table-dialog-download-link reusable-font-regular'>Download CSV</a><a href='#' download target='_blank' class='table-dialog-download-link reusable-font-regular'>Download type B</a></div>" +
+          "<svg viewBox = '0 0 500 500' xmlns='http://www.w3.org/2000/svg'><circle style='fill: rgb(216, 216, 216);' cx='248.984' cy='251.416' r='249.057' transform='matrix(0.995483, 0, 0, 0.998119, 1.932797, -1.415413)'/><path d='M 169.12 -30.323 H 310.441 L 310.441 -106.792 L 439.724 6.309 L 310.441 119.41 L 310.441 42.941 H 169.12 V -30.323 Z' style='fill: rgb(255, 255, 255);' transform='matrix(-0.003056, 0.999995, -0.999995, -0.003056, 255.851608, -48.003548)' bx: shape='arrow 169.12 -106.792 270.604 226.202 73.264 129.283 0 1@48b5a99f'/></svg ></div></td>" +
           "</tr>"
         );
       }
+
+      $(document).on('click', 'td.data-table-image', function () { 
+        $('td.data-table-image>div>div').removeClass('show');
+        $(this).find('div').toggleClass('show');
+      })
+
+      $(document).click(function(event) {
+        const target = event.target;
+        if (!$(target).is('td.data-table-image') && !$(target).parents().is('td.data-table-image')) {
+          $('td.data-table-image>div>div').removeClass('show');
+        }
+      });
   
       $("p.loading-text").remove();
       

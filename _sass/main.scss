@@ -102,7 +102,7 @@ article, section {
 }
 
 .landing-top-container {
-  background-color: $light-primary-font-color
+  background-color: $light-primary-color
 }
 
 .container-wrapper {
@@ -155,7 +155,7 @@ table {
   font-family: $primary-font;
   font-size: $senary-font-size;
   font-weight: $secondary-font-weight;
-  color: $grey-quaternary-font-color;
+  color: $grey-quaternary-color;
   line-height: 42px;
 
   @media only screen and (max-width: 1000px) {
@@ -170,7 +170,7 @@ table {
 }
 
 .primary-divider {
-  border-bottom: solid 1px $grey-secondary-font-color;
+  border-bottom: solid 1px $light-tertiary-color;
 }
 
 .padding-bottom {
@@ -252,7 +252,7 @@ div.no-margin-bottom {
   font-family: $primary-font;
   font-size: 15px;
   font-weight: $normal-font-weight;
-  color: $light-primary-font-color;
+  color: $light-primary-color;
   line-height: 0.93;
 }
 
@@ -289,4 +289,3 @@ footer {
 .hidden {
   display: none;
 }
-
