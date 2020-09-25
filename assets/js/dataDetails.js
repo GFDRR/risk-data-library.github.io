@@ -142,6 +142,15 @@ $(document).ready(function() {
         return links;
       }
 
+      function displayKey(key) {
+        switch (key) {
+          case "year_developed":
+            return "year".toUpperCase();
+          default:
+            return key.toUpperCase().replace("_", " ");
+        }
+      }
+      
       function downloadData(data){
         return "<div class='dataDetails-link-container'>" +
           build_download_links(data.download_link) +
