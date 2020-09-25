@@ -153,12 +153,13 @@ $(document).ready(function () {
           return "";
         });
         
-        const old_url = dataset.download_link ;
-        dataset.download_link = {
-          'csv': old_url,
-          'json': old_url
-        } 
-        console.log(dataset.download_link)
+        // TO DELETE - mockup data for developing download link feature while the backend gets deployed
+        // const old_url = dataset.download_link ;
+        // dataset.download_link = {
+        //   'csv': old_url,
+        //   'json': old_url
+        // } 
+        // console.log(dataset.download_link)
         return (
           "<tr>" +
           metadata.join("") +
