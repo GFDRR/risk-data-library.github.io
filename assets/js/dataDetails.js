@@ -127,9 +127,25 @@ $(document).ready(function() {
         return "";
       });
 
+      function build_download_links(download_link) {
+        let links = '';
+        for (var key in download_link) {
+          links += "<a" +
+              " href='" + download_link[key] +
+              "' download " +
+              " target='_blank' " +
+              " class='table-dialog-download-link reusable-font-regular'>" +
+              " Download " + displayKey(key) +
+              " </a>" ;
+        }
+
+        return links;
+      }
 
       function downloadData(data){
-        return "<div class='dataDetails-link-container'><a href='" + data.download_link + "' download class='dataDetails-download-link' target='_blank'>Download CSV</a></div>";
+        return "<div class='dataDetails-link-container'>" +
+          build_download_links(data.download_link) +
+         "</div>";
       };
 
       $("#data-details").append(renderHeader(data[0])); 
