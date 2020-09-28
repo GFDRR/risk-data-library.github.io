@@ -26,7 +26,7 @@ $(document).ready(function () {
       let exposureDatasets = null;
       let vulnerabilityDatasets = null;
       let lossDatasets = null;
-
+      
       const siteData = JSON.parse(JSON.stringify(data));
       // need var here as IE11 doesn't support const/let for in loop
       for (var key in siteData) {

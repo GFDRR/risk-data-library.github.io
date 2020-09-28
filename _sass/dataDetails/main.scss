@@ -9,14 +9,18 @@ h1.dataDetails-title {
 .dataDetails-link-container {
   margin-top: 30px;
   margin-bottom: 60px;
+  flex-direction: row;
+}
+
+.dataDetails-link-sub-container {
   width: 160px;
   height: 40px;
+  padding-top: 5px;
   border: solid 1px $blue-primary-color;
   text-align: center;
-  display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
+  display:inline-block;
 }
 
 .dataDetails-project {
