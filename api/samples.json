@@ -1,13 +1,13 @@
 {
   "hazard": [
     {
-      "id": 80,
+      "id": 85,
       "schema": "hazard",
       "description": "A set of flood return period hazard maps showing maximum inundation depth per return period.",
       "value": "Demonstrates a typical hazard dataset with key metadata."
     },
     {
-      "id": 81,
+      "id": 88,
       "schema": "hazard",
       "description": "A set of earthquake return period hazard maps showing maximum pga per return period.",
       "value": "Demonstrates a typical hazard dataset with key metadata."
