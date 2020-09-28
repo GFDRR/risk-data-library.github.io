@@ -130,13 +130,13 @@ $(document).ready(function() {
       function build_download_links(download_link) {
         let links = '';
         for (var key in download_link) {
-          links += "<div class='dataDetails-link-container'><a" +
+          links += "<li class='dataDetails-link-sub-container'><a" +
               " href='" + download_link[key] +
               "' download " +
               " target='_blank' " +
               " class='table-dialog-download-link reusable-font-regular'>" +
               " Download " + displayKey(key) +
-              " </a></div>" ;
+              " </a></li>" ;
         }
 
         return links;
@@ -152,7 +152,7 @@ $(document).ready(function() {
       }
 
       function downloadData(data){
-        return build_download_links(data.download_link) 
+        return "<ul class='dataDetails-link-container'>" + build_download_links(data.download_link) + "</ul>"
       };
 
       $("#data-details").append(renderHeader(data[0])); 
