@@ -83,14 +83,18 @@ $(document).ready(function() {
               month: "short",
             });
           case "intensity_measure":
-            let intensity_concat = [];
-            if(dataset[key] && dataset[key].length > 0){
-              dataset[key].forEach(function(intensity, idx){
-                intensity_concat.push(`${intensity} (${dataset['unit'][idx]})` )
-              })
+            if(Array.isArray(dataset[key])){
+              let intensity_concat = [];
+              if(dataset[key] && dataset[key].length > 0){
+                dataset[key].forEach(function(intensity, idx){
+                  intensity_concat.push(intensity + ' (' + dataset['unit'][idx] + ')' )
+                })
+              }
+              return transformDataValue(intensity_concat.join(', '));
             }
-            
-            return transformDataValue(intensity_concat.join(', '));
+            else {
+              return transformDataValue(dataset[key]);
+            }
             case "occurrence_probability":
              
               return transformDataValue(dataset[key].join(', '));
