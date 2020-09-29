@@ -267,6 +267,12 @@ div.no-margin-bottom {
   }
 }
 
+// masonry-layout
+.masonry-layout-item {
+  float: left;
+  width: 275px;
+}
+
 // the section below is to make website readable on mobile view - no responsive design
 .navbar, .top-container,.page-top-container,.middle-container, .footer-container {
   min-width: 1200px;

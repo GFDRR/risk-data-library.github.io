@@ -43,7 +43,6 @@ $(document).ready(function() {
       $("#loading-text").remove();
       
       // add units to intensity
-
       function renderHeader(data) {
         return (
           "<h1 class='dataDetails-title'>" +
@@ -131,11 +130,11 @@ $(document).ready(function() {
         return "";
       });
 
-      function build_download_links(download_link) {
+      function buildDownloadLinks(downloadLink) {
         let links = '';
-        for (var key in download_link) {
+        for (var key in downloadLink) {
           links += "<li class='dataDetails-link-sub-container'><a" +
-              " href='" + download_link[key] +
+              " href='" + downloadLink[key] +
               "' download " +
               " target='_blank' " +
               " class='table-dialog-download-link reusable-font-regular'>" +
@@ -156,7 +155,7 @@ $(document).ready(function() {
       }
 
       function downloadData(data){
-        return "<ul class='dataDetails-link-container'>" + build_download_links(data.download_link) + "</ul>"
+        return "<ul class='dataDetails-link-container'>" + buildDownloadLinks(data.download_link) + "</ul>"
       };
 
       $("#data-details").append(renderHeader(data[0])); 
