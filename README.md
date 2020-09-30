@@ -7,7 +7,11 @@
 2. Run `docker-compose up --build` to build docker image
 3. Follow the instructions in the Terminal and go to `http://0.0.0.0:4000` to see the pages
 
-Note: `localhost` doesn't render data from the backend.
+Note: 
+- `localhost` doesn't render data from the backend.
+- Need to support **IE11**, some ES6 functions or syntax cannot be used. Refer to this table for compatibility: https://kangax.github.io/compat-table/es6/ 
+
+---
 
 ## User Notes
 ### To Display Image block in the future
