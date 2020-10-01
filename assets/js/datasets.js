@@ -1,8 +1,21 @@
 $(document).ready(function () {
-  const HAZARD = "hazard";
-  const EXPOSURE = "exposure";
-  const VULNERABILITY = "vulnerability";
-  const LOSS = "loss";
+  const HAZARD = {
+    query: "event_set_id",
+    dataset: 'hazard'
+  }
+  const EXPOSURE = {
+    query: "exposure",
+    dataset: 'exposure'
+  };
+  const VULNERABILITY = {
+    query: "vulnerability",
+    dataset: 'vulnerability'
+  };
+
+  const LOSS = {
+    query: "loss",
+    dataset: 'loss'
+  };
   
 
   $("#hazard-datasets").append(
@@ -31,17 +44,17 @@ $(document).ready(function () {
       // need var here as IE11 doesn't support const/let for in loop
       for (var key in siteData) {
         switch (key) {
-          case HAZARD:
-            hazardDatasets = siteData[HAZARD]
+          case HAZARD.dataset:
+            hazardDatasets = siteData[HAZARD.dataset]
             break;
-          case EXPOSURE:
-            exposureDatasets = siteData[EXPOSURE]
+          case EXPOSURE.dataset:
+            exposureDatasets = siteData[EXPOSURE.dataset]
             break;
-          case VULNERABILITY:
-            vulnerabilityDatasets = siteData[VULNERABILITY]
+          case VULNERABILITY.dataset:
+            vulnerabilityDatasets = siteData[VULNERABILITY.dataset]
             break;
-          case LOSS:
-            lossDatasets = siteData[LOSS]
+          case LOSS.dataset:
+            lossDatasets = siteData[LOSS.dataset]
             break;
           default:
             break;
@@ -93,7 +106,7 @@ $(document).ready(function () {
             return  "<a class='table-header-redirect data-table-value' href='./data-details#" +
                       schema +
                       "=" +
-                      dataset.id +
+                      (schema !== 'hazard' ? dataset.id : dataset.event_set_id) +
                       "'" +
                       "id='" +
                       dataset.id +
@@ -185,27 +198,27 @@ $(document).ready(function () {
       $("#hazard-datasets").append(getHeadersFromData(hazardDatasets[0]));
   
       $.each(hazardDatasets, function (key, hazardEvent){
-        $("#hazard-datasets").append(render(hazardEvent, HAZARD));
+        $("#hazard-datasets").append(render(hazardEvent, HAZARD.dataset));
       });
   
       $("#exposure-datasets").append(getHeadersFromData(exposureDatasets[0]));
   
       $.each(exposureDatasets, function (key, exposureEvent) {
-        $("#exposure-datasets").append(render(exposureEvent, EXPOSURE));
+        $("#exposure-datasets").append(render(exposureEvent, EXPOSURE.dataset));
       });
   
       $("#vulnerability-datasets").append(getHeadersFromData(vulnerabilityDatasets[0]));
   
       $.each(vulnerabilityDatasets, function (key, vulnerabilityEvent) {
         $("#vulnerability-datasets").append(
-          render(vulnerabilityEvent, VULNERABILITY)
+          render(vulnerabilityEvent, VULNERABILITY.dataset)
         );
       });
   
       $("#loss-datasets").append(getHeadersFromData(lossDatasets[0]));
   
       $.each(lossDatasets, function (key, lossEvent) {
-        $("#loss-datasets").append(render(lossEvent, LOSS));
+        $("#loss-datasets").append(render(lossEvent, LOSS.dataset));
       });
     });
   }
@@ -213,19 +226,19 @@ $(document).ready(function () {
   const BASE_URL = "https://ddsurmhzkc.execute-api.ap-southeast-2.amazonaws.com/dev";
   var GET_SAMPLE_DATASET_URL = BASE_URL + '/datasets?';
   $.get("./api/samples.json", function (res) {
-    const hazardIds = res[HAZARD].map(function(json) {
+    const eventSetIds = res[HAZARD.dataset].map(function(json) {
       return json.id;
     }).join(",");
 
-    const exposureIds = res[EXPOSURE].map(function(json) {
+    const exposureIds = res[EXPOSURE.dataset].map(function(json) {
       return json.id;
     }).join(",");
 
-    const vulnerabilityIds = res[VULNERABILITY].map(function(json) {
+    const vulnerabilityIds = res[VULNERABILITY.dataset].map(function(json) {
       return json.id;
     }).join(",");
 
-    const lossIds = res[LOSS].map(function(json) {
+    const lossIds = res[LOSS.dataset].map(function(json) {
       return json.id;
     }).join(",");
     
@@ -233,10 +246,10 @@ $(document).ready(function () {
     [
       BASE_URL,
       '/datasets?',
-      HAZARD, '=', hazardIds, '&',
-      EXPOSURE, '=', exposureIds, '&',
-      LOSS, '=', lossIds, '&',
-      VULNERABILITY, '=', vulnerabilityIds
+      HAZARD.query, '=', eventSetIds, '&',
+      EXPOSURE.dataset, '=', exposureIds, '&',
+      LOSS.dataset, '=', lossIds, '&',
+      VULNERABILITY.dataset, '=', vulnerabilityIds
     ].join('')
 
     update(GET_SAMPLE_DATASET_URL);
