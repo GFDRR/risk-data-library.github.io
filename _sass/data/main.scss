@@ -195,16 +195,17 @@ svg:hover circle {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  width: 0;
-  height: 0;
-  bottom: -12%;
+  width: 10px;
+  height: 10px;
+  bottom: -14%;
   left: 74%;
   box-sizing: border-box;
-  border: 0.3rem solid black;
-  border-color: transparent transparent $light-primary-color $light-primary-color;
+  border: 1px solid $light-tertiary-color;
+  border-color: transparent transparent $light-tertiary-color $light-tertiary-color;
   transform-origin: 0 0;
   transform: rotate(-45deg);
-  box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: -2px 2px 2px 0 rgba(0,0,0,0.1);
+  background-color: #ffffff;
 }
 
 // Toggle this class - hide and show the dialog
