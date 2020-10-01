@@ -106,7 +106,7 @@ $(document).ready(function () {
             return  "<a class='table-header-redirect data-table-value' href='./data-details#" +
                       schema +
                       "=" +
-                      dataset.id +
+                      (schema != 'hazard' ? dataset.id : dataset.event_set_id) +
                       "'" +
                       "id='" +
                       dataset.id +
