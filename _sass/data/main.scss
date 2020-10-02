@@ -84,7 +84,7 @@ table>tr:not(:first-child)>td:nth-last-child(5) {
 
 table#hazard-datasets>tr:not(:first-child)>td:first-child {
   width: 200px;
-  padding-right: 0;
+  padding-right: calc(0.15vw + 15px);
 }
 
 tr>td:first-child, tr>th:first-child  {
