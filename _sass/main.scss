@@ -114,6 +114,15 @@ article, section {
   }
 }
 
+.data-container-wrapper {
+  width: 1160px;
+  align-self: center;
+
+  @media only screen and (max-width: 1200px) {
+    align-self: flex-start;
+  }
+}
+
 a.link {
   font-family: $primary-font;
   font-size: $primary-font-size;

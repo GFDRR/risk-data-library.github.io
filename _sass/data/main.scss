@@ -2,11 +2,16 @@
   margin-top: 60px;
 }
 
+.data-section {
+  margin-left: 100px;
+}
+
 .data-title {
   font-family: $primary-font;
   font-size: 24px;
   font-weight: $secondary-font-weight;
   color: $blue-secondary-color;
+  margin-left: 100px;
 }
 
 .data-subtitle {
@@ -16,6 +21,7 @@
   color: $grey-quinary-color;
   margin-bottom: 50px;
   width: 480px;
+  margin-left: 100px;
 }
 
 .data-table-header-container {
