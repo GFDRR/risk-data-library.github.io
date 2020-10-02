@@ -1,9 +1,3 @@
-.component-individual:not(:last-child) {
-  >.component-individual-right {
-    border-bottom: solid 1px $light-tertiary-color;
-  }
-}
-
 .component-individual-title {
   font-weight: $secondary-font-weight;
 }
