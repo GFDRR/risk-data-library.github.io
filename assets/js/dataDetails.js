@@ -41,10 +41,6 @@ $(document).ready(function() {
 
     $.get(DATA_DETAILS_URL, function(data) {
       $("#loading-text").remove();
-      const HAZARD = 'hazard';
-      const EXPOSURE = 'exposure';
-      const LOSS = 'loss';
-      const VULNERABILITY = 'vulnerability';
 
       // add units to intensity
       function renderHeader(data) {
