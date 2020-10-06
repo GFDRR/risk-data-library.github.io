@@ -169,9 +169,11 @@ $(document).ready(function() {
 
       // const test = createLinkForEachSchema(schema, dataPerSchema);
 
-
+      let schemaForLink = '';
+      let schemaId = 0;
       function createLinkForEachSchema(schema, dataPerSchema) {
         console.log(schema, dataPerSchema);
+        schemaForLink = schema;
         const matcher = {
           "hazard": "description",
           "exposure": "name",
@@ -182,6 +184,7 @@ $(document).ready(function() {
         // const props = ['description', 'f_reference', 'name'];
         let links = dataPerSchema.map(function(value){
           console.log("value-->", value['id']);
+          schemaId = value['id'];
           if (value['id'] !== null) {
             const dataKey = matcher[schema];
             console.log(dataKey, value[dataKey]);
@@ -235,17 +238,19 @@ $(document).ready(function() {
         }
       }
 
-      $('p.dataDetails-list-right>a').click(function () {
-        // window.location.href = '/data-details#exposure=164';
-        // window.location.hash = '#exposure' + 164;
-        console.log("CLICKED");
-        window.location.reload();
-        // return false;
-      });
+
 
       $("#data-details").append(renderHeader(data[0])); 
       $("#data-details").append(downloadData(data[0])); 
-      $("#data-details").append("<div class='dataDetails-content'>" + dataDetails.join('') + "<div class='dataDetails-list'>" + "<p class='dataDetails-list-left details-subtitle'>Linked Datasets</p>" + "<p class='dataDetails-list-right details-content'>" + linkedDatasets(data[0]) + "</p></div></div>"); 
+      $("#data-details").append("<div class='dataDetails-content'>" + dataDetails.join('') + "<div class='dataDetails-list'>" + "<p class='dataDetails-list-left details-subtitle'>Linked Datasets</p>" + "<p id='linkedData' class='dataDetails-list-right details-content'>" + linkedDatasets(data[0]) + "</p></div></div>"); 
+
+      $('#linkedData a').click(function () {
+        // window.location.href = '/data-details#exposure=164';
+        console.log("CLICKED", schemaForLink);
+        window.location.hash = '#' + schemaForLink + "=" + schemaId;
+        window.location.reload();
+        // return false;
+      });
     });
   }
 });
