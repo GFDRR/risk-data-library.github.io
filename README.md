@@ -4,12 +4,14 @@
 ### Run the repo locally
 
 1. Navigate to the root of the repository
-2. Run `docker-compose up --build` to build docker image
+2. Run `docker-compose up --build` and/or `docker-compose up`(if no structure changes) to build docker image
 3. Follow the instructions in the Terminal and go to `http://0.0.0.0:4000` to see the pages
 
 Note: 
 - `localhost` doesn't render data from the backend.
 - Need to support **IE11**, some ES6 functions or syntax cannot be used. Refer to this table for compatibility: https://kangax.github.io/compat-table/es6/ 
+- If website doesn't updating during development, remove `_site` and `sass-cache` and restart the server
+- Jekyll doesn't support hot reload, need to restart server for javascript changes
 
 ---
 

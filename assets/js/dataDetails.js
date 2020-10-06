@@ -41,7 +41,7 @@ $(document).ready(function() {
 
     $.get(DATA_DETAILS_URL, function(data) {
       $("#loading-text").remove();
-      
+
       // add units to intensity
       function renderHeader(data) {
         return (
@@ -64,7 +64,6 @@ $(document).ready(function() {
       }
 
       function transformDataValue(data) {
-        
         switch (data) {
           case "":
           case null:
@@ -94,9 +93,8 @@ $(document).ready(function() {
             else {
               return transformDataValue(dataset[key]);
             }
-            case "occurrence_probability":
-             
-              return transformDataValue(dataset[key].join(', '));
+          case "occurrence_probability":
+            return transformDataValue(dataset[key].join(', '));
           case "analysis_metric":
             return (
               dataset[key] &&
@@ -158,9 +156,61 @@ $(document).ready(function() {
         return "<ul class='dataDetails-link-container'>" + buildDownloadLinks(data.download_link) + "</ul>"
       };
 
+      function capitalizeSchema(schema) {
+        return schema.split('')[0].toUpperCase() + schema.substring(1);
+      }
+
+      // create linked data among data schemas
+      function createLinkForEachSchema(schema, dataPerSchema) {
+        const matcher = {
+          "hazard": "description",
+          "exposure": "name",
+          "loss": "name",
+          "vulnerability": "f_reference"
+        }
+      
+        let linkContainer = "<div class='each-data-container'><div class='each-data-schema'>" + capitalizeSchema(schema) + ":" + "</div><div class='each-data-link'>"
+        let links = dataPerSchema.map(function(value){
+          if (value['id'] !== null) {
+            const dataKey = matcher[schema];
+            linkContainer += "<a class='value-" + schema + value['id'] + "' schema='" + schema + "' id=" + value['id'] + " " + "href='./data-details#" + schema + "=" + value['id'] + "'>" + value[dataKey] + "</a>"
+          } else {
+            linkContainer += 'Not available';
+          }
+        })
+        linkContainer = linkContainer.replace(/(Not available)+/g, "Not available");
+        return linkContainer + "</div></div>";
+      }
+
+      function linkedDatasets(data) {
+        let result = ''
+        for (var key in data) {
+          switch (key) {
+            case 'hazard':
+            case 'exposure':
+            case 'vulnerability':
+            case 'loss':
+              result += createLinkForEachSchema(key, data[key]);
+            default:
+              break;
+          }
+        }
+        return result;
+      }
+
+
       $("#data-details").append(renderHeader(data[0])); 
       $("#data-details").append(downloadData(data[0])); 
-      $("#data-details").append("<div class='dataDetails-content'>" + dataDetails.join('') + "</div>"); 
+      $("#data-details").append("<div class='dataDetails-content'>" + dataDetails.join('') + "<div class='dataDetails-list'>" + "<p class='dataDetails-list-left details-subtitle'>Linked Datasets</p>" + "<div id='linkedData' class='linked-data'>" + linkedDatasets(data[0]) + "</p></div></div>"); 
+
+      $("a[class^='value-']").ready(function () {
+        $("#linkedData div div a").click(function () {
+          const schema = $(this).attr("schema");
+          const id = $(this).attr("id")
+          window.location.hash = '#' + schema + "=" + id;
+          window.location.reload();
+        });
+      });
     });
   }
 });
