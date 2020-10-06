@@ -56,6 +56,32 @@ h1.dataDetails-title {
   word-wrap: break-word;
 }
 
+.linked-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.each-data-container {
+  display: flex;
+  flex-direction: row;
+  font-family: $primary-font;
+  font-size: 1rem;
+  font-weight: normal;
+  color: $dark-primary-color;
+  margin-left: 60px;
+  width: 625px;
+  word-break: break-word;
+}
+
+.each-data-schema {
+  width: 100px;
+}
+
+.each-data-link {
+  display: flex;
+  flex-direction: column;
+}
+
 .dataDetails-download-link {
   align-self: center;
   font-family: $primary-font;
