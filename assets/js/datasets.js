@@ -18,16 +18,16 @@ $(document).ready(function () {
   };
   
 
-  $("#hazard-datasets").append(
+  $("#hazard-datasets").addClass('data-table-hidden').append(
     "<p class='loading-text details-content'>Loading....</p>"
   );
-  $("#exposure-datasets").append(
+  $("#exposure-datasets").addClass('data-table-hidden').append(
     "<p class='loading-text details-content'>Loading....</p>"
   );
-  $("#loss-datasets").append(
+  $("#loss-datasets").addClass('data-table-hidden').append(
     "<p class='loading-text details-content'>Loading....</p>"
   );
-  $("#vulnerability-datasets").append(
+  $("#vulnerability-datasets").addClass('data-table-hidden').append(
     "<p class='loading-text details-content'>Loading....</p>"
   );
 
@@ -181,6 +181,7 @@ $(document).ready(function () {
         );
       }
 
+      // click download icon show pop up dialog 
       $(document).on('click', 'td.data-table-image', function () { 
         $('td.data-table-image>div>div').removeClass('show');
         $(this).find('div').toggleClass('show');
@@ -195,19 +196,19 @@ $(document).ready(function () {
   
       $("p.loading-text").remove();
       
-      $("#hazard-datasets").append(getHeadersFromData(hazardDatasets[0]));
+      $("#hazard-datasets").removeClass('data-table-hidden').append(getHeadersFromData(hazardDatasets[0]));
   
       $.each(hazardDatasets, function (key, hazardEvent){
         $("#hazard-datasets").append(render(hazardEvent, HAZARD.dataset));
       });
   
-      $("#exposure-datasets").append(getHeadersFromData(exposureDatasets[0]));
+      $("#exposure-datasets").removeClass('data-table-hidden').append(getHeadersFromData(exposureDatasets[0]));
   
       $.each(exposureDatasets, function (key, exposureEvent) {
         $("#exposure-datasets").append(render(exposureEvent, EXPOSURE.dataset));
       });
   
-      $("#vulnerability-datasets").append(getHeadersFromData(vulnerabilityDatasets[0]));
+      $("#vulnerability-datasets").removeClass('data-table-hidden').append(getHeadersFromData(vulnerabilityDatasets[0]));
   
       $.each(vulnerabilityDatasets, function (key, vulnerabilityEvent) {
         $("#vulnerability-datasets").append(
@@ -215,7 +216,7 @@ $(document).ready(function () {
         );
       });
   
-      $("#loss-datasets").append(getHeadersFromData(lossDatasets[0]));
+      $("#loss-datasets").removeClass('data-table-hidden').append(getHeadersFromData(lossDatasets[0]));
   
       $.each(lossDatasets, function (key, lossEvent) {
         $("#loss-datasets").append(render(lossEvent, LOSS.dataset));

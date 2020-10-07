@@ -24,6 +24,7 @@
   font-family: $primary-font;
   font-size: $primary-font-size;
   color: $light-primary-color;
+  line-height: $primary-line-height;
   opacity: 1;
 
   &:hover {
@@ -36,6 +37,7 @@
   opacity: $secondary-opacity;
   color: $light-primary-color;
   font-size:$primary-font-size;
+  line-height: $primary-line-height;
   &:not(:last-child){
     padding-right: 60px;
   }

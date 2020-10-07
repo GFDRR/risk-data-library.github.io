@@ -1,3 +1,4 @@
+@import "utils";
 @import "colors";
 @import "mixins";
 @import "fonts";
@@ -89,20 +90,8 @@ article, section {
   padding-bottom: 70px;
 }
 
-.extra-margin-top {
-  margin-top: 70px;
-}
-
-.extra-margin-bottom {
-  margin-bottom: 40px;
-}
-
 .page-container-title {
   color: $blue-secondary-color;
-}
-
-.landing-top-container {
-  background-color: $light-primary-color
 }
 
 .container-wrapper {
@@ -134,39 +123,28 @@ a.link {
 }
 
 .reusable-component-left {
-  width: 275px;
+  width: $primary-width;
 }
 
 .reusable-component-right {
-  width: 625px;
+  width: $secondary-width;
   padding-bottom: 60px;
-}
-
-#hazard-datasets, #exposure-datasets, #loss-datasets, #vulnerability-datasets {
-  min-height: 200px;
-}
-
-table {
-  margin-top: 30px;
-  margin-bottom: 0!important;
-}
-
-.landing-page-component-title {
-  font-family: $primary-font;
-  font-size: $senary-font-size;
-  font-weight: $secondary-font-weight;
-  color: $grey-quaternary-color;
-  line-height: 42px;
-
-  @media only screen and (max-width: 1000px) {
-    font-size:1.5em;
-  }
 }
 
 .title-color {
   color: $blue-secondary-color !important;
   margin-top: 30px;
   font-weight: $secondary-font-weight!important;
+}
+
+
+// miscellaneous margin top/bottom & padding top/bottom 
+.extra-margin-top {
+  margin-top: 70px;
+}
+
+.extra-margin-bottom {
+  margin-bottom: 40px;
 }
 
 .padding-bottom {
@@ -178,7 +156,7 @@ table {
 }
 
 .extra-padding-top {
-  padding-top: 0.5rem;
+  padding-top: $primary-padding-top;
 }
 
 .no-padding-bottom {
@@ -209,6 +187,11 @@ div.no-margin-bottom {
   margin-top: 0;
 }
 
+// Learn more links
+.link-container {
+  margin-top: 1rem;
+}
+
 .list {
   padding-left: 20px;
   margin-bottom: 0;
@@ -218,13 +201,54 @@ div.no-margin-bottom {
   }
 }
 
-// Learn more links
-.link-container {
-  margin-top: 1rem;
+// schema page, database page & resources page only
+.no-margin-top-first-title-color {
+  &>p.title-color:first-of-type {
+    margin-top: 0;
+  }
 }
 
+// masonry-layout
+.masonry-layout-item {
+  float: left;
+  width: $primary-width;
+}
+
+// the section below is to make website readable on mobile view - no responsive design
+.navbar, .top-container,.page-top-container,.middle-container, .footer-container {
+  min-width: 1200px;
+}
+
+.body-container {
+  min-height: 100%;
+  margin-bottom: -230px;
+}
+
+.content-wrap {
+  margin-bottom: 230px;
+}
+
+footer {
+  height: 230px;
+}
 
 // landing page only
+.landing-top-container {
+  background-color: $light-primary-color
+}
+
+.landing-page-component-title {
+  font-family: $primary-font;
+  font-size: $senary-font-size;
+  font-weight: $secondary-font-weight;
+  color: #333333;
+  line-height: 42px;
+
+  @media only screen and (max-width: 1000px) {
+    font-size:1.5em;
+  }
+}
+
 .landing-page-section-title {
   text-align: right;
 }
@@ -256,38 +280,7 @@ div.no-margin-bottom {
   margin-bottom: 100px;
 }
 
-// schema page, database page & resources page only
-.no-margin-top-first-title-color {
-  &>p.title-color:first-of-type {
-    margin-top: 0;
-  }
-}
-
-// masonry-layout
-.masonry-layout-item {
-  float: left;
-  width: 275px;
-}
-
-// the section below is to make website readable on mobile view - no responsive design
-.navbar, .top-container,.page-top-container,.middle-container, .footer-container {
-  min-width: 1200px;
-}
-
-.body-container {
-  min-height: 100%;
-  margin-bottom: -230px;
-}
-
-.content-wrap {
-  margin-bottom: 230px;
-}
-
-footer {
-  height: 230px;
-}
-
-// hidden components for later use
+// hidden components for later use - for user
 .hidden {
   display: none;
 }

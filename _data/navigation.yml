@@ -1,10 +1,10 @@
 - name: Schema
-  link: ./schemas
+  link: /schemas
 - name: Database
-  link: ./database
+  link: /database
 - name: Data
-  link: ./data
+  link: /data
 - name: Resources
-  link: ./resources
+  link: /resources
 - name: Project
-  link: ./project
+  link: /project

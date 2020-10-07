@@ -10,6 +10,7 @@ h1.dataDetails-title {
   margin-top: 30px;
   margin-bottom: 60px;
   flex-direction: row;
+  margin-left: 0;
 }
 
 .dataDetails-link-sub-container {
@@ -51,7 +52,7 @@ h1.dataDetails-title {
 
 .dataDetails-list-right {
   margin-left: 60px;
-  width: 625px;
+  width: $secondary-width;
   word-break: break-word;
   word-wrap: break-word;
 }
@@ -69,7 +70,7 @@ h1.dataDetails-title {
   font-weight: normal;
   color: $dark-primary-color;
   margin-left: 60px;
-  width: 625px;
+  width: $secondary-width;
   word-break: break-word;
 }
 

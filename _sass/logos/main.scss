@@ -12,7 +12,7 @@
 }
 
 .individual-logo-container {
-  width: 280px;
+  width: $primary-width;
   display: flex;
   flex-flow: column;
   justify-content: flex-end;
@@ -24,6 +24,8 @@
 
   & figcaption {
     text-align: start;
+    line-height: $primary-line-height;
+    font-size: $primary-font-size;
   }
 }
 

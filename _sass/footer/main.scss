@@ -25,13 +25,13 @@
     font-family: $primary-font;
     font-size: $primary-font-size;
     font-weight: $normal-font-weight;
-    line-height: 1.39;
+    line-height: $primary-line-height;
     color: $blue-primary-color;
     align-self: center;
   }
 
   p {
-    margin-bottom: 5px;
+    line-height: $primary-line-height;
     font-size: $primary-font-size;
     font-weight: $normal-font-weight;
     color: $grey-tertiary-color;

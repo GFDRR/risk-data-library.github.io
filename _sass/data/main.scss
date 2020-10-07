@@ -2,9 +2,10 @@
   margin-top: 60px;
 }
 
-.data-title {
+h2.data-title {
   font-family: $primary-font;
-  font-size: 24px;
+  font-size: $quaternary-font-size;
+  line-height: $secondary-line-height;
   font-weight: $secondary-font-weight;
   color: $blue-secondary-color;
 }
@@ -14,8 +15,9 @@
   font-size: $secondary-font-size;
   font-weight: $normal-font-weight;
   color: $grey-quinary-color;
+  line-height: $secondary-line-height;
   margin-bottom: 50px;
-  width: 480px;
+  width: 710px;
 }
 
 .data-table-header-container {
@@ -24,11 +26,15 @@
   background-color: $light-secondary-color;
 }
 
+.data-table-hidden {
+  border-style: hidden;
+}
+
 .data-table-value {
   font-family: $primary-font;
   font-size: $medium-font-size;
   font-weight: $normal-font-weight;
-  line-height: 1.54;
+  line-height: $primary-line-height;
   color: $grey-tertiary-color;
   vertical-align: top;
 }
@@ -122,12 +128,12 @@ tr>td:first-child, tr>th:first-child  {
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
-  line-height: 1.33;
+  line-height: $secondary-line-height;
   letter-spacing: normal;
 }
 
 .table-header-redirect {
-  line-height: 1.54;
+  line-height: $primary-line-height;
   color: $blue-primary-color;
 }
 
