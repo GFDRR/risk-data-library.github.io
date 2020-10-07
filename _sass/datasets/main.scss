@@ -1,3 +1,12 @@
+table {
+  margin-top: 30px;
+  margin-bottom: 0!important;
+}
+
+#hazard-datasets, #exposure-datasets, #loss-datasets, #vulnerability-datasets {
+  min-height: 200px;
+}
+
 .datasets-list {
   list-style-type: none;
   margin-left: 0;

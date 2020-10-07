@@ -90,20 +90,8 @@ article, section {
   padding-bottom: 70px;
 }
 
-.extra-margin-top {
-  margin-top: 70px;
-}
-
-.extra-margin-bottom {
-  margin-bottom: 40px;
-}
-
 .page-container-title {
   color: $blue-secondary-color;
-}
-
-.landing-top-container {
-  background-color: $light-primary-color
 }
 
 .container-wrapper {
@@ -143,31 +131,20 @@ a.link {
   padding-bottom: 60px;
 }
 
-#hazard-datasets, #exposure-datasets, #loss-datasets, #vulnerability-datasets {
-  min-height: 200px;
-}
-
-table {
-  margin-top: 30px;
-  margin-bottom: 0!important;
-}
-
-.landing-page-component-title {
-  font-family: $primary-font;
-  font-size: $senary-font-size;
-  font-weight: $secondary-font-weight;
-  color: #333333;
-  line-height: 42px;
-
-  @media only screen and (max-width: 1000px) {
-    font-size:1.5em;
-  }
-}
-
 .title-color {
   color: $blue-secondary-color !important;
   margin-top: 30px;
   font-weight: $secondary-font-weight!important;
+}
+
+
+// miscellaneous margin top/bottom & padding top/bottom 
+.extra-margin-top {
+  margin-top: 70px;
+}
+
+.extra-margin-bottom {
+  margin-bottom: 40px;
 }
 
 .padding-bottom {
@@ -210,6 +187,11 @@ div.no-margin-bottom {
   margin-top: 0;
 }
 
+// Learn more links
+.link-container {
+  margin-top: 1rem;
+}
+
 .list {
   padding-left: 20px;
   margin-bottom: 0;
@@ -217,44 +199,6 @@ div.no-margin-bottom {
   >li {
     padding-bottom: 0.5rem;
   }
-}
-
-// Learn more links
-.link-container {
-  margin-top: 1rem;
-}
-
-
-// landing page only
-.landing-page-section-title {
-  text-align: right;
-}
-
-.landing-page-nav-bar {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  padding-top: 20px;
-  padding-bottom: 22px;
-  padding-left: rem-calc(154);
-  padding-right: rem-calc(169);
-
-  @media only screen and (max-width: 1200px) {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-}
-
-.landing-page-header {
-  font-family: $primary-font;
-  font-size: 15px;
-  font-weight: $normal-font-weight;
-  color: $light-primary-color;
-  line-height: 0.93;
-}
-
-.landing-page-container {
-  margin-bottom: 100px;
 }
 
 // schema page, database page & resources page only
@@ -286,6 +230,54 @@ div.no-margin-bottom {
 
 footer {
   height: 230px;
+}
+
+// landing page only
+.landing-top-container {
+  background-color: $light-primary-color
+}
+
+.landing-page-component-title {
+  font-family: $primary-font;
+  font-size: $senary-font-size;
+  font-weight: $secondary-font-weight;
+  color: #333333;
+  line-height: 42px;
+
+  @media only screen and (max-width: 1000px) {
+    font-size:1.5em;
+  }
+}
+
+.landing-page-section-title {
+  text-align: right;
+}
+
+.landing-page-nav-bar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding-top: 20px;
+  padding-bottom: 22px;
+  padding-left: rem-calc(154);
+  padding-right: rem-calc(169);
+
+  @media only screen and (max-width: 1200px) {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+.landing-page-header {
+  font-family: $primary-font;
+  font-size: 15px;
+  font-weight: $normal-font-weight;
+  color: $light-primary-color;
+  line-height: 0.93;
+}
+
+.landing-page-container {
+  margin-bottom: 100px;
 }
 
 // hidden components for later use - for user
