@@ -9,7 +9,7 @@
   font-size: $primary-font-size;
   font-weight: $secondary-font-weight;
   color: $grey-tertiary-color;
-  line-height: 1.5;
+  line-height: $primary-line-height;
   padding-bottom: 5px;
 }
 
@@ -18,7 +18,7 @@
   font-size: $primary-font-size;
   font-weight: $normal-font-weight;
   color: $grey-tertiary-color;
-  line-height: 1.5;
+  line-height: $primary-line-height;
 }
 
 .datasets-link-container {

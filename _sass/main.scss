@@ -1,3 +1,4 @@
+@import "utils";
 @import "colors";
 @import "mixins";
 @import "fonts";
@@ -134,11 +135,11 @@ a.link {
 }
 
 .reusable-component-left {
-  width: 275px;
+  width: $primary-width;
 }
 
 .reusable-component-right {
-  width: 625px;
+  width: $secondary-width;
   padding-bottom: 60px;
 }
 
@@ -155,7 +156,7 @@ table {
   font-family: $primary-font;
   font-size: $senary-font-size;
   font-weight: $secondary-font-weight;
-  color: $grey-quaternary-color;
+  color: #333333;
   line-height: 42px;
 
   @media only screen and (max-width: 1000px) {
@@ -178,7 +179,7 @@ table {
 }
 
 .extra-padding-top {
-  padding-top: 0.5rem;
+  padding-top: $primary-padding-top;
 }
 
 .no-padding-bottom {
@@ -266,7 +267,7 @@ div.no-margin-bottom {
 // masonry-layout
 .masonry-layout-item {
   float: left;
-  width: 275px;
+  width: $primary-width;
 }
 
 // the section below is to make website readable on mobile view - no responsive design
@@ -287,7 +288,7 @@ footer {
   height: 230px;
 }
 
-// hidden components for later use
+// hidden components for later use - for user
 .hidden {
   display: none;
 }

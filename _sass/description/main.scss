@@ -1,8 +1,10 @@
 .description {
   display: flex;
   flex-direction: column;
-  padding-top: 60px;
-  padding-bottom: 90px;
+  padding-top: 70px;
+  padding-bottom: 110px;
+  align-items: center;
+  text-align: center;
 }
 
 .description-title {
@@ -11,10 +13,12 @@
 
 .description-paragraph {
   font-family: $primary-font;
-  font-size: $secondary-font-size;
+  font-size: $quaternary-font-size;
   color: $light-primary-color;
   font-weight: $normal-font-weight;
-  width: 625px;
+  line-height: $secondary-line-height;
+  width: $secondary-width;
+  margin-top: 25px;
 }
 
 .description-anchor {
