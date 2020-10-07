@@ -26,6 +26,10 @@ h2.data-title {
   background-color: $light-secondary-color;
 }
 
+.data-table-hidden {
+  border-style: hidden;
+}
+
 .data-table-value {
   font-family: $primary-font;
   font-size: $medium-font-size;
