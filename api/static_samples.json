@@ -1,0 +1,162 @@
+{
+    "exposure": [
+        {
+            "id": 143,
+            "dataset_name": "GEM SARA Argentina buildings",
+            "exposure_type": "Mixed",
+            "developed_by": "Global Earthquake Model SARA project",
+            "year_developed": 1459728000000,
+            "license": "CC BY 4.0",
+            "download_link": {
+                "csv": "https://risk-data-library-storage.s3.amazonaws.com/datasets/data/rdl-exp-Mixed-143.csv.zip",
+                "geojson": "https://risk-data-library-storage.s3.amazonaws.com/datasets/data/rdl-exp-Mixed-143.geojson.zip"
+            }
+        },
+        {
+            "id": 164,
+            "dataset_name": "Madagascar aggegrate building exposure (all assets, 1km grid)",
+            "exposure_type": "Mixed",
+            "developed_by": "AIR Worldwide",
+            "year_developed": 1451606400000,
+            "license": "CC BY-SA 4.0",
+            "download_link": {
+                "csv": "https://risk-data-library-storage.s3.amazonaws.com/datasets/data/rdl-exp-Mixed-164.csv.zip",
+                "geojson": "https://risk-data-library-storage.s3.amazonaws.com/datasets/data/rdl-exp-Mixed-164.geojson.zip"
+            }
+        }
+    ],
+    "hazard": [
+        {
+            "id": 18,
+            "event_set_id": 85,
+            "project_name": "GFDRR South West Indian Ocean Risk Assessment and Financing Initiative (SWIO-RAFI)",
+            "year_developed": 1451606400000,
+            "developed_by": "AIR Worldwide",
+            "license": "CC BY-SA 4.0",
+            "data_purpose": "Quantification of site specific risk of flood, earthquakes, tropical cyclones, storm surge and tsunamis, to support improvement in the resiliency and capacity of South West Indian Ocean island states through the creation of disaster risk financing strategies.",
+            "notes": "This data set was produced with financial support from the European Union in the framework of the ACP-EU Natural Disaster Risk Reduction Program, managed by the Global Facility for Disaster Reduction and Recovery (GFDRR).",
+            "data_version": "version 1",
+            "dataset_name": "SWIO RAFI Madagascar Tropical Cyclone Pluvial Flood",
+            "location": "Madagascar",
+            "extent": "BBOX(43.21667 -25.60833,50.48333 -11.95)",
+            "analysis_type": "Probabilistic",
+            "hazard_type": "Flood",
+            "process_type": "Pluvial Flood",
+            "intensity_measure": [
+                "Flood water depth"
+            ],
+            "units": [
+                "m"
+            ],
+            "occurrence_probability": [
+                10.0,
+                25.0,
+                50.0,
+                100.0,
+                250.0,
+                500.0,
+                1000.0
+            ],
+            "download_link": {
+                "csv": "https://risk-data-library-storage.s3.amazonaws.com/datasets/data/rdl-hzd-Flood-85.csv.zip",
+                "geojson": "https://risk-data-library-storage.s3.amazonaws.com/datasets/data/rdl-hzd-Flood-85.geojson.zip"
+            }
+        },
+        {
+            "id": 21,
+            "event_set_id": 88,
+            "project_name": "GFDRR South West Indian Ocean Risk Assessment and Financing Initiative (SWIO-RAFI)",
+            "year_developed": 1451606400000,
+            "developed_by": "AIR Worldwide",
+            "license": "CC BY-SA 4.0",
+            "data_purpose": "Quantification of site specific risk of flood, earthquakes, tropical cyclones, storm surge and tsunamis, to support improvement in the resiliency and capacity of South West Indian Ocean island states through the creation of disaster risk financing strategies.",
+            "notes": "This data set was produced with financial support from the European Union in the framework of the ACP-EU Natural Disaster Risk Reduction Program, managed by the Global Facility for Disaster Reduction and Recovery (GFDRR).",
+            "data_version": "version 1",
+            "dataset_name": "SWIO RAFI Madagascar Earthquake Ground Shaking",
+            "location": "Madagascar",
+            "extent": "BBOX(43.2167 -25.6083,50.4833 -11.95)",
+            "analysis_type": "Probabilistic",
+            "hazard_type": "Earthquake",
+            "process_type": "Ground Motion",
+            "intensity_measure": [
+                "Modified Mercalli Intensity",
+                "Peak ground acceleration in g"
+            ],
+            "units": [
+                "-",
+                "g"
+            ],
+            "occurrence_probability": [
+                10.0,
+                25.0,
+                50.0,
+                100.0,
+                250.0,
+                500.0,
+                10000.0
+            ],
+            "download_link": {
+                "csv": "https://risk-data-library-storage.s3.amazonaws.com/datasets/data/rdl-hzd-Earthquake-88.csv.zip",
+                "geojson": "https://risk-data-library-storage.s3.amazonaws.com/datasets/data/rdl-hzd-Earthquake-88.geojson.zip"
+            }
+        }
+    ],
+    "loss": [
+        {
+            "id": 75,
+            "dataset_name": "SWIO RAFI Madagascar All Perils Losses",
+            "hazard_type": "Multi-Hazard",
+            "exposure_type": "(Mixed,AAL)",
+            "developed_by": "AIR Worldwide",
+            "year_developed": 1451606400000,
+            "license": "CC BY-SA 4.0",
+            "download_link": {
+                "csv": "https://risk-data-library-storage.s3.amazonaws.com/datasets/data/rdl-lss-Multi-Hazard-75.csv.zip",
+                "geojson": "https://risk-data-library-storage.s3.amazonaws.com/datasets/data/rdl-lss-Multi-Hazard-75.geojson.zip"
+            }
+        },
+        {
+            "id": 76,
+            "dataset_name": "SWIO RAFI Madagascar Earthquake Losses",
+            "hazard_type": "Earthquake",
+            "exposure_type": "(Mixed,AAL)",
+            "developed_by": "AIR Worldwide",
+            "year_developed": 1451606400000,
+            "license": "CC BY-SA 4.0",
+            "download_link": {
+                "csv": "https://risk-data-library-storage.s3.amazonaws.com/datasets/data/rdl-lss-Earthquake-76.csv.zip",
+                "geojson": "https://risk-data-library-storage.s3.amazonaws.com/datasets/data/rdl-lss-Earthquake-76.geojson.zip"
+            }
+        }
+    ],
+    "vulnerability": [
+        {
+            "id": 20,
+            "dataset_name": "Murao_2010",
+            "hazard_type": "Tsunami",
+            "exposure_type": "Residential",
+            "function_type": "Fragility",
+            "developed_by": "Murao_2010",
+            "year_developed": 1580136541000,
+            "license": "CC0",
+            "download_link": {
+                "csv": "https://risk-data-library-storage.s3.amazonaws.com/datasets/data/rdl-vln-Tsunami-Residential-20.csv.zip",
+                "json": "https://risk-data-library-storage.s3.amazonaws.com/datasets/data/rdl-vln-Tsunami-Residential-20.json.zip"
+            }
+        },
+        {
+            "id": 99,
+            "dataset_name": "Jaiswal et al_2011",
+            "hazard_type": "Earthquake",
+            "exposure_type": "Residential",
+            "function_type": "Vulnerability",
+            "developed_by": "Jaiswal et al_2011",
+            "year_developed": 1580136541000,
+            "license": "CC0",
+            "download_link": {
+                "csv": "https://risk-data-library-storage.s3.amazonaws.com/datasets/data/rdl-vln-Earthquake-Residential-99.csv.zip",
+                "json": "https://risk-data-library-storage.s3.amazonaws.com/datasets/data/rdl-vln-Earthquake-Residential-99.json.zip"
+            }
+        }
+    ]
+}
