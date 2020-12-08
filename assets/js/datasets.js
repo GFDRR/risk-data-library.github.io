@@ -224,35 +224,42 @@ $(document).ready(function () {
     });
   }
 
-  const BASE_URL = "https://ddsurmhzkc.execute-api.ap-southeast-2.amazonaws.com/dev";
-  var GET_SAMPLE_DATASET_URL = BASE_URL + '/datasets?';
-  $.get("./api/samples.json", function (res) {
-    const eventSetIds = res[HAZARD.dataset].map(function(json) {
-      return json.id;
-    }).join(",");
+  // Disable dynamic loading of showcase data
+  // Read sample set data from a file instead (see below)
+  //
+  // const BASE_URL = "https://ddsurmhzkc.execute-api.ap-southeast-2.amazonaws.com/dev";
+  // var GET_SAMPLE_DATASET_URL = BASE_URL + '/datasets?';
+  // $.get("./api/samples.json", function (res) {
+  //   const eventSetIds = res[HAZARD.dataset].map(function(json) {
+  //     return json.id;
+  //   }).join(",");
 
-    const exposureIds = res[EXPOSURE.dataset].map(function(json) {
-      return json.id;
-    }).join(",");
+  //   const exposureIds = res[EXPOSURE.dataset].map(function(json) {
+  //     return json.id;
+  //   }).join(",");
 
-    const vulnerabilityIds = res[VULNERABILITY.dataset].map(function(json) {
-      return json.id;
-    }).join(",");
+  //   const vulnerabilityIds = res[VULNERABILITY.dataset].map(function(json) {
+  //     return json.id;
+  //   }).join(",");
 
-    const lossIds = res[LOSS.dataset].map(function(json) {
-      return json.id;
-    }).join(",");
-    
-    GET_SAMPLE_DATASET_URL = 
-    [
-      BASE_URL,
-      '/datasets?',
-      HAZARD.query, '=', eventSetIds, '&',
-      EXPOSURE.dataset, '=', exposureIds, '&',
-      LOSS.dataset, '=', lossIds, '&',
-      VULNERABILITY.dataset, '=', vulnerabilityIds
-    ].join('')
+  //   const lossIds = res[LOSS.dataset].map(function(json) {
+  //     return json.id;
+  //   }).join(",");
 
-    update(GET_SAMPLE_DATASET_URL);
-  });
+  //   GET_SAMPLE_DATASET_URL = 
+  //   [
+  //     BASE_URL,
+  //     '/datasets?',
+  //     HAZARD.query, '=', eventSetIds, '&',
+  //     EXPOSURE.dataset, '=', exposureIds, '&',
+  //     LOSS.dataset, '=', lossIds, '&',
+  //     VULNERABILITY.dataset, '=', vulnerabilityIds
+  //   ].join('')
+  //   update(GET_SAMPLE_DATASET_URL);
+  // });
+
+  /*** 
+   * Read sample set data from a file instead
+   ***/
+  update("./api/static_samples.json")
 });
