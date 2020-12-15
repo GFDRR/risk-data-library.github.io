@@ -15,12 +15,6 @@
   ],
   "exposure": [
     {
-      "id": 115,
-      "schema": "exposure",
-      "description": "Tanzania road network data.",
-      "value": "An example of transport network data with detailed GED4ALL taxonomy and metadata."
-    },
-    {
       "id": 143,
       "schema": "exposure",
       "description": "Argentina building data with night-time population",
