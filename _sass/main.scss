@@ -287,10 +287,9 @@ footer {
 
 //iframe embed for RDL documentation
 .iframe-container {
-  position: relative;
-  overflow: hidden;
+  position: absolute;
+  left: 0;
   height: 100%;
-  padding: 50%;
   width: 100%;
 }
 
